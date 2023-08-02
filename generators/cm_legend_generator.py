@@ -102,7 +102,7 @@ for instance in data:
         ax.remove()
         # save the legend
         # check if folder already present if not create
-        base_path = f"../{legendId}/"
+        base_path = f"../collections/{legendId}/"
         if not os.path.exists(base_path):
             os.makedirs(base_path)
         plt.savefig(
