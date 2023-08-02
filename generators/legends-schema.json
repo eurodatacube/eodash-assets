@@ -10,10 +10,6 @@
         "additionalProperties":{
           "type":"object",
           "properties":{
-            "short_name":{
-                "type":"string",
-                "description":"Short identifying name of indicator"
-            },
             "range":{
               "type":"array",
               "items":[
