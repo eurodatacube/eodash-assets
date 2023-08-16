@@ -21,8 +21,14 @@ function setup() {
     }
   }
   function evaluatePixel(samples) {
+    let validValue = 1
+    // data sanitation
+    if (samples.tropno2 >= 1e20 ){
+        validValue = 0
+    }
+    let index = samples.tropno2;
     return {
-      data:  [samples.tropno2],
-      dataMask: [samples.dataMask]
+      data:  [index],
+      dataMask: [samples.dataMask * validValue]
     }
   }
