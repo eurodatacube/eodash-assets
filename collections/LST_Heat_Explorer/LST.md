@@ -7,7 +7,7 @@ Data shows land surface temperatures measured during early afternoon hours in °
 Additional analytical elements are presented on commune level featuring min, max and mean land surface temperatures, as well as the percentage of the residential population exposed to surface temperatures above 35°C.
 
 Provided by  
-[![GeoVille Logo](data/gtif/images/logos/geoville.png "GeoVille Logo")](https://www.geoville.com)  
+[![GeoVille Logo](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/geoville.png "GeoVille Logo")](https://www.geoville.com)  
 Original version available at [https://heatmap.geoville.com](https://heatmap.geoville.com)
 
 ## Background

@@ -3,7 +3,7 @@ activities is the tropospheric nitrogen dioxide (NO2). This data are collected d
 worldwide by the Copernicus Sentinel 5P satellite.
 
 <p align="middle">
-  <img alt="Sistema Logo" src="data/gtif/images/logos/sistema.png" width="32%" />
-  <img alt="Mindearth Logo" src="data/gtif/images/logos/mindearth.png" width="32%" /> 
-  <img alt="GeoSphere Logo" src="data/gtif/images/logos/geosphere.svg" width="32%" />
+  <img alt="Sistema Logo" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/sistema.png" width="32%" />
+  <img alt="Mindearth Logo" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/mindearth.png" width="32%" /> 
+  <img alt="GeoSphere Logo" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/geosphere.svg" width="32%" />
 </p>

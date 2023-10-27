@@ -39,4 +39,4 @@ makers to quickly focus on areas showing the greatest potential for further inve
 
 **License:** Creative Commons CC BY-SA 3.0 IGO
 
-![DHI Logo](data/gtif/images/logos/dhi.png "DHI Logo")
+![DHI Logo](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi.png "DHI Logo")

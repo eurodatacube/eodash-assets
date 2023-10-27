@@ -49,4 +49,4 @@ Colors used in the trade-off explorer above.
 
 &nbsp;
 
-![DHI Logo](data/gtif/images/logos/dhi.png "DHI Logo")
+![DHI Logo](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi.png "DHI Logo")

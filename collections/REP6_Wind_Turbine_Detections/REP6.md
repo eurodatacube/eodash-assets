@@ -86,4 +86,4 @@ turbines in the remaining open land area are detected using Sentinel-2.
 Attribution International license, CC BY 4.0
 
 
-![DHI Logo](data/gtif/images/logos/dhi.png "DHI Logo")
+![DHI Logo](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi.png "DHI Logo")

@@ -1,0 +1,9 @@
+## Particulate Matter 10µm
+
+Particulate Matter with diameters less than 10µm - mass concentration in µg/m³ obtained daily from the [Copernicus Atmosphere Monitoring Service (CAMS)](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-europe-air-quality-forecasts?tab=overview) European air quality forecasts dataset.The value displayed on the platform represents the geographical mean and maxima values of the daily average pollutant concentration for each Local Administrative Unit (LAU)
+
+<div align="middle">
+  <img alt="geosphere" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/geosphere.svg" width="32%" style="vertical-align: bottom;"/>
+  <img alt="Mindearth Logo" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/mindearth.png" width="32%" style="vertical-align: bottom;margin-left:10px;margin-right:10px"/>
+  <img alt="SISTEMA Logo" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/sistema.png" width="30%" style="vertical-align: bottom;"/> 
+</div>
