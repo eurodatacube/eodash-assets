@@ -213,6 +213,22 @@
             "label": "Population density [people/km2]",
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 10000]
+        },
+        "SOL1_Green_Roofs_grimpactscore": {
+            "range": [1, 6],
+            "cm": ["#32721a","#7cb820","#eeeb3c","#fead3c", "#f63f37"],
+            "label": "Green Roof Impact Score",
+            "ticks": [1, 2, 3, 4, 5],
+            "tickLabels": ["very low", "low", "medium", "high", "very high"],
+            "discrete": true
+        },
+        "SOL1_5_Green_Roofs_co2red_05": {
+            "range": [1, 7],
+            "cm": ["#443a83","#31688e","#2d928e", "#4cb97a", "#8fd744", "#fee93f"],
+            "label": "Potential CO2 reduction [tons/year]",
+            "ticks": [1, 2, 3, 4, 5, 6],
+            "tickLabels": [0, 1, 5, 10, 50, 100],
+            "discrete": true
         }
     }
 }

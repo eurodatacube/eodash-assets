@@ -1,5 +1,3 @@
-<div style="width: 100%;"><img style="width:230px; float:right;" src="data/gtif/images/legends/REP1.png"></img></div>
-
 ### Wind Power Density
 The wind power density (w m 2 ) is a measure of the available wind resource. Higher wind power density
 indicates greater wind power potential.
@@ -34,19 +32,8 @@ many mountainous and inaccessible areas.
 ### RIX
 The Ruggedness Index is a measure of the steepness of the terrain in the surrounding area. Uncertainty in
 wind density estimates increase with higher RIX values.
-
-<div style="width: 100%;"><img style="width:230px; float:right;" src="data/gtif/images/legends/worldcover.png"></img></div>
-
 ### World Cover classes
 
-Colors used in the trade-off explorer above.
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
+<div style="width: 100%;"><img style="width:230px; float:right;" src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/REP1_Wind_Energy/worldcover.png"></img></div>
 
 ![DHI Logo](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi.png "DHI Logo")
