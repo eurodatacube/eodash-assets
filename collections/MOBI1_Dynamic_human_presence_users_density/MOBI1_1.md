@@ -1,13 +1,19 @@
 ### Dynamic human presence
 
-#### Population count
+#### Population density
 
-**Brief description:** The Population Count reports the number of people present in each Local
-Administrative Unit (LAU) during a given hour.
+**Brief description:** The Population Density [#people / km 2 ] reports the hourly density of people
+per square kilometer within each Local Administrative Unit (LAU). A larger value denotes a
+densely visited area whereas lower values correspond to more sparse (in terms of visitors)
+areas. Population density allows us to effectively compare the occupation rate of census areas
+featuring different surface extensions and amount of visitors.
 
-**Unit:** people in area
+**Unit:** people/km2
 
-**Value Range:** GEM level: [0, 100 000]
+**Value Range:** GEM level: [0, 10 000]
+
+**Color Range:** logarithmic scale [1, 10 000]
+
 
 |Product Name| Dynamic human presence |
 | --- | --- |
@@ -22,6 +28,7 @@ Administrative Unit (LAU) during a given hour.
 | Input datasets |Commercial HFLB data from third parties and public census figures including:<ul><li>resident population by sex and age https://www.statistik.at/en/statistics/population-and-society/population/population-stock/</li><li>number of employed/unemployed, retired, commuters https://www.statistik.at/en/statistics/labour-market/;</li><li>number of students https://www.statistik.at/en/statistics/population-and-society/education/school-attendance/pupils</li></ul>|
 | Reported accuracy | The human presence estimates based on data passively collected from mobile devices are known to possibly overestimate population in densely occupied areas while underestimating it in sparsely populated areas. This is due to an inherent bias introduced by the data collection mechanism: the adoption rate of the mobile devices used to collect data is not homogeneous in the population and might depend on the applications installed on the given device (indeed, only some of them provide location data). In general, population count estimates have an average ±10% confidence interval on the projected number that can go up to ±30% relative error in densely populated areas. The confidence interval can extend up to ±70% in less populated areas due to a severe underrepresentation of the resident population. |
 | License | https://creativecommons.org/licenses/by/4.0/ |
+
 
 ## Disclaimer
 
