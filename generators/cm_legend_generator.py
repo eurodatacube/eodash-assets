@@ -11,6 +11,7 @@ from matplotlib.colors import (
     LinearSegmentedColormap,
 )
 from matplotlib import cm
+import cmocean
 import json
 from matplotlib.ticker import ScalarFormatter
 import numpy as np
@@ -41,6 +42,12 @@ cfastie_prepared = [
 cm.register_cmap(
     name="cfastie", cmap=LinearSegmentedColormap.from_list("cfastie", cfastie_prepared)
 )
+for colormap_name in dir(cmocean.cm):
+    if isinstance(getattr(cmocean.cm, colormap_name), LinearSegmentedColormap):
+        cmap = LinearSegmentedColormap.from_list(
+            colormap_name, getattr(cmocean.cm, colormap_name)(range(256))
+        )
+        cm.register_cmap(name=colormap_name, cmap=cmap)
 
 for instance in data:
     # clear_folder(f"/public/legends/{instance}")
@@ -105,7 +112,5 @@ for instance in data:
         base_path = f"../collections/{legendId}/"
         if not os.path.exists(base_path):
             os.makedirs(base_path)
-        plt.savefig(
-            f"{base_path}/cm_legend.png", bbox_inches="tight", dpi=200
-        )
+        plt.savefig(f"{base_path}/cm_legend.png", bbox_inches="tight", dpi=200)
         plt.close()

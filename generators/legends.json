@@ -127,6 +127,26 @@
         }
     },
     "trilateral": {
+        "RECCAP2_1_AGC_LVOD_amazonia_methods_mean_crop": {
+            "range": [0, 150],
+            "cm": "rain",
+            "label": "[Mg C ha]"
+        },
+        "RECCAP2_5_SF_biomass_growth": {
+            "range": [0, 2],
+            "cm": "YlGn",
+            "label": "[Mg C ha year]"
+        },
+        "RECCAP2_6_deforested_biomass": {
+            "range": [0, 5],
+            "cm": "YlOrRd",
+            "label": "[Mg C ha year]"
+        },
+        "RECCAP2_9_intact_biomass_change_methods_mean": {
+            "range": [-5, 5],
+            "cm": "Spectral",
+            "label": "[Mg C ha year]"
+        }
     },
     "gtif": {
         "AQ1_aggregated_mobility_data_trajectories": {
