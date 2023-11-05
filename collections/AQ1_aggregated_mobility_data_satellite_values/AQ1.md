@@ -1,0 +1,1 @@
+One of the variables which is linked to pollutant sectors such as traffic and industrial activities is the tropospheric nitrogen dioxide (NO2). This data are collected daily worldwide by the Copernicus Sentinel 5P satellite.
