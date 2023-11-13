@@ -12,4 +12,4 @@ It provides key inputs that support major EU and international policies and init
 
 ### Additional links
 
-https://marine.copernicus.eu/
+[Copernicus Marine Service](https://marine.copernicus.eu/)

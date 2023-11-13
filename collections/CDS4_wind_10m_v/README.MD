@@ -15,5 +15,4 @@ The product contains one single band named "windv10m" expressed in m s-1
 - [Climate Data for Covid-19 research](https://climate.copernicus.eu/climate-information-support-covid-19-research)
 - [Zaitchik, B.F., Sweijd, N., Shumake-Guillemot, J. et al. A framework for research linking weather, climate and COVID-19. Nat Commun 11, 5730 (2020)](https://doi.org/10.1038/s41467-020-19546-7)
 
-![Wind v fields from CDS](Windv.PNG)<br>
 *Global coverage of Wind v fields*

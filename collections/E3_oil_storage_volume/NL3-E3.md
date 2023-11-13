@@ -27,7 +27,7 @@ Oil sector faced a sudden decline in demand due to the COVID-19 pandemic. As oil
 
 **Links and resources**
 
-https://www.offshore-technology.com/comment/oil-storage-covid-19-impact/
+[The impact of Covid-19 on the global oil storage sector](https://www.offshore-technology.com/comment/oil-storage-covid-19-impact/)
 
 **Read more about Iceye imagery:**
 
