@@ -29,7 +29,6 @@ This dataset is provided by the Euro Data Cube, via the on-the-fly data cube acc
 
 [Access Video URL](https://www.esa.int/content/view/embedjw/428481)
 
-
 Copyright: ESA/ATG medialab, source: [ESA Multimedia](https://dlmultimedia.esa.int/download/public/videos/2014/03/026/1403_026_AR_EN.mp4)
 
 

@@ -2,7 +2,7 @@
 
 Earth Observation can contribute in serval ways for monitoring of commodity markets. For example, shipping by tracking shipping vessels, which are the primary transport vehicle for most commodities and which can be directly observed and categorised with Sentinel imagery and very high resolution data. The changes in vessel dynamics within harbours with known landing piers for certain commodities can be  used as a proxy for changes in the volume of ore stockpiled on site.
 
-<iframe title="Prices for almost all commodities have fallen since the start of the year" aria-label="chart" id="datawrapper-chart-PNmee" src="https://datawrapper.dwcdn.net/PNmee/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+<iframe title="Prices for almost all commodities have fallen since the start of the year" aria-label="chart" id="datawrapper-chart-PNmee" src="https://datawrapper.dwcdn.net/PNmee/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
 
 [Access Chart URL](https://datawrapper.dwcdn.net/PNmee/3/)
 
