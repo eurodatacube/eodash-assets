@@ -30,6 +30,6 @@ The CAMS analyses combine model data with observations into a complete and consi
 Satellite observations, on the other hand, provide a more direct measure of the current situation and are therefore important for monitoring rapidly changing conditions around the world and especially in areas where there is a lack of accurate surface observations. However, the satellite observations are limited in their spatial and temporal coverage. Current satellite observations, such as for instance from Sentinel-5p Tropomi, can measure the total column of NO2 once a day. This is due to the fact that they are embarked onboard so-called Low-Earth-Orbiting satellites that observe each location on Earth at the same mean local solar time. Besides, the measurements can only be made for areas that are not affected by significant cloud cover obstructing the field-of-view. Finally, the satellite measures the total amount of NO2 from the Earth’s surface to the top of the atmosphere, which is related to - but not the same as - the concentration at the surface or the emissions.
 
 ### Additional links
-- https://atmosphere.copernicus.eu/ 
+[https://atmosphere.copernicus.eu/](https://atmosphere.copernicus.eu/) 
 
 For answers to queries about CAMS products or to provide your feedback, please contact our [User Support service](mailto:copernicus-support@ecmwf.int).
