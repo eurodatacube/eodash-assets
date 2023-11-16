@@ -3,7 +3,7 @@ function setup() {
   return {
     input: [{
       bands: [
-        "windu10m",
+        "RelH",
         "dataMask"
       ]
     }],
@@ -23,10 +23,10 @@ function setup() {
 function evaluatePixel(samples) {
   let validValue = 1
   // data sanitation
-  if (samples.windu10m >= 1e20) {
+  if (samples.RelH >= 1e20) {
     validValue = 0
   }
-  let index = samples.windu10m;
+  let index = samples.RelH;
   return {
     data: [index],
     dataMask: [samples.dataMask * validValue]

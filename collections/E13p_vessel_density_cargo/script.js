@@ -3,7 +3,7 @@ function setup() {
   return {
     input: [{
       bands: [
-        "AIR2MT",
+        "cargo",
         "dataMask"
       ]
     }],
@@ -23,10 +23,10 @@ function setup() {
 function evaluatePixel(samples) {
   let validValue = 1
   // data sanitation
-  if (samples.AIR2MT >= 1e20) {
+  if (samples.cargo >= 1e20) {
     validValue = 0
   }
-  let index = samples.AIR2MT;
+  let index = samples.cargo;
   return {
     data: [index],
     dataMask: [samples.dataMask * validValue]
