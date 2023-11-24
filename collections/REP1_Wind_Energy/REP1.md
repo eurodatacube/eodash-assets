@@ -2,7 +2,7 @@
 Use this tool to explore site suitability to create new wind farms. You can filter the wind power density information depending on topography (elevation, slope, ruggedness),  distances to settlements and to the energy grid, presence of protected areas. Once all filters are set, you can export the information for the administrative area you select at Zahlsprengel level into a geojason file for your further analyses. You can also create and download a report giving an overview of the analysis you performed. 
 
 
-## DATA DESCRIPTION
+## WHY THIS DATA
 Wind Power Density - The wind power density (w m 2 ) is a measure of the available wind resource. Higher wind power density indicates greater wind power potential.
 Distance to Settlement - Each federal province in Austria has distance requirements between wind turbines and settlements. Increase the minimum distance to select areas further from settlements, you can chose between two distance layers:
     WSF: the distance to settlements is based on the World Settlement Footprint (product obtained from satellite data)
