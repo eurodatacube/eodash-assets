@@ -156,6 +156,11 @@
             "range": [-7, 2],
             "cm": "bwr",
             "label": "[gC/m2/day]"
+        },
+        "ESDC_kndvi": {
+            "range": [0, 1],
+            "cm": "RdYlGn",
+            "label": "KNDVI"
         }
     },
     "gtif": {
