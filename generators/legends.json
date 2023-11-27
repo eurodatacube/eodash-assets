@@ -146,6 +146,16 @@
             "range": [-5, 5],
             "cm": "Spectral",
             "label": "[Mg C/ha/year]"
+        },
+        "ESDC_gross_primary_productivity": {
+            "range": [-1, 15],
+            "cm": "jet",
+            "label": "[gC/m2/day]"
+        },
+        "ESDC_net_ecosystem_exchange": {
+            "range": [-7, 2],
+            "cm": "bwr",
+            "label": "[gC/m2/day]"
         }
     },
     "gtif": {
