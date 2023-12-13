@@ -28,10 +28,10 @@ def clear_folder(target_dir):
                 os.remove(entry.path)
 
 
-with open("./legends.json", "r") as fh:
+with open(os.path.join(os.path.dirname(__file__), "legends.json"), "r") as fh:
     data = json.load(fh)
 # prepare a special legend cfastie (NDVI), as its not in matplotlib
-cfastie = np.load("./cfastie.npy")
+cfastie = np.load(os.path.join(os.path.dirname(__file__), "cfastie.npy"))
 cfastie_prepared = [
     [
         i / 255,
@@ -47,7 +47,10 @@ for colormap_name in dir(cmocean.cm):
         cmap = LinearSegmentedColormap.from_list(
             colormap_name, getattr(cmocean.cm, colormap_name)(range(256))
         )
-        cm.register_cmap(name=colormap_name, cmap=cmap)
+        try:
+            cm.register_cmap(name=colormap_name, cmap=cmap)
+        except ValueError:
+            pass
 
 for instance in data:
     # clear_folder(f"/public/legends/{instance}")

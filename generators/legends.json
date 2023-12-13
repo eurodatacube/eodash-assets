@@ -1,82 +1,96 @@
 {
     "esa": {
-        "N3c_ocean_colour_plankton": {
+        "N3c_ocean_colour_plankton_atlantic": {
             "range": [0.03, 30],
             "cm": "rainbow",
-            "label": "ChL-a concentration mg/m³",
+            "label": "ChL-a concentration [mg/m³]",
+            "logarithmic": true,
+            "ticks": [0.03, 0.2, 1, 5, 30]
+        },
+        "N3c_ocean_colour_plankton_black_sea": {
+            "range": [0.03, 30],
+            "cm": "rainbow",
+            "label": "ChL-a concentration [mg/m³]",
+            "logarithmic": true,
+            "ticks": [0.03, 0.2, 1, 5, 30]
+        },
+        "N3c_ocean_colour_plankton_mediterranean": {
+            "range": [0.03, 30],
+            "cm": "rainbow",
+            "label": "ChL-a concentration [mg/m³]",
             "logarithmic": true,
             "ticks": [0.03, 0.2, 1, 5, 30]
         },
         "N1_NO2": {
             "range": [0, 180],
             "cm": "Reds",
-            "label": "Tropospheric NO₂ (µmol/m²)",
+            "label": "Tropospheric NO₂ [µmol/m²]",
             "ticks": [0, 45, 90, 135, 180]
         },
         "N1b_NO2": {
             "range": [0, 40],
             "cm": ["#ffffff", "#fffbf7", "#feeedf", "#fed6b7", "#fab181", "#e9834d", "#b85426", "#7f2704"],
-            "label": "Tropospheric NO₂ (µg/m³)",
+            "label": "Tropospheric NO₂ [µg/m³]",
             "ticks": [0, 5, 10, 15, 20, 25, 30, 35, 40],
             "discrete": true
         },
         "N1b_PM25": {
             "range": [0, 40],
             "cm": ["#ffffff", "#fcfcfd", "#f2f2f8", "#dddded", "#bdbbdb", "#998cc2", "#6e4aa1", "#3f007d"],
-            "label": "PM2.5 (µg/m³)",
+            "label": "PM2.5 [µg/m³]",
             "ticks": [0, 5, 10, 15, 20, 25, 30, 35, 40],
             "discrete": true
         },
         "N1b_PM10": {
             "range": [0, 40],
             "cm": ["#ffffff", "#fbfdfa", "#ebf7e9", "#cfebce", "#9ed5a8", "#68b37f", "#27854c", "#00441b"],
-            "label": "PM10 (µg/m³)",
+            "label": "PM10 [µg/m³]",
             "ticks": [0, 5, 10, 15, 20, 25, 30, 35, 40],
             "discrete": true
         },
         "N1b_O3": {
             "range": [0, 240],
             "cm": ["#ffffff", "#fffbf7", "#feeedf", "#fed6b7", "#fab181", "#e9834d", "#b85426", "#7f2704"],
-            "label": "O3 (µg/m³)",
+            "label": "O3 [µg/m³]",
             "ticks": [0, 30, 60, 90, 120, 150, 180, 210, 240],
             "discrete": true
         },
         "N1_CO": {
             "range": [0, 175],
             "cm": [[0, [248,246,244,0]], [20, [158,97,168,40]], [40, [83,102,182,90]],[60,[60,140,198,120]],[83,[81,172,162,150]], [106,[227,166,37,180]], [129,[235,73,14,180]], [152,[186,0,6,180]], [175,[116,18,13,180]]],
-            "label": "CO (ppbv)",
+            "label": "CO [ppbv]",
             "ticks": [0, 40, 80, 120, 150, 175]
         },
         "N1_CH4": {
             "range": [1680, 1980],
             "cm": [[1680, [0,1,3,40]],[1740, [0,108,211,120]], [1800, [0,210,255,150]], [1830, [0,255,255,150]], [1860, [70,255,150,150]], [1910, [255,253,0,150]], [1920,[255,193,0,150]], [1950, [255,73,0,150]], [1980, [255,0,0,150]]],
-            "label": "CH4 volume mixing ratio (ppbv)",
+            "label": "CH4 volume mixing ratio [ppbv]",
             "ticks": [1680, 1740, 1800, 1860, 1900, 1940, 1980]
         },
         "E13o_vessel_density_all": {
             "range": [1, 6],
             "cm":   [[1, [0,155,143,0]], [2, [0,219,0]], [3, [255,252,0]], [4, [244,154,0]], [5, [208,19,0]], [6, [161,0,0]]],
-            "label": "total ship presence time on a 1 km²",
+            "label": "total ship presence time / 1 km²",
             "ticks": [1, 2, 3, 4, 5, 6],
             "tickLabels": [0.5, 2, 5, 10, 20, 150]
         },
         "NASAPopulation": {
             "range": [1, 6],
             "cm": [[1, [255,242,209]],[2, [255,218,166]], [3, [250,184,85]], [4, [253,141,60]], [5, [240,59,32]], [6, [189,0,38]]],
-            "label": "persons per km²",
+            "label": "[persons/km²]",
             "ticks": [1, 2, 3, 4, 5, 6],
             "tickLabels": [1, 5, 25, 250, 1000, 10000]
         },
         "CDS1_temperature": {
             "range": [210, 330],
             "cm": [[210, [44,89,150]], [230, [97,154,195]], [250, [188,214,230]],[270, [246,246,246]],[290, [242,200,176]], [310, [204,110,90]], [330, [146,36,45]]],
-            "label": "Air Temperature at 2m (K)",
+            "label": "Air Temperature at 2m [K]",
             "ticks": [210, 230, 250, 270, 290, 310, 330]
         },
         "CDS2_relative_humidity": {
             "range": [0, 100],
             "cm": [[0, [230, 165, 30]], [30, [120, 120, 55]], [60, [60, 90, 192]],[80, [0, 44, 255]],[100, [50, 255, 55]]],
-            "label": "Relative humidity (at 1000hPa)",
+            "label": "Relative humidity (at 1000hPa) [%]",
             "ticks": [0, 30, 60, 80, 100]
         },
         "CDS3_wind_10m_u": {
@@ -88,7 +102,7 @@
         "N1_SO2": {
             "range": [1, 9],
             "cm": [[1, [248,246,244]],[2, [158,97,168]], [3, [83,102,182]], [4, [60,140,198]], [5, [81,172,162]], [6, [227,166,37]],[7, [235,73,14]],[8, [186,0,6]],[9, [116,18,13]]],
-            "label": "SO2 column number density (DU)",
+            "label": "SO2 column number density [DU]",
             "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9],
             "tickLabels": [0, 1, 2, 3, 4, 8, 12, 16, 20]
         },
@@ -121,7 +135,7 @@
         "GHS-BUILT-S-R2023A": {
             "range": [1, 5],
             "cm": [[1, [0,0,0,0]], [2, [124, 8, 169,255]], [3, [203, 71, 120,255]],[4, [246, 154, 67,255]],[5, [251, 250, 144]]],
-            "label": "0 - 10 000 m2 of built-up surface areas",
+            "label": "0 - 10 000 m² of built-up surface areas",
             "ticks": [1,2,3,4,5],
             "tickLabels": [0,2500,5000,7500,10000]
         }
@@ -150,12 +164,12 @@
         "ESDC_gross_primary_productivity": {
             "range": [-1, 15],
             "cm": "jet",
-            "label": "[gC/m2/day]"
+            "label": "[gC/m²/day]"
         },
         "ESDC_net_ecosystem_exchange": {
             "range": [-7, 2],
             "cm": "bwr",
-            "label": "[gC/m2/day]"
+            "label": "[gC/m²/day]"
         },
         "ESDC_kndvi": {
             "range": [0, 1],
@@ -167,7 +181,7 @@
         "AQ1_aggregated_mobility_data_trajectories": {
             "range": [1, 40000],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Trajectories count",
+            "label": "[trajectories]",
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 40000]
         },
@@ -179,82 +193,106 @@
         "AQ1_aggregated_mobility_data_mean_value": {
             "range": [0, 50],
             "cm": ["#00531E","#C3E556","#FFDD56","#F67758","#FF973F","#FF6331","#D5001F","#63000D"],
-            "label": "Mean value [µg/m³]"
+            "label": "[µg/m³]"
         },
         "AQ1_aggregated_mobility_data_congestion_index": {
             "range": [0, 50],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Congestion index [%]"
+            "label": "[%]"
         },
         "AQ1_aggregated_mobility_data_speed": {
             "range": [0, 120],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Traffic-free trip speed [km/h]"
+            "label": "[km/h]"
         },
         "AQ1_aggregated_mobility_data_motorized_count": {
             "range": [1, 20000],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Motorized count",
+            "label": "",
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 20000]
         },
         "AQ1_aggregated_mobility_data_motorized_share": {
             "range": [0, 100],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Motorized trip share index [%]"
+            "label": "[%]"
         },
         "AQ4_Human_Mobility_Patterns_congestion_index": {
             "range": [0, 100],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Congestion index [%]"
+            "label": "[%]"
         },
         "AQ4_1_Human_Mobility_Patterns_duration": {
             "range": [0, 240],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Traffic-free trip duration (minutes)"
+            "label": "[minutes]"
         },
         "AQ4_2_Human_Mobility_Patterns_speed": {
             "range": [0,140],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Traffic-free trip speed [km/h]"
+            "label": "[km/h]"
         },
         "AQ4_3_Human_Mobility_Patterns_distance": {
             "range": [0,300],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Trip distance [km]"
+            "label": "[km]"
         },
         "AQ4_4_Human_Mobility_Patterns_trajectories": {
             "range": [1,4000],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Trajectories count",
+            "label": "[trajectories]",
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 4000]
         },
         "AQ4_5_Human_Mobility_Patterns_motorized_share": {
             "range": [0, 100],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Motorized trip share index [%]"
+            "label": "[%]"
         },
         "MOBI1_Dynamic_human_presence_users_count": {
             "range": [100,100000],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Population count",
+            "label": "[users]",
             "logarithmic": true,
             "ticks": [100, 1000, 10000, 100000]
         },
         "MOBI1_Dynamic_human_presence_users_density": {
             "range": [1,10000],
             "cm": ["#0198bd","#49e3ce","#d8feb5","#feedb1", "#fead54", "#d1374e"],
-            "label": "Population density [people/km2]",
+            "label": "[users/km²]",
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 10000]
         },
         "SOL1_Green_Roofs_grimpactscore": {
             "range": [1, 6],
             "cm": ["#32721a","#7cb820","#eeeb3c","#fead3c", "#f63f37"],
-            "label": "Green Roof Impact Score",
+            "label": "",
             "ticks": [1, 2, 3, 4, 5],
             "tickLabels": ["very low", "low", "medium", "high", "very high"],
+            "discrete": true
+        },
+        "SOL1_1_Green_Roofs_lst": {
+            "range": [1, 11],
+            "cm": ["#fef0d9","#fee0b6","#fed093","#fdb77a", "#fd9b64", "#f77e50", "#ec603f", "#de422d", "#c92116", "#b30000"],
+            "label": "[°C]",
+            "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+            "tickLabels": [0, 34, 36, 37, 38, 39, 40, 40.5, 41, 42, 45],
+            "discrete": true
+        },
+        "SOL1_2_Green_Roofs_grexisting": {
+            "range": [1, 3],
+            "cm": ["#686868","#2ea729"],
+            "label": "",
+            "ticks": [1.5, 2.5],
+            "tickLabels": ["not existing", "existing"],
+            "discrete": true
+        },
+        "SOL1_3_Green_Roofs_grpotential": {
+            "range": [1, 3],
+            "cm": ["#686868","#2ea729"],
+            "label": "",
+            "ticks": [1.5, 2.5],
+            "tickLabels": ["not suitable", "suitable"],
             "discrete": true
         },
         "SOL1_4_Green_Roofs_grpotrelation": {
@@ -268,10 +306,83 @@
         "SOL1_5_Green_Roofs_co2red_05": {
             "range": [1, 7],
             "cm": ["#443a83","#31688e","#2d928e", "#4cb97a", "#8fd744", "#fee93f"],
-            "label": "Potential CO2 reduction [tons/year]",
+            "label": "[tons/year]",
             "ticks": [1, 2, 3, 4, 5, 6],
             "tickLabels": [0, 1, 5, 10, 50, 100],
             "discrete": true
+        },
+        "AQA_health_risk_index": {
+            "range": [0, 10],
+            "cm": ["#00531E","#C3E556", "#FFDD56", "#F67758", "#FF973F", "#FF6331", "#D5001F", "#63000D"],
+            "label": "[%]"
+        },
+        "AQB_Coarse_particulate_matter_PM10": {
+            "range": [0, 50],
+            "cm": ["#00531E","#C3E556", "#FFDD56", "#F67758", "#FF973F", "#FF6331", "#D5001F", "#63000D"],
+            "label": "[µg/m³]"
+        },
+        "AQC_Coarse_particulate_matter_PM25": {
+            "range": [0, 50],
+            "cm": ["#00531E","#C3E556", "#FFDD56", "#F67758", "#FF973F", "#FF6331", "#D5001F", "#63000D"],
+            "label": "[µg/m³]"
+        },
+        "AQ5_Nitrogen_Dioxide_S5P": {
+            "range": [0, 300],
+            "cm": ["#FFFFFF","#FFFBF7", "#FEEEDF", "#FED6B7", "#FAB181", "#E9834D", "#B85426", "#7F2704"],
+            "label": "[µmol/m²]"
+        },
+        "BM2_Above_Ground_Biomass": {
+            "range": [0, 420],
+            "cm": "viridis",
+            "label": "[t/ha]"
+        },
+        "SOL2_1_Solar_Roofs_pv_existing": {
+            "range": [1, 3],
+            "cm": ["#686868","#c519f8"],
+            "label": "",
+            "ticks": [1.5, 2.5],
+            "tickLabels": ["not existing", "existing"],
+            "discrete": true
+        },
+        "SOL2_Solar_Roofs_high_performance": {
+            "range": [1, 11],
+            "cm": ["#f6f84c","#ffc843", "#ff9d49", "#f67758", "#df556c", "#c33684", "#9f1b9b", "#400f9c", "#28013B", "#040030"],
+            "label": "[%]",
+            "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "tickLabels": [0, 10, 15, 20, 25, 35, 75, 200, 500, 1400],
+            "discrete": true
+        },
+        "REP1_Wind_Energy": {
+            "range": [1, 9],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[w/m²]",
+            "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "tickLabels": [0, 100, 200, 300, 400, 900, 1400, 1900, 2400]
+        },
+        "REP2_Solar_Energy": {
+            "range": [0.5, 5],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[kWh/m²/day]"
+        },
+        "REP2_1_Solar_Energy_fall": {
+            "range": [0.5, 4.5],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[kWh/m²/day]"
+        },
+        "REP2_2_Solar_Energy_spring": {
+            "range": [1, 5.5],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[kWh/m²/day]"
+        },
+        "REP2_3_Solar_Energy_summer": {
+            "range": [1, 7.5],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[kWh/m²/day]"
+        },
+        "REP2_4_Solar_Energy_winter": {
+            "range": [0.5, 2.5],
+            "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+            "label": "[kWh/m²/day]"
         }
     }
 }
