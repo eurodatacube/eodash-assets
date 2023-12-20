@@ -103,12 +103,18 @@ for instance in data:
         cbar = plt.colorbar(mpb, ax=ax, orientation="horizontal")
         # special handling of pre-configured ticks
         if ticks:
+            cbar.ax.tick_params(direction="inout")
             cbar.ax.set_xticks(ticks)
             cbar.ax.set_xticklabels([str(i) for i in tickLabels or ticks])
             # default for logarithmic ticks is 10^x notation, set scalar
             if logarithmic:
                 cbar.ax.xaxis.set_major_formatter(ScalarFormatter())
-        cbar.set_label(label, rotation=0)
+        cbar.set_label(
+            label,
+            rotation=0,
+        )
+        # makes final colorbar transparent background
+        fig.set_facecolor([1, 1, 1, 0])
         ax.remove()
         # save the legend
         # check if folder already present if not create
