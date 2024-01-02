@@ -175,6 +175,23 @@
             "range": [0, 1],
             "cm": "RdYlGn",
             "label": "KNDVI"
+        },
+        "N1_NO2_monthly": {
+            "range": [0, 108],
+            "cm": "Reds",
+            "label": "NO₂ [µmol/m²]"
+        },
+        "N1_NO2_diff_monthly": {
+            "range": [-3, 3],
+            "cm": "Reds",
+            "label": "NO₂ difference [10^15 molecules/cm²]"
+        },
+        "N1_NO2_jaxa": {
+            "range": [0, 360],
+            "cm": ["#0000C8", "#0041FF", "#00C1FF", "#49FFAD", "#B1FF46", "#FFD000", "#FF5900", "#C40000", "#800000"],
+            "label": "NO₂ (µmol/m²)",
+            "ticks": [0, 40, 80, 120, 160, 200, 240, 280, 320, 360],
+            "discrete": true
         }
     },
     "gtif": {
