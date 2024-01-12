@@ -1,0 +1,1 @@
+The Population Count reports the number of people present in each Local Administrative Unit (LAU) during a given hour.

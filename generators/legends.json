@@ -331,7 +331,7 @@
         "AQA_health_risk_index": {
             "range": [0, 10],
             "cm": ["#00531E","#C3E556", "#FFDD56", "#F67758", "#FF973F", "#FF6331", "#D5001F", "#63000D"],
-            "label": "[%]"
+            "label": ""
         },
         "AQB_Coarse_particulate_matter_PM10": {
             "range": [0, 50],
