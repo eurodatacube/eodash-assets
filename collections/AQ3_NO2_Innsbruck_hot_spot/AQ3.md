@@ -5,4 +5,4 @@ Regulatory thresholds of NO2 are violated at many roadside stations along the In
 regulatory actions promoted by EU.
 
 **Developed with**  
-![](https://github.com/eurodatacube/eodash-assets/blob/main/collections/gtif-logos/luftblick-dlr-uniInnsbruck.jpg)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/luftblick-dlr-uniInnsbruck.jpg)
