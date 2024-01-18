@@ -10,4 +10,4 @@ Data from https://ado.eurac.edu/
 
 
 **Developed with**  
-![](https://github.com/eurodatacube/eodash-assets/blob/main/collections/gtif-logos/ado_row.jpg)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/ado_row.jpg)

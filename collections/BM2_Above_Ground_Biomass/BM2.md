@@ -7,4 +7,4 @@ The Global Climate Observing System considers above-ground biomass (AGB) an Esse
 Information on forest biomass can also play a much wider role in understanding and predicting climate, for example in model initialisation, model testing, estimation of carbon turnover, inferring the forest disturbance regime, and data assimilation in carbon cycle and climate models.
 
 **Developed with**  
-![](https://github.com/eurodatacube/eodash-assets/blob/main/collections/gtif-logos/forestCarbon_row.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/forestCarbon_row.png)

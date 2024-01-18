@@ -21,5 +21,5 @@ Use this tool to explore site suitability to create new wind farms. You can filt
 *RIX* - The Ruggedness Index is a measure of the steepness of the terrain in the surrounding area. Uncertainty in wind density estimates increase with higher RIX values.  
 
 **Developed with**  
-![](https://github.com/eurodatacube/eodash-assets/blob/main/collections/gtif-logos/dhi_row.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi_row.png)
 

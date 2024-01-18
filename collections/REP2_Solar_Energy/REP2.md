@@ -14,4 +14,4 @@ Use this tool to explore site suitability to create new solar farms. You can fil
 *Protected areas* - Solar power facilities are not typically proposed in conservation areas such as Natura 2000 sites and nationally designated areas.
 
 **Developed with**  
-![](https://github.com/eurodatacube/eodash-assets/blob/main/collections/gtif-logos/dhi_row.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi_row.png)
