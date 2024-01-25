@@ -11,11 +11,14 @@ from matplotlib.colors import (
     LinearSegmentedColormap,
 )
 from matplotlib import cm
+import matplotlib.font_manager as font_manager
 import cmocean
 import json
 from matplotlib.ticker import ScalarFormatter
 import numpy as np
 
+esa_font_path = "notesesareg.ttf"
+font_prop = font_manager.FontProperties(fname=esa_font_path)
 plt.rcParams.update({"figure.max_open_warning": 0})
 
 
@@ -103,16 +106,28 @@ for instance in data:
         cbar = plt.colorbar(mpb, ax=ax, orientation="horizontal")
         # special handling of pre-configured ticks
         if ticks:
-            cbar.ax.tick_params(direction="inout")
             cbar.ax.set_xticks(ticks)
             cbar.ax.set_xticklabels([str(i) for i in tickLabels or ticks])
             # default for logarithmic ticks is 10^x notation, set scalar
             if logarithmic:
                 cbar.ax.xaxis.set_major_formatter(ScalarFormatter())
-        cbar.set_label(
-            label,
-            rotation=0,
-        )
+        cbar.ax.tick_params(direction="inout")
+        if instance == "gtif":
+            text_color = "#87898b"
+        else:
+            text_color = "#000000"
+        cbar.set_label(label, rotation=0, color=text_color, fontproperties=font_prop)
+        # add ESA font on labels
+        if instance == "gtif":
+            # GTIF specific color and font overrides
+            for t in cbar.ax.get_xticklabels():
+                t.set_color(text_color)
+                t.set_fontproperties(font_prop)
+            for spine in cbar.ax.spines.values():
+                spine.set_edgecolor(text_color)
+            cbar.ax.xaxis.set_tick_params(which="major", color=text_color)
+            cbar.ax.xaxis.set_tick_params(which="minor", color=text_color)
+
         # makes final colorbar transparent background
         fig.set_facecolor([1, 1, 1, 0])
         ax.remove()

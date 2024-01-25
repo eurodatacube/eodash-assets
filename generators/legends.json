@@ -24,13 +24,13 @@
         "N1_NO2": {
             "range": [0, 180],
             "cm": "Reds",
-            "label": "Tropospheric NO₂ [µmol/m²]",
+            "label": "Tropospheric NO2 [µmol/m²]",
             "ticks": [0, 45, 90, 135, 180]
         },
         "N1b_NO2": {
             "range": [0, 40],
             "cm": ["#ffffff", "#fffbf7", "#feeedf", "#fed6b7", "#fab181", "#e9834d", "#b85426", "#7f2704"],
-            "label": "Tropospheric NO₂ [µg/m³]",
+            "label": "Tropospheric NO2 [µg/m³]",
             "ticks": [0, 5, 10, 15, 20, 25, 30, 35, 40],
             "discrete": true
         },
@@ -179,17 +179,17 @@
         "N1_NO2_monthly": {
             "range": [0, 108],
             "cm": "Reds",
-            "label": "NO₂ [µmol/m²]"
+            "label": "NO2 [µmol/m²]"
         },
         "N1_NO2_diff_monthly": {
             "range": [-3, 3],
             "cm": "Reds",
-            "label": "NO₂ difference [10^15 molecules/cm²]"
+            "label": "NO2 difference [10^15 molecules/cm²]"
         },
         "N1_NO2_jaxa": {
             "range": [0, 360],
             "cm": ["#0000C8", "#0041FF", "#00C1FF", "#49FFAD", "#B1FF46", "#FFD000", "#FF5900", "#C40000", "#800000"],
-            "label": "NO₂ (µmol/m²)",
+            "label": "NO2 (µmol/m²)",
             "ticks": [0, 40, 80, 120, 160, 200, 240, 280, 320, 360],
             "discrete": true
         }
@@ -280,14 +280,6 @@
             "logarithmic": true,
             "ticks": [1, 10, 100, 1000, 10000]
         },
-        // "SOL1_Green_Roofs_grimpactscore": {
-        //     "range": [1, 6],
-        //     "cm": ["#32721a","#7cb820","#eeeb3c","#fead3c", "#f63f37"],
-        //     "label": "",
-        //     "ticks": [1, 2, 3, 4, 5],
-        //     "tickLabels": ["very low", "low", "medium", "high", "very high"],
-        //     "discrete": true
-        // },
         "SOL1_1_Green_Roofs_lst": {
             "range": [1, 11],
             "cm": ["#fef0d9","#fee0b6","#fed093","#fdb77a", "#fd9b64", "#f77e50", "#ec603f", "#de422d", "#c92116", "#b30000"],
@@ -296,22 +288,6 @@
             "tickLabels": [0, 34, 36, 37, 38, 39, 40, 40.5, 41, 42, 45],
             "discrete": true
         },
-        // "SOL1_2_Green_Roofs_grexisting": {
-        //     "range": [1, 3],
-        //     "cm": ["#686868","#2ea729"],
-        //     "label": "",
-        //     "ticks": [1.5, 2.5],
-        //     "tickLabels": ["not existing", "existing"],
-        //     "discrete": true
-        // },
-        // "SOL1_3_Green_Roofs_grpotential": {
-        //     "range": [1, 3],
-        //     "cm": ["#686868","#2ea729"],
-        //     "label": "",
-        //     "ticks": [1.5, 2.5],
-        //     "tickLabels": ["not suitable", "suitable"],
-        //     "discrete": true
-        // },
         "SOL1_4_Green_Roofs_grpotrelation": {
             "range": [1, 7],
             "cm": ["#d7191c","#f3854e", "#fee93f", "#eff9b1", "#aedd72", "#1a9641"],
@@ -353,14 +329,6 @@
             "cm": "viridis",
             "label": "[t/ha]"
         },
-        // "SOL2_1_Solar_Roofs_pv_existing": {
-        //     "range": [1, 3],
-        //     "cm": ["#686868","#c519f8"],
-        //     "label": "",
-        //     "ticks": [1.5, 2.5],
-        //     "tickLabels": ["not existing", "existing"],
-        //     "discrete": true
-        // },
         "SOL2_Solar_Roofs_high_performance": {
             "range": [1, 11],
             "cm": ["#f6f84c","#ffc843", "#ff9d49", "#f67758", "#df556c", "#c33684", "#9f1b9b", "#400f9c", "#28013B", "#040030"],
