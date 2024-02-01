@@ -369,5 +369,7 @@
             "cm": ["#0c2c84", "#1d91c0", "#7fcdbb", "#edf8b1", "#ffffd9", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
             "label": "[kWh/m²/day]"
         }
+    },
+    "polar": {
     }
 }
