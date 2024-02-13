@@ -371,5 +371,45 @@
         }
     },
     "polar": {
+        "TOPAZ5_SIAGE": {
+            "range": [0, 1800],
+            "cm": "viridis",
+            "label": "[days]"
+        },
+        "TOPAZ5_SICONC": {
+            "range": [0, 1],
+            "cm": "ice",
+            "label": ""
+        },
+        "TOPAZ5_SITHICK": {
+            "range": [0, 4],
+            "cm": "ice",
+            "label": "[m]"
+        },
+        "TOPAZ5_VXSI": {
+            "range": [-0.3, 0.3],
+            "cm": "delta",
+            "label": "[m/s]"
+        },
+        "TOPAZ5_VYSI": {
+            "range": [-0.3, 0.3],
+            "cm": "delta",
+            "label": "[m/s]"
+        },
+        "TOPAZ5_VXO": {
+            "range": [-0.3, 0.3],
+            "cm": "delta",
+            "label": "[m/s]"
+        },
+        "TOPAZ5_VYO": {
+            "range": [-0.3, 0.3],
+            "cm": "delta",
+            "label": "[m/s]"
+        },
+        "TOPAZ5_SISNTHICK": {
+            "range": [0, 1],
+            "cm": "ice",
+            "label": "[m]"
+        }
     }
 }
