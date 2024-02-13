@@ -377,7 +377,7 @@
             "label": "[days]"
         },
         "TOPAZ5_P1D_SICONC": {
-            "range": [0, 1],
+            "range": [0, 0.7],
             "cm": "ice",
             "label": "[fraction]"
         },
@@ -407,7 +407,7 @@
             "label": "[m/s]"
         },
         "TOPAZ5_P1D_SISNTHICK": {
-            "range": [0, 1],
+            "range": [0, 0.7],
             "cm": "ice",
             "label": "[m]"
         },
