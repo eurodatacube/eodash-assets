@@ -332,7 +332,7 @@
         "SOL2_Solar_Roofs_high_performance": {
             "range": [1, 11],
             "cm": ["#f6f84c","#ffc843", "#ff9d49", "#f67758", "#df556c", "#c33684", "#9f1b9b", "#400f9c", "#28013B", "#040030"],
-            "label": "[%]",
+            "label": "[MWh]",
             "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             "tickLabels": [0, 10, 15, 20, 25, 35, 75, 200, 500, 1400],
             "discrete": true
