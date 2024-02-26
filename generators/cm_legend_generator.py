@@ -32,7 +32,7 @@ def clear_folder(target_dir):
 
 
 with open(os.path.join(os.path.dirname(__file__), "legends.json"), "r") as fh:
-    data = json.load(fh)
+    data: dict = json.load(fh)
 # prepare a special legend cfastie (NDVI), as its not in matplotlib
 cfastie = np.load(os.path.join(os.path.dirname(__file__), "cfastie.npy"))
 cfastie_prepared = [
@@ -55,12 +55,18 @@ for colormap_name in dir(cmocean.cm):
         except ValueError:
             pass
 
-for instance in data:
+for instance, content in data.items():
     # clear_folder(f"/public/legends/{instance}")
-    content = data[instance]
-    for legendId in content:
+    for key, config in content.items():
+        if "/" in key:
+            # key needs to split to folder/legendId
+            legendId = key.rpartition("/")[2]
+            folder_name = key.rpartition("/")[0]
+            base_path = f"../collections/{folder_name}/"
+        else:
+            legendId = key
+            base_path = f"../collections/{legendId}/"
         # extract from config with defaults
-        config = content[legendId]
         zrange = config.get("range", [0, 1])
         colors = config.get("cm", "YlGn")
         label = config.get("label", "")
@@ -133,8 +139,7 @@ for instance in data:
         ax.remove()
         # save the legend
         # check if folder already present if not create
-        base_path = f"../collections/{legendId}/"
         if not os.path.exists(base_path):
             os.makedirs(base_path)
-        plt.savefig(f"{base_path}/cm_legend.png", bbox_inches="tight", dpi=200)
+        plt.savefig(f"{base_path}/{legendId}_legend.png", bbox_inches="tight", dpi=200)
         plt.close()
