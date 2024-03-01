@@ -1,35 +1,8 @@
-## Agricultural production
+## Agricultural production - productive area
 
-**Earth Observation** can provide timely information for monitoring border closures & transport restriction and changing food demand on agricultural activities related to food production. Satellite observations, such as from **Sentinel-2**, allow to map the cultivated fields and ongoing activities continuously throughout the harvesting period. 
+Earth Observation can provide timely information for monitoring border closures & transport restrictions and changing food demand on agricultural activities related to food production. 
+Satellite observations, such as from Sentinel-2, allow to map the cultivated fields and ongoing activities continuously throughout the harvesting period. 
 
-
-## The impacts of COVID-19 on Water Agricultural production in Europe
-
-Organizations like **[FAO](http://www.fao.org/home/en/)** and **[WFP](https://www.wfp.org/)** expressed their concerns that the COVID-19 outbreak might turn from a health crisis to a global food [crisis](http://www.fao.org/news/story/en/item/1272058/icode/).
-
-#### Impact of boarder closure on labour-intensive crops:
-#### Asparagus in Germany
-
-The lock-down due to the COVID19 outbreak severely restricted the movement of seasonal agricultural workers in Europe. The **[German Agricultural Ministry](https://www.bmel.de/)** was expecting in end of March a lack of 300.000 workers in the agricultural sector for the [crop season of 2020](https://www.politico.eu/article/coronavirus-agriculture-coronavirus-hit-countries-to-newly-unemployed-help-us-farm/ ). The harvesting of **asparagus** is a highly labour-intensive activity which risks to be significantly affected by the lack of seasonal workers which normally are arriving from Bulgaria and Romania to support the German farmers during the harvest period in March to June.
-
-##### ESA Video – Earth Observation monitoring border closure and asparagus harvesting
-
-<video controls>
-  <source src="https://dlmultimedia.esa.int/download/public/videos/2020/05/016/2005_016_AR_EN.mp4" width="100%" allowfullscreen></source>
-</video>
-
-[Access Video URL](https://dlmultimedia.esa.int/download/public/videos/2020/05/016/2005_016_AR_EN.mp4)
-
- Satellite observations, such as from **Sentinel-2**, allow to map the cultivated white asparagus fields and ongoing activities continuously throughout the harvesting period. For this purpose, the full German federal state of **Brandenburg** (29.500 sqkm) is monitored and compared to the 2019 season to assess the impact of COVID19 on the current asparagus production. The asparagus season started early in 2020 but as soon as the COVID19 lock-down started the cultivated area of asparagus fields was reduced significantly as can be seen in the 20-30% lower area in March and April. The reduced amount of fields cultivated will lead to a significant lower production of asparagus and related economic loss for German farmers - in 2019 Brandenburg produced about **[16% of the German asparagus harvest](https://agrarbericht.brandenburg.de/abo/de/start/produktion/gartenbau/)**.
-
-##### Sentinel-2 time series animation showing differences in 2019 and 2020
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10a1_agricultural_production_productive_area/Sentinel-2_L1C-timelapse-3.gif)
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10a1_agricultural_production_productive_area/Sentinel-2_L1C-timelapse-4.gif)
-
-##### BBC News on German farmer witnessing 50% harvest loss
-
-[Access Video URL](https://www.bbc.com/news/av/embed/p08dj8wy/52715288)
-
-<iframe src="https://www.bbc.com/news/av/embed/p08dj8wy/52715288" width="600" height="400" frameborder="0"></iframe>
+**Asparagus in Germany**
+Harvesting asparagus is a highly labour-intensive activity and involves seasonal workers who typically arrive from Bulgaria and Romania to support the German farmers during the harvest period from March to June.
+Sentinel-2 data allow an overview of the cultivated white asparagus fields and related activities.
