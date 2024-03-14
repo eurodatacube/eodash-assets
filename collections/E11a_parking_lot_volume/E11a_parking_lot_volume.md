@@ -1,6 +1,6 @@
 ## Warsaw Stadium Parking lot is empty in April as Poland has shut down due to Covid 19
 
-In Poland, the government declared lockdown restrictions in response to the pandemic in March - April 2020. In Warsaw, the capital city, a noticeable slowdown of activities has been observed. 
+In Poland, the government declared lockdown restrictions in response to the pandemic in March - April 2020. In Warsaw, the capital city, [a noticeable slowdown of activities has been observed](https://www.dw.com/en/coronavirus-threatens-polands-remarkable-growth-story/a-52939825). 
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E11a_parking_lot_volume/PL7-E11a-Fig1.png)
 
@@ -17,8 +17,3 @@ In Poland, the government declared lockdown restrictions in response to the pand
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E11a_parking_lot_volume/PL7-E11a-Fig2.png)
 
 *Fig.2. Sentinel-2 imagery of Disneyland Paris on 11 January and 16 April 2020*
-
-**Links and resources**
-
-https://www.dw.com/en/coronavirus-threatens-polands-remarkable-growth-story/a-52939825
-
