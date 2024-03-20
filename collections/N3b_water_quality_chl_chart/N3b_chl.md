@@ -34,7 +34,7 @@ On the indicator chart, for each day, the light/dark red chart background indica
 
 In accordance with the weekly mean anomaly maps of Chl concentration, the time series shows after the lockdown date (March, 11th) predominant presence of days recording good water quality (green dots) and, in particular, a total absence of red dots. After the post-lockdown date (May, 4th) regular and low water quality (i.e., presence of blue and red dots) are recorded. This observation actually matches with the reactivation of some socio-economic activities within the investigated area. These anomalously low values indicate a water with lower amounts of Chl, compared to what is usually observed at this time of the year. A more in-depth analysis showed that they result from the cumulated impact of a number of natural phenomena. In particular, low wind magnitudes (top plot of Figure 1) were recorded at the AAOT from 5th to 20th April, which, by preserving the vertical stratification of the water column, hindered upwelling of nutrient-rich waters that may enhance the growth of phytoplankton. Such hypothesis is confirmed by significant increase of SST (bottom plot of Figure 1), as measured by a multi-sensor product (including data from NOAA-18, MetOpA-B, Aqua, Terra, MSG1, NPP, Meteosat11, Sentinel 3A-B) at the AAOT  during that period.
 
-![](./eodash-data/stories/N3-Fig1.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality/N3-Fig1.png)
 
 *Figure 1: Chl-a concentration in the North Adriatic Sea during the Italian lockdown from OLCI (See Methods); the black line indicates the 2017–2019 climatologic values of Chl-a concentration; the grey shadow indicates the standard deviation; dots represent the weekly means of Chl-a concentration (green) below the climatologic value, (blue) above the climatologic value and below the standard deviation, (red) above the climatologic value and above the standard deviation; the red shaded area indicates the 2020 Italian lockdown.*
 
@@ -42,7 +42,7 @@ On top of this particular local conditions, water level data of Po River at Pont
 
 Finally, we cannot exclude **a mutual role of a decrease of human activities that enhanced the negative anomaly in Chl concentration** as highlighted by the low turbidity values in the Po river measured by Sentinel-2 in the lockdown phase (top panel of Figure 2)
 
-![](./eodash-data/stories/N3-Fig2.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality/N3-Fig2.png)
 
 *Figure 2: (Top) S2-derived turbidity maps in the last inland branch of the Po River March, 19th 2020 (beginning of lockdown) and April, 8th (middle of lockdown), (Bottom) Time series of the Po river water discharge at Pontelagoscuro station.*
 
