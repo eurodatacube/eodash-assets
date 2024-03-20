@@ -13,4 +13,5 @@ The core service is a snow water equivalent (SWE) product generated using a clou
 centers, associations and hydropower companies.
 
 **Developed with**
+
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/EO4A_Snowdepth/eo4alps_row.png)
