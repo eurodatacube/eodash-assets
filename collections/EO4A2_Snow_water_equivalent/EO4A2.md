@@ -12,5 +12,7 @@ It is taking advantage of the recent developments in physically-based snow model
 The core service is a snow water equivalent (SWE) product generated using a cloud based processing environment to be delivered over the entire Alpine arc region. The eo4alps team is planning to engage users from public and private sectors, such as public agencies, research
 centers, associations and hydropower companies.
 
-Developed with
+
+**Developed with**
+
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/EO4A_Snowdepth/eo4alps_row.png)
