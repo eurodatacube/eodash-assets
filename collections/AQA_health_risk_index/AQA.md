@@ -1,3 +1,7 @@
+#### HOW TO USE THIS TOOL
+Selecting the single LAU it is possible to visualize in the "ANALYSIS" box the respective time series of the ARI.
+
+#### WHY THIS DATA
 The Aggregate Risk Index (ARI) is an index that provides a measure of the health outcome-specific risk due to the short-term exposure to multiple air pollutants (PM10, PM2.5, NO2, SO2 and O3). It is derived by additively summing the product of pollutant concentration weighted using health outcome-specific Relative Risk factors of increased mortality due to all causes, provided by the World Health Organization. The values displayed on the platform represent the geographical mean values of the daily average for each Local Administrative Unit (LAU)
 
 Selecting the single LAU it is possible to visualize in the "ANALYSIS" box the respective time series of ARI.
@@ -41,3 +45,5 @@ More info about the ARI index can be found here:
 </tr></tbody></table>
 
 </div>
+
+
