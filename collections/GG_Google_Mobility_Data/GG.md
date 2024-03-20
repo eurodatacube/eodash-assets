@@ -4,8 +4,6 @@ This dataset is provided by Google LLC "Google COVID-19 Community Mobility Repor
 
 Source: [https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/) Accessed: 2021-04-01. Updated: daily
 
-On the indicator chart, for each day, the light/dark red chart background indicates whether there were **restrictions or lockdown** measure in place in the country where the city is located. This information is based on [Oxford University’s coronavirus government response tracker](https://covidtracker.bsg.ox.ac.uk/). 
-
 Each datasets shows the daily variation of visits and length of stay at different places compared to a baseline value - "the median value, for the corresponding day of the week, during the 5-week period Jan 3–Feb 6, 2020". Google makes the data available for download as CSV and presents the data as pdfs, one for each country (and art sub-national level for a number of countries). 
 
 Here the data is presented as interactive charts to make it easier to inspect changes at country levels, browse through time, and to relate the information with the local measures taken by the authorities.
