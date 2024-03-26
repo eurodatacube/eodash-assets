@@ -1,4 +1,4 @@
-## Agricultural production - active area percentage
+## Agricultural production - active area fraction
 
 
 This indicator illustrates the ratio:
