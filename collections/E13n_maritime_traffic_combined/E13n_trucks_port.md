@@ -12,9 +12,12 @@ The data used to compute this indicator are traffic changes extracted from mobil
 
 February 2019 has been considered as the reference period. Changes in traffic fluxes have been computed in sequence, following the diagram below, on the finest geographic granularity (regional for domestic data, national for international data). 
 
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13n_maritime_traffic_combined/E13n-fig1.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13n_trucks_port/E13n-fig1.png)
 *Diagram for the computation of commercial fluxes*
 
 **Spatial data aggregation**
 
 To obtain one value per month per flux type, data are geographically aggregated. Domestic data are computed averaging all regional data per period, while international data are computed averaging data at country level.
+
+### Visualising the lockdown measures effect on comercial fluxes:
+The light/dark red chart background indicates whether in the respective month there were restrictions/lockdown measures in place in the respective country. This information is based on [Oxford University’s coronavirus government response tracker](https://covidtracker.bsg.ox.ac.uk/).
