@@ -1,8 +1,9 @@
 ## Truck detections motorways
 
-This indicator aims at showing the economic performance of a country by detecting the amount of moving trucks on motorways in the EU by means of Sentinel-2 cloudless acquisitions between January 2020 and December 2021.  
-The detection method (developed by Henrik Fisser - Julius-Maximilians-University Würzburg, Germany) exploits a temporal sensing offset of the [Sentinel-2 multispectral instrument (MSI)](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument),
-causing spatially and spectrally distorted signatures of moving objects. 
+This indicator shows moving trucks on EU motorways detected in Sentinel-2 cloudless imagery between January 2020 and December 2021.  
+The detection method enables to detect trucks on a large scale using Sentinel-2 data and was developed in the context of the of the [ESA COVID-19 Custom Script Contest](https://www.esa.int/Applications/Observing_the_Earth/COVID-19_how_can_satellites_help) by Henrik Fisser - Julius-Maximilians-University Würzburg, Germany.
+
+The method exploits an effect related to the [Sentinel-2 Multispectral Instrument (MSI)](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument) geometry. Sentinel-2 does not see a moving truck once but three times in the red-blue-green wavelengths. As the truck keeps traveling during this short time offset, it appears spectrally disassembled. This pattern may be used for detecting roaming trucks on roads. Although visual inspection cannot confirm that the objects are trucks, this is implied by the ratio between size of different vehicles and a Sentinel-2 pixel (see validation for details). However, a confusion with moving vehicles of similar size such as buses may occur.
 
 In order to generally reduce false detections the computation is constrained to road data from [Open Street Maps (OSM)](https://wiki.openstreetmap.org/wiki/Key:highway).
 The blue dots in Fig. 1 are examples of identified trucks in these subsets.
