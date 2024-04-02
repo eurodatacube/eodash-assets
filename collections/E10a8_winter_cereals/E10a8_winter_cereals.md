@@ -4,4 +4,4 @@ This indicator aims at showing the winter cereals (e.g. winter wheat and barley)
 
 Time series of Sentinel-2 vegetation indices and Sentinel-1 backscatter and coherence values have been processed and analyzed using the open source Sen4CAP (and upcoming Sen4Stat) processing systems. 
 
-Parcels dataset have been kindly shared by the national Paying Agency “Fondo Español de Garantía Agraria O.A.” (FEGA).
+Parcels dataset have been kindly shared by the national Paying Agency “Fondo Español de Garantía Agraria O.A.” (FEGA) which also provided advices on the results interpretation along with the regional paying agency of Castilla y León.
