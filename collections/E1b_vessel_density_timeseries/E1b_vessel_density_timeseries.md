@@ -1,4 +1,4 @@
-## Vessel density time series
+## Ship Density Maps (Sentinel-1)
 
 This indicator shows ships detected in the major EU ports by means of Copernicus Sentinel-1 data. It was developed by Alessandro Cimbelli within the upscaling part of the [RACE Challenges 2021](https://eo4society.esa.int/2021/08/01/rapid-action-on-coronavirus-and-eo-race-dashboard-challenge-3/).
 
