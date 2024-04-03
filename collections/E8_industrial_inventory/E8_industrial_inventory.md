@@ -1,43 +1,8 @@
-## COVID-19 Lockdown effects on industrial inventory level
+## Automobile inventory time series
 
-This indicator aims at showing the effect of COVID-19 lockdown on inventory level at various industrial sites (such as motor vehicle plants) by means of Synthetic Aperture Radar satellites such as the C-band [Copernicus Sentinel-1](http://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1) or the X-band Iceye satellites.
+This indicator aims at showing inventory level at various motor vehicle production sites by means of Synthetic Aperture Radar satellites such as the C-band [Copernicus Sentinel-1](http://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1).
+The indicator shows a rolling mean of the SAR backscatter signal over the logistic areas. 
 
-### The impacts of COVID-19 lockdown restrictions at finished goods production sites
+The Sentinel-1 GRD IW time series are extracted for each AOI (area of interest), using same orbit for the whole time series. The HV cross-polarization is used as it is more sensitive to rough surfaces. 
+An average value is computed for the AOI at each observation date.
 
-To contain the COVID-19 pandemic, EU Member States have taken a number of restrictive measures that had in general a negative effect on demand and thus on industrial production in many areas [EUROSTAT](https://ec.europa.eu/eurostat/en/web/products-eurostat-news/-/DDN-20200612-2).
-In March 2020, industrial production in the EU fell by 10.9% compared with February 2020 and by 12.2% compared with March 2019. The fall continued in April 2020, when EU industrial production fell by 17.3% compared with March 2020 and by 27.2% compared with April 2019.
-
-Across the different industries, the largest decline in production in March and April 2020 was registered by **motor vehicles** (-33.5 % in March and -68.5 in April compared with the previous months), followed by manufacturing of leather products (-40.4% and -60.2%) and wearing apparel (-32.8% and -30.4%).
-
-![](https://ec.europa.eu/eurostat/documents/4187653/10321603/Industrial+production+growth+rate+March+April+2020/e303951e-76b2-24fc-aa3c-492fb683ff8f?t=1591969332125)
-*Figure 1. Industrial production growth rates by selected industries, EU; source: [EUROSTAT](https://ec.europa.eu/eurostat/documents/4187653/10321603/Industrial+production+growth+rate+March+April+2020/e303951e-76b2-24fc-aa3c-492fb683ff8f?t=1591969332125)*
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E8_industrial_inventory/E8-Fig6.png)
-
-*Figure 2. Passenger car sales in the European Union, 2010-2020 (February of each year); Covid 19 has a large impact on global automotive industry: from a supply shock when the virus started to spread across China, to a global demand shock now that it is spreading all around the world. The European Automobile Manufacturers’ Association (ACEA) forecasts a drop in passenger car registrations in the European Union, falling from 12.8 million last year to just 9.6 million units in 2020.*
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E8_industrial_inventory/Fig3-E8.png)
-*Figure 4. SAR backscatter variation in 2019 and 2020 at the Dacia Mioveni car manufacturing plant. Organge box indicates lockdown period when production was stopped to contain the spread of the COVID-19. As the production resumed, an increase in the SAR backscatter signal can be observed.*
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E8_industrial_inventory/E8-Fig5.png)
-
-*Figure 5. Employee parking empty due and Produced car parking area full to lockdown in VW Barcelona plant, Barcelona, Spain, 27th march, 2020*
-
-#### Industrial production in the Member States
-
-Eurostat reports that in March compared with February 2020 the largest decreases were recorded in Italy (-28.4%), Slovakia (-20.3%) and Luxembourg (-19.8%). In March, industrial production still increased in four Member States, in Ireland (15.3%), Finland (2.2%), Greece (1.9%) and Lithuania (1.7%). In April compared with March 2020 the industrial production fell in all Member States, with the largest decreases in Hungary (-30.5%), Romania (-27.7%) and Slovakia (-26.7%). The industries with the highest declines in production in March and April (manufacturing of motor vehicles, leather products, wearing apparel, textiles and furniture) also saw exceptionally high growth rates, due to the extremely low levels that the production of these products had reached in April 2020 (base effect).  [source: EUROSTAT](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Impact_of_Covid-19_crisis_on_industrial_production#Development_by_industry)
-
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E8_industrial_inventory/Fig4-E8.png)
-
-*Figure 6. EU-27 growth rates for different industries; source: [EUROSTAT](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Impact_of_Covid-19_crisis_on_industrial_production#Development_by_industry)*
-
-
-On the indicator chart, for each day, the light/dark red chart background indicates whether there were **restrictions or lockdown** measure in place in the country where the city is located. This information is based on [Oxford University’s coronavirus government response tracker](https://covidtracker.bsg.ox.ac.uk/). 
-
-
-Read more: 
-###
-- [EUROSTAT Volume of retail trade 5 November 2020](https://ec.europa.eu/eurostat/documents/2995521/11492432/4-05112020-AP-EN.pdf/d52662ba-b163-2c48-90ab-67e6e6ba2d19)
-- [COVID-19 and the automotive industry](https://www.ilo.org/wcmsp5/groups/public/---ed_dialogue/---sector/documents/briefingnote/wcms_741343.pdf)
-- [Coronavirus: EU auto industry faces unprecedented crisis](https://www.acea.be/press-releases/article/coronavirus-eu-auto-industry-faces-unprecedented-crisis)
-- [How will Europe’s automotive industry recover from COVID-19?](https://www.automotiveworld.com/articles/how-will-europes-automotive-industry-recover-from-covid-19/)
