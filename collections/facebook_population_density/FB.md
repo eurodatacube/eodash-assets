@@ -6,7 +6,7 @@ The high-resolution maps estimate the number of people living within 30-meter gr
 
 Darker areas indicate higher population density areas and lighter areas indicate lower population density areas.
 
-![](FB-Fig1.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/facebook_population_density/FB-Fig1.png)
 
 
 Read more about the methodology employed to create these maps on the [Data for Good Website](https://dataforgood.fb.com/docs/methodology-high-resolution-population-density-maps-demographic-estimates/)
