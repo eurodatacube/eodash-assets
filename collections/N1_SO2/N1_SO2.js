@@ -3,7 +3,7 @@ function setup() {
   return {
     input: [{
       bands: [
-        "co",
+        "so2",
         "dataMask"
       ]
     }],
@@ -23,10 +23,10 @@ function setup() {
 function evaluatePixel(samples) {
   let validValue = 1
   // data sanitation
-  if (samples.co >= 1e20) {
+  if (samples.so2 >= 1e20) {
     validValue = 0
   }
-  let index = samples.co;
+  let index = samples.so2;
   return {
     data: [index],
     dataMask: [samples.dataMask * validValue]

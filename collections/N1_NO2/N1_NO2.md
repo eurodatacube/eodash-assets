@@ -5,15 +5,6 @@ Earth observing satellites like the **TROPOMI** instrument on the [Copernicus Se
 
 ![NO2 concentration measurements over Europe](https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2020/04/nitrogen_dioxide_concentrations_over_europe/21956023-2-eng-GB/Nitrogen_dioxide_concentrations_over_Europe_pillars.jpg)
 
-**Read more on [ESA.int](https://www.esa.int/):**
-
-•	[Air pollution remains low as Europeans stay at home](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P/Air_pollution_remains_low_as_Europeans_stay_at_home)
-
-•	[Coronavirus nitrogen dioxide emissions drop over Italy](https://www.esa.int/ESA_Multimedia/Videos/2020/03/Coronavirus_nitrogen_dioxide_emissions_drop_over_Italy)
-
-•	[S5p-PAL](https://maps.s5p-pal.com/)
-
-
 ## The impacts of COVID-19 pandemic on air quality
 The coronavirus (COVID-19) has been spreading rapidly across the world and has been declared a global pandemic by the [World Health Organisation](https://www.who.int/). In order to curb the spread of the COVID-19 outbreak, countries across the world have been implementing various social distancing measures restricting people’s movements by placing cities and even entire countries on lockdown. A **significant drop in nitrogen dioxide (NO2) concentrations** happened worldwide coinciding with the strict quarantine measures which cause less emissions due to reduced traffic and industrial activities.
 
