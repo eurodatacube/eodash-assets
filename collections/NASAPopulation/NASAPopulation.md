@@ -7,4 +7,3 @@ Gridded Population of the World, Version 4 (GPWv4): Population Density Adjusted 
 Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC). https://doi.org/10.7927/H4F47M65. 
 
 Accessed 2021-03-01
-
