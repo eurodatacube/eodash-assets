@@ -11,4 +11,4 @@ The project developed a simple space-time data cube design (referred to as StatC
 * Algorithm: https://github.com/gisat/s14amazonas
 * ESA webstory: https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Using_a_data_cube_to_monitor_forest_loss_in_the_Amazon
 
-![image](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/sen4ama/sen4ama_1.png)
+![image](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/MCD_S14Amazonas_detections/MCD_S14Amazonas_detections_1.png)
