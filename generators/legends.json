@@ -446,5 +446,17 @@
             "cm": "ice",
             "label": "[m]"
         }
+    },
+    "ideas": {
+        "IDEAS1_hopi": {
+            "range": [0, 0.15],
+            "cm": "hot_r",
+            "label": ""
+        },
+        "IDEAS3_locust": {
+            "range": [0.7, 1],
+            "cm": "hot_r",
+            "label": ""
+        }
     }
 }
