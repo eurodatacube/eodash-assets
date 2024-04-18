@@ -469,7 +469,7 @@
             "label": "[days]"
         },
         "IDEAS1_hopi_b5": {
-            "range": [-10, 40],
+            "range": [10, 30],
             "cm": "hot_r",
             "label": "[°C]"
         },
