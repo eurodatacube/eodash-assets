@@ -3,9 +3,7 @@
 
 Author: Enveo IT, Fürstenweg 176, 6020 Innsbruck, Austria
 
-Processing date: 2022-06-09 
-
-This dataset illustrates the Melt Season Duration. It refers to the first time that there are three consecutive days of melt in a year, thereby indicating the beginning of the snowmelt season. The product was generated based on melt maps (indicating presence of liquid water) from 2007 until 2021 derived from the ASCAT Enhanced Resolution Scatterometer Image Reconstruction (SIR) product [1]. The meltmaps (such as the one for 2021 depicted below) are also available on this Dashboard.
+This dataset illustrates the Melt Season Duration. It refers to the first time that there are three consecutive days of melt in a year, thereby indicating the beginning of the snowmelt season. The product was generated based on melt maps (indicating presence of liquid water) from 2007 until 2021 derived from the ASCAT Enhanced Resolution Scatterometer Image Reconstruction (SIR) product [1]. The meltmaps are also available on this Dashboard.
 
     
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/ADD_Meltmap/ASCAT_AA_meltmap_2021.gif)
@@ -25,7 +23,7 @@ All products are provided in GeoTiff format at a grid spacing of 4.45 km x 4.45 
 Lindsley, R. D. and Long, D. G. 2010. Standard BYU ASCAT land/ice image products. Microwave Earth Remote Sensing Laboratory, 3.
 
 ### Data Access:
-ESA Open Science Data Catalogue https://opensciencedata.esa.int/projects/4d-antarctica 
+ESA Open Science Data Catalogue https://opensciencedata.esa.int/projects/4d-Antarctica/collection 
 
 ### 4D Antarctica Project Page
 

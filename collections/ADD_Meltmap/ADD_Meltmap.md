@@ -47,7 +47,7 @@ All products are provided in GeoTiff format at a grid spacing of 4.45 km x 4.45 
 Lindsley, R. D. and Long, D. G. 2010. Standard BYU ASCAT land/ice image products. Microwave Earth Remote Sensing Laboratory, 3.
 
 ### Data Access:
-ESA Open Science Data Catalogue https://opensciencedata.esa.int/projects/4d-antarctica 
+ESA Open Science Data Catalogue https://opensciencedata.esa.int/projects/4d-Antarctica/collection 
 
 ### 4D Antarctica Project Page
 https://4d-antarctica.org/ 
