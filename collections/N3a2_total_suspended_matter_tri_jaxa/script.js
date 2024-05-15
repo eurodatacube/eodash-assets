@@ -3,7 +3,7 @@ function setup() {
   return {
     input: [{
       bands: [
-        "tsmnn",
+        "tsm",
         "dataMask"
       ]
     }],
@@ -23,7 +23,7 @@ function setup() {
 function evaluatePixel(samples) {
   let validValue = 1
   // data sanitation
-  if (samples.tsmnn >= 2e3) {
+  if (samples.tsm >= 2e3) {
     validValue = 0
   }
   let index = samples.tsm;

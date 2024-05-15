@@ -3,7 +3,7 @@ function setup() {
   return {
     input: [{
       bands: [
-        "chl",
+        "chla",
         "dataMask"
       ]
     }],
@@ -23,7 +23,7 @@ function setup() {
 function evaluatePixel(samples) {
   let validValue = 1
   // data sanitation
-  if (samples.chl >= 2e3) {
+  if (samples.chla >= 2e3) {
     validValue = 0
   }
   let index = samples.chla;
