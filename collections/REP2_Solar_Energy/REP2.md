@@ -1,5 +1,5 @@
 #### TIPS ON USING THIS TOOL
-Use this tool to explore site suitability to create new solar farms. You can filter the global horizontal irradiation information depending on topography (elevation, slope and aspect),  distances to the energy grid, presence of protected areas. 
+Use this tool to explore site suitability to create new solar farms. You can constrain the global horizontal irradiation information depending on topography (elevation, slope and aspect),  distances to the energy grid, presence of protected areas, and albedo proxy. 
 
 
 #### WHY THIS DATA
@@ -13,5 +13,6 @@ Use this tool to explore site suitability to create new solar farms. You can fil
 
 *Protected areas* - Solar power facilities are not typically proposed in conservation areas such as Natura 2000 sites and nationally designated areas.
 
+*Albedo Proxy* - Solar energy reflected from the surface can be used by bifacial solar panels (with a rear-facing side). Increase the lower range to select areas with higher possible increase in usable energy for a bifacial system.
 **Developed with**  
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-logos/dhi_row.png)
