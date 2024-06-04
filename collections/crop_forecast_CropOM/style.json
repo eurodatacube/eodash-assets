@@ -35,6 +35,7 @@
         },
         "vminmax": {
           "title": "Value range",
+          "description": "Units: Water need [mm]; Yield [t/ha]",
           "type": "object",
           "properties": {
             "vmin": {
