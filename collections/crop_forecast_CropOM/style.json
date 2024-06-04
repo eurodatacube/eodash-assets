@@ -4,7 +4,16 @@
       "title": "Data configuration",
       "properties": {
         "parameter": {
-          "title": "Dataset",
+          "title": "Parameter",
+          "type": "string",
+          "enum": [
+              "yield",
+              "water_need"
+          ],
+          "default": "yield"
+        },
+        "crop": {
+          "title": "Crop",
           "type": "string",
           "enum": [
               "Maize",
@@ -25,19 +34,20 @@
           "default": "average"
         },
         "vminmax": {
+          "title": "Value range",
           "type": "object",
           "properties": {
             "vmin": {
               "type": "number",
               "minimum": 0,
-              "maximum": 10,
+              "maximum": 600,
               "format": "range",
               "default": 0
             },
             "vmax": {
               "type": "number",
               "minimum": 0,
-              "maximum": 10,
+              "maximum": 600,
               "format": "range",
               "default": 10
             }
@@ -49,13 +59,14 @@
   "variables": {
       "vmin": 1,
       "vmax": 10,
-      "parameter": "Maize",
-      "vstat": "average"
+      "crop": "Maize",
+      "vstat": "average",
+      "parameter": "yield"
   },
   "fill-color": [
       "interpolate",
       [ "linear" ],
-      [ "/", [ "-", ["get", "yield", ["var", "parameter"], ["var", "vstat"]], ["var", "vmin"]], ["var", "vmax"] ],
+      [ "/", [ "-", ["get", ["var", "parameter"], ["var", "crop"], ["var", "vstat"]], ["var", "vmin"]], ["var", "vmax"] ],
       0,
       [68,1, 84, 1],
       0.06666666666666667,
