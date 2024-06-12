@@ -1,25 +1,25 @@
 {
     "esa": {
         "N3c_ocean_colour_plankton_atlantic": {
-            "range": [0.03, 30],
+            "range": [0.03, 50],
             "cm": "rainbow",
             "label": "ChL-a concentration [mg/m³]",
             "logarithmic": true,
-            "ticks": [0.03, 0.2, 1, 5, 30]
+            "ticks": [0.03, 0.2, 1, 5, 50]
         },
         "N3c_ocean_colour_plankton_black_sea": {
-            "range": [0.03, 30],
+            "range": [0.03, 50],
             "cm": "rainbow",
             "label": "ChL-a concentration [mg/m³]",
             "logarithmic": true,
-            "ticks": [0.03, 0.2, 1, 5, 30]
+            "ticks": [0.03, 0.2, 1, 5, 50]
         },
         "N3c_ocean_colour_plankton_mediterranean": {
-            "range": [0.03, 30],
+            "range": [0.03, 50],
             "cm": "rainbow",
             "label": "ChL-a concentration [mg/m³]",
             "logarithmic": true,
-            "ticks": [0.03, 0.2, 1, 5, 30]
+            "ticks": [0.03, 0.2, 1, 5, 50]
         },
         "N1_NO2": {
             "range": [0, 180],
