@@ -3,12 +3,6 @@
     "type": "object",
     "title": "Data configuration",
     "properties": {
-      "parameter": {
-        "title": "Parameter",
-        "type": "string",
-        "enum": ["yield", "water_need"],
-        "default": "yield"
-      },
       "crop": {
         "title": "Crop",
         "type": "string",
