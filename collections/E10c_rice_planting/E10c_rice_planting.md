@@ -1,20 +1,29 @@
 ## Early Rice Planting in Sacramento, California, USA
 
-Indicator provided by: [JAXA](https://global.jaxa.jp/) based on data observed by [JAXA](https://global.jaxa.jp/), [NASA](https://www.nasa.gov/)/[USGS](https://www.usgs.gov/), and [ESA](https://esa.int/)
 
-2021/08/18: Update. Added observation results until June in 2021 captured by GCOM-C, Sentinel-2, Landsat-8 and ALOS-2.
+This indicator aims at assessing the state of rice cultivation near Sacramento (California, USA) by means of satellite imagery obtained from:
+###
+- [JAXA](https://global.jaxa.jp/) ALOS-2 PALSAR-2 and GCOM-C 
+- [ESA](https://esa.int/) Sentinel-2 
+- [NASA](https://www.nasa.gov/)/[USGS](https://www.usgs.gov/) Landsat-8 
 
-2021/01/05: Update. Added observation results until harvest season in 2020 captured by GCOM-C, Sentinel-2, Landsat-8 and ALOS-2.
 
 ### Overview
 
-Satellite imagery observed by ALOS-2 PALSAR-2 and GCOM-C operated by JAXA, Sentinel-2 by ESA, and Landsat-8 by NASA/USGS were used to assess the state of rice cultivation near Sacramento, California, USA. These observations show that the rice planting, heading and harvesting in 2020 began earlier than the past two years in many regions, and rice planting area was larger than in 2019. 
 
-As for the timing of planting, effect of weather conditions is one reason. In addition, there is a possibility that high rice price caused by the COVID-19 related concerns over global rice supply through potential increases in demand, threats of export restrictions, and shortage of labor.
+The satellite-based observations show that the rice planting, heading and harvesting in 2020 began earlier than the past two years in many regions, and rice planting area was larger than in 2019. 
+As for the timing of planting, effect of weather conditions is one reason.
+In addition, there is a possibility that high rice price caused by the COVID-19 related concerns over global rice supply through potential increases in demand,
+threats of export restrictions, and shortage of labor.
+
 
 ### Observation and Analysis Results
 
-Global food supply in the best conditions is becoming a major challenge. COVID-19 has strained the food supply and demand balance by disrupting food supply chain systems, such as labor, logistics, trade/domestic policies, and market anxiety. In the case of rice production, COVID-19 contributed to concerns over global supply through potential increases in demand, threats of export restrictions, and farm labor concerns. These and other factors resulted in a reported high rice price and increase in global rice production. 
+
+Global food supply in the best conditions is becoming a major challenge.
+COVID-19 has strained the food supply and demand balance by disrupting food supply chain systems, such as labor, logistics, trade/domestic policies, and market anxiety.
+In the case of rice production, COVID-19 contributed to concerns over global supply through potential increases in demand, threats of export restrictions, and farm labor concerns.
+These and other factors resulted in a reported high rice price and increase in global rice production. 
 
 For decades, satellite monitoring for global food supply has provided critical, independent, and objective indicators of major commodity supplies, and it has been continued during the COVID-19 pandemic. Satellite imagery is able to confirm planting progress in key rice producing areas. Satellite imagery are used to assess the state of planting near Sacramento, California, USA, using ALOS-2 PALSAR-2 and GCOM-C operated by JAXA, Sentinel-2 by ESA, and Landsat-8 by NASA/USGS. These satellites can capture rice phenology, when rice is planted, mature and harvested, through the observation of land surface conditions such as water inundation for planting and leaf area after emergence.
 
@@ -33,9 +42,12 @@ In addition, Rice planting area around Sacramento was estimated by machine learn
 
 *Figure 1. Study Area (Colusa, Glenn, and Yolo counties in CA, USA). Background image is Normalized Difference Vegetation Index (NDVI)  generated from the data observed by GCOM-C SGLI during March 5-12 2020.* 
 
+
+
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10c_rice_planting/US07-E10c-Fig2.png)
 
 *Figure 2. Comparison result of observation image around Sacramento captured by ALOS-2 PALSAR on May 29, 2019 and May 28, 2020. Red color shows the paddy fields which have already been planted at the end of May only in 2020. Many fields indicated in red imply the advance of rice planting in 2020. *
+
 
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10c_rice_planting/US07-E10c-Fig3a.png)
@@ -52,6 +64,8 @@ In addition, Rice planting area around Sacramento was estimated by machine learn
 
 *Figure 3. Time-series changes of NDVI observed by GCOM-C SGLI in paddy fields of Colusa, Glenn, and Yolo counties.*
 
+
+
 Yellow lines (2020) increase earlier than red (2019) or blue (2018), which indicates that the timing of planting in 2020 was the earliest of the three years (2020, 2019, 2018). Similarly, the yellow lines decrease earlier, which means that the timing of harvest was also earlier than usual. Horizontal axis shows “Day of Year” (“1” means January 1st and “365” means December 31st).  
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10c_rice_planting/US07-E10c-Fig4a.png)
@@ -62,7 +76,11 @@ Yellow lines (2020) increase earlier than red (2019) or blue (2018), which indic
 
 *b) Landsat-8*
 
+
+
 *Figure 4. Time-series changes of Vegetation Index observed by Sentinel-2 and Landsat-8 at a specific point (N 39.48284, W122.06556) in Glenn county, CA USA.*
+
+
 
 The timing of rice planting, growing and harvesting in 2020 was the earliest among last six years observed by Sentinel-2 and last eight years observed by Landsat-8, respectively. Horizontal axis shows “Day of Year” (“1” means January 1st and “365” means December 31st).  
 
@@ -70,9 +88,15 @@ The timing of rice planting, growing and harvesting in 2020 was the earliest amo
 
 *Figure 5: Estimated result of rice planting area around Sacramento in 2019 and 2020 by using ALOS-2 (Radar) and Sentinel-2 (Optical) data*
 
+
+
 The White parts indicate areas of rice planting in both 2019 and 2020. The red parts indicate areas of rice planting only in 2020, and the blue parts indicate areas of rice planting only in 2019. Because the red area is larger than the blue area, the rice harvest in 2020 is expected to be higher than in 2019.
 
+
+
 ## New results until June in 2021 captured by GCOM-C, Sentinel-2, Landsat-8 and ALOS-2
+
+
 
 Same as 2020, satellite imagery observed by ALOS-2 PALSAR-2 and GCOM-C operated by JAXA, Sentinel-2 by ESA, and Landsat-8 by NASA/USGS were also used to monitor rice planting conditions around Sacramento, California, USA in 2021. Especially, the year 2021 is expected to be one of the hottest years on record and precipitation and snowfall are far below average. According to the [“U.S. Drought Monitor”](https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?West) published by the National Oceanic and Atmospheric Administration and other organizations, the drought intensity is D3 (Extreme Drought) or D4 (Exceptional Drought) on large areas of California, and these are the most serious of the five stages (as of July 2021). Due to the drought, more than 1,500 dams and reservoirs in California had less than 50% water volume compared to the average year.
 
@@ -83,6 +107,8 @@ Comparison result of ALOS-2 (Synthetic Aperture Radar) satellite data at the end
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E10c_rice_planting/E10c-Fig6.png)
 
 *Figure 6: Comparison result of paddy fields filled with water around Sacramento analyzed by ALOS-2 satellite data on May 28, 2020 and May 27, 2021.*
+
+
 
 As of the end of May, the paddy fields filled with water only in 2021 are shown as blue color and the paddy fields filled with water only in 2020 are shown as red color. Many fields are shown in red, which implies that the paddy field filled with water in 2021 drastically　decreased from 2020 due to the shortage of water supplies.
 
@@ -119,3 +145,9 @@ Looking at the time-series changes over last seven years observed by Sentinel-2 
 
 
 Horizontal axis shows "Day of Year" ("1" means January 1st and "365" means December 31st).
+
+
+### Data updates
+###
+- 2021/08/18: added observation results until June in 2021 captured by GCOM-C, Sentinel-2, Landsat-8 and ALOS-2.
+- 2021/01/05: added observation results until harvest season in 2020 captured by GCOM-C, Sentinel-2, Landsat-8 and ALOS-2.
