@@ -17,7 +17,7 @@
       },
       "vminmax": {
         "title": "Value range",
-        "description": "Units: Water need [mm]",
+        "description": "Water need [mm]",
         "type": "object",
         "properties": {
           "vmin": {
