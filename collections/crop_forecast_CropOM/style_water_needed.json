@@ -60,7 +60,7 @@
         "/",
         [
           "-",
-          ["get", "yield", ["var", "crop"], ["var", "vstat"]],
+          ["get", "water_need", ["var", "crop"], ["var", "vstat"]],
           ["var", "vmin"]
         ],
         ["var", "vmax"]

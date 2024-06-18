@@ -23,14 +23,14 @@
           "vmin": {
             "type": "number",
             "minimum": 0,
-            "maximum": 100,
+            "maximum": 50,
             "format": "range",
             "default": 2
           },
           "vmax": {
             "type": "number",
             "minimum": 0,
-            "maximum": 100,
+            "maximum": 50,
             "format": "range",
             "default": 20
           }
