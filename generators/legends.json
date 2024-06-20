@@ -192,6 +192,11 @@
             "label": "NO2 (µmol/m²)",
             "ticks": [0, 40, 80, 120, 160, 200, 240, 280, 320, 360],
             "discrete": true
+        },
+        "ESDL_Hydrology_SM": {
+            "range": [0, 1],
+            "cm": "plasma_r",
+            "label": "[% relative saturation]"
         }
     },
     "gtif": {
