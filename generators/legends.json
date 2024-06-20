@@ -199,7 +199,7 @@
             "label": "[% relative saturation]"
         },
         "ESDL_Hydrology_Precipitation": {
-            "range": [0, 100],
+            "range": [0, 50],
             "cm": "viridis",
             "label": "[mm/day]"
         }
