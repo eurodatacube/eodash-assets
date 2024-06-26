@@ -1,7 +1,5 @@
 ## Examples of COVID-19 impact on Air Quality - NO2
 
-prepared by [ESA](https://www.esa.int)/ [NASA](https://www.nasa.gov)
-
 In an effort to mitigate the spread of the novel coronavirus, government and public health officials have enacted various social distancing practices and other measures to limit human contact, at times placing entire countries on lockdown.
 As human behavior has changed during the pandemic, ongoing measurements from Earth observing instruments have detected concurrent changes in environmental factors, such as a drop in the air pollutant nitrogen dioxide (NO2). 
 
@@ -36,3 +34,6 @@ Similarly, as stay-at-home and other lockdown restrictions begin to ease, OMI an
 
 *[The mean column density of nitrogen dioxide (NO2) over China as measured by the OMI satellite in 2020 (red line) and the average from 2015-2019 (blue lines). Time is measured in days before and after the Lunar New Year began. (In 2020, it started on Jan.25) ](https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china) Image Credit: NASA Earth Observatory*
 
+
+## Additional information
+- prepared by [ESA](https://www.esa.int)/ [NASA](https://www.nasa.gov)
