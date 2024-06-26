@@ -202,6 +202,13 @@
             "range": [0, 50],
             "cm": "viridis",
             "label": "[mm/day]"
+        },
+        "crop_forecast_CropOM": {
+            "range": [0, 1],
+            "cm": "viridis",
+            "ticks": [0, 1],
+            "label": "",
+            "tickLabels": ["min","max"]
         }
     },
     "gtif": {
