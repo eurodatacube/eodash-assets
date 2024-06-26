@@ -16,7 +16,7 @@
         "default": "average"
       },
       "vminmax": {
-        "title": "Value range",
+        "title": "Dynamic range",
         "description": "Yield [t/ha]",
         "type": "object",
         "properties": {

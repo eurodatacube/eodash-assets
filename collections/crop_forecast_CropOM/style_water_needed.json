@@ -16,7 +16,7 @@
         "default": "average"
       },
       "vminmax": {
-        "title": "Value range",
+        "title": "Dynamic range",
         "description": "Water need [mm]",
         "type": "object",
         "properties": {
