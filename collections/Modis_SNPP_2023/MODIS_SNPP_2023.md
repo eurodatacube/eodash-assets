@@ -1,0 +1,1 @@
+# MODIS burned area detections
