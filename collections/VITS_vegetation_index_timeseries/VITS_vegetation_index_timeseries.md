@@ -6,11 +6,8 @@ This agrometeorological information is obtained from satellite observations (e.g
 
 The vegetation index (NDVI) is an index that uses the sunlight reflection characteristics of plants to indicate the amount and activity of green leaves in plants. 
 
-## Access datasets
 
-Visit the JASMAI website for more details about the calculation methods and to access additional data: https://jasmai.maff.go.jp/user_guide/#item_2_7 
-
-### References
+### Additional information
 
 * Vegetation Index (NDVI): Ministry of Agriculture, Forestry and Fisheries "Agricultural Meteorological Information Satellite Monitoring System"
 (Created by processing JAXA's "Natural Vegetation Index (NDVI) Product")
