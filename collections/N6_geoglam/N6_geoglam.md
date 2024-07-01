@@ -1,15 +1,16 @@
 ## World, Crop Condition
 
+Measures to slow the spread of COVID-19 are affecting the food supply chain in many ways, including the availability of inputs, labor, transport, and cross-border trade.
+The [Group on Earth Observation’s Global Agricultural Monitoring Initiative (GEOGLAM) Global Crop Monitor](https://cropmonitor.org/) uses remote sensing data like global precipitation and soil moisture measurements to help reduce uncertainty, promote market transparency, and provide early warning for crop failures through multi-agency collaboration. During the pandemic, this tool – developed in conjunction with NASA’s food and agriculture program ([NASA Harvest](https://nasaharvest.org/)), ESA and JAXA – is increasingly used in lieu of on-the-ground validation of crop conditions.
+
+Data from the GEOGLAM Crop Monitor inform two different agricultural tools that have helped lessen global concerns over food security during the novel coronavirus pandemic: the Agricultural Market Information System (AMIS) and the Crop Monitor for Early Warning (CM4EW). AMIS provides agricultural information based on remote sensing observations for the major producing nations of four primary crops – wheat, maize, rice, and soybeans. CM4EW provides agricultural data for countries at higher risk of food insecurity.
+
+
+
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N6_geoglam/N6-Fig-1.png)
 
 
 *Global crop conditions as of July 28, 2020. Blue and green colors indicate exceptional and favorable crop conditions, while red and burgundy indicate poor crop conditions and crop failure. Yellow areas are currently under watch for potential negative impacts on crops. Image Credit: GEOGLAM Crop Monitor*
-
-### Examples of COVID-19 impact on Global Food Supplies
-
-Measures to slow the spread of COVID-19 are affecting the food supply chain in many ways, including the availability of inputs, labor, transport, and cross-border trade. The [Group on Earth Observation’s Global Agricultural Monitoring Initiative (GEOGLAM) Global Crop Monitor](https://cropmonitor.org/) uses remote sensing data like global precipitation and soil moisture measurements to help reduce uncertainty, promote market transparency, and provide early warning for crop failures through multi-agency collaboration. During the pandemic, this tool – developed in conjunction with NASA’s food and agriculture program ([NASA Harvest](https://nasaharvest.org/)), ESA and JAXA – is increasingly used in lieu of on-the-ground validation of crop conditions.
-
-Data from the GEOGLAM Crop Monitor inform two different agricultural tools that have helped lessen global concerns over food security during the novel coronavirus pandemic: the Agricultural Market Information System (AMIS) and the Crop Monitor for Early Warning (CM4EW). AMIS provides agricultural information based on remote sensing observations for the major producing nations of four primary crops – wheat, maize, rice, and soybeans. CM4EW provides agricultural data for countries at higher risk of food insecurity.
 
 
 #### Major Producing and Exporting Countries

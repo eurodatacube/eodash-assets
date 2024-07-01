@@ -21,6 +21,7 @@ The Advanced Rapid Imaging and Analysis (ARIA) team at NASA's Jet Propulsion Lab
 
 “We’ve developed a new algorithm to detect and monitor changes in human activity in response to virus-related social restrictions, and the research is building upon methods we’ve used to detect damaged areas after an earthquake or tropical cyclone,” said Sang-Ho Yun, principal investigator of the research at JPL.
 
+
 ### Interpreting the Data
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N7_slowdown_proxy/N7-Fig-2.png)
@@ -31,18 +32,20 @@ These maps show significant changes in the number of cars in the parking lots of
 
 Although changes in activity in parking lots are prominent in the maps, SAR measurements also pick up other changes in human activities, such as construction activity and the movement of shipping containers.
 
+
 #### Credit
 
 ARIA at NASA-JPL/Caltech
 
 EOS at Nanyang Technological University
 
+
 #### Additional Resources
 
-[What is Synthetic Aperture Radar?](https://earthdata.nasa.gov/learn/what-is-sar)
+- [What is Synthetic Aperture Radar?](https://earthdata.nasa.gov/learn/what-is-sar)
 
-[Disasters program area of NASA's Earth Science Applied Sciences Program](https://appliedsciences.nasa.gov/what-we-do/disasters)
+- [Disasters program area of NASA's Earth Science Applied Sciences Program](https://appliedsciences.nasa.gov/what-we-do/disasters)
 
-[European Space Agency - Earth Observation Applications](https://www.esa.int/Applications/Observing_the_Earth)
+- [European Space Agency - Earth Observation Applications](https://www.esa.int/Applications/Observing_the_Earth)
 
-[Disaster monitoring with Earth Observation Satellites](https://www.esa.int/ESA_Multimedia/Keywords/Description/Disasters/(result_type)/videos)
+- [Disaster monitoring with Earth Observation Satellites](https://www.esa.int/ESA_Multimedia/Keywords/Description/Disasters/(result_type)/videos)

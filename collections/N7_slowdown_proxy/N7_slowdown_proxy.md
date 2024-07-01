@@ -15,6 +15,7 @@ Preliminary findings in the Slowdown Proxy Maps for the Los Angeles area, for ex
 
 The Recovery Proxy Maps track when and where activity begins to increase as COVID-19 restrictions ease. 
 
+
 ### Scientific Research
 
 The Advanced Rapid Imaging and Analysis (ARIA) team at NASA's Jet Propulsion Laboratory in Pasadena, California, in collaboration with the Earth Observatory of Singapore (EOS), is leading this research using innovative methods and high-performance computing. The team is using SAR data from the Copernicus Sentinel-1 mission, operated by the European Space Agency (ESA), and the ALOS-2 mission, operated by the Japan Aerospace Exploration Agency (JAXA). SAR instruments are able to penetrate cloud cover and work in both day and night conditions.
@@ -31,18 +32,20 @@ These maps show significant changes in the number of cars in the parking lots of
 
 Although changes in activity in parking lots are prominent in the maps, SAR measurements also pick up other changes in human activities, such as construction activity and the movement of shipping containers.
 
+
 #### Credit
 
 ARIA at NASA-JPL/Caltech
 
 EOS at Nanyang Technological University
 
+
 #### Additional Resources
 
-[What is Synthetic Aperture Radar?](https://earthdata.nasa.gov/learn/what-is-sar)
+- [What is Synthetic Aperture Radar?](https://earthdata.nasa.gov/learn/what-is-sar)
 
-[Disasters program area of NASA's Earth Science Applied Sciences Program](https://appliedsciences.nasa.gov/what-we-do/disasters)
+- [Disasters program area of NASA's Earth Science Applied Sciences Program](https://appliedsciences.nasa.gov/what-we-do/disasters)
 
-[European Space Agency - Earth Observation Applications](https://www.esa.int/Applications/Observing_the_Earth)
+- [European Space Agency - Earth Observation Applications](https://www.esa.int/Applications/Observing_the_Earth)
 
-[Disaster monitoring with Earth Observation Satellites](https://www.esa.int/ESA_Multimedia/Keywords/Description/Disasters/(result_type)/videos)
+- [Disaster monitoring with Earth Observation Satellites](https://www.esa.int/ESA_Multimedia/Keywords/Description/Disasters/(result_type)/videos)

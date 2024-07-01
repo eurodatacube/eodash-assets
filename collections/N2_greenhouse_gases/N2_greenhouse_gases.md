@@ -1,6 +1,7 @@
 ## Carbon Dioxide
 
-Scientists use Japan’s GOSAT data to determine changes in atmospheric CO2 over large urban areas, which experienced the largest changes in economic activity associated with the onset of the COVID-19 pandemic. While NASA’s OCO-2 is optimized to detect the subtle, regional-scale changes in CO2, GOSAT has advantages for tracking changes in CO2 emissions over large cities.
+Scientists use Japan’s GOSAT data to determine changes in atmospheric CO2 over large urban areas, which experienced the largest changes in economic activity associated with the onset of the COVID-19 pandemic.
+While NASA’s OCO-2 is optimized to detect the subtle, regional-scale changes in CO2, GOSAT has advantages for tracking changes in CO2 emissions over large cities.
 
 Analysis of GOSAT observations revealed enhancements in ambient CO2 concentrations from things like fossil fuel emissions over cities, which are only detectable lower down in the atmosphere. 
 
