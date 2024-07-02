@@ -1,18 +1,27 @@
-# Finished goods production: output inventory level
+# Finished goods production: vehicles inventory level
 
-Indicator provided by: [JAXA](https://global.jaxa.jp/) based on data provided by [JAXA](https://global.jaxa.jp/)'s PALSAR-2 L-band SAR on ALOS-2 and [ESA](https://esa.int/)'s C-band SAR on European Sentinel-1.
+This indicator aims at tracking production and movement at factories and ports importing and exporting cars to monitor the increase and decrease of new car production
+by combining satellite data from:
+###
+- PALSAR-2, which uses L-band SAR mounted on [JAXA](https://global.jaxa.jp/)'s ALOS-2 
+- C-band SAR mounted on the [ESA](https://esa.int/)'s Sentinel-1
+- NASA-processed high-resolution optical remote sensing data from Planet’s SkySat
+
+
 
 ### Change in the number of new car at automobile factory
 
-All over the world, countries have taken measures to reduce the spread of the coronavirus, such as urban lockdowns or stay-at-home requests due. Automotive manufacturers around the world also have taken steps, such as adjusting, reducing and suspending new car production.
+All over the world, countries have taken measures to reduce the spread of the coronavirus, such as urban lockdowns or stay-at-home requests due.
+Automotive manufacturers around the world also have taken steps, such as adjusting, reducing and suspending new car production.
 
-The combined data from PALSAR-2, which uses L-band SAR mounted on JAXA's ALOS-2, and C-band SAR mounted on the European Sentinel-1, tracks production and movement at factories and ports importing and exporting cars to monitor the increase and decrease of new car production.
 
 The area bordered by a red rectangle in Fig. 1 shows temporal changes in the density of new cars parked at an automobile factory near Beijing Airport, China from December 2019 to May 2020. During the lockdown in Beijing, from January to March 2020, the density of new cars dropped significantly. 
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E9_car_containers/Tri_E8.png)
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E9_car_containers/Tri_1_E8.png)
+
+
 
 ## Change in the number of car containers at shipping terminals Japan
 
@@ -91,15 +100,12 @@ Figure 2 shows a color composited SAR image of LAX from the PALSAR-2 instrument 
 
 *Figure 2. ALOS-2 LAX data.*
 
-Figures 3 and 4 show car detection in red using Planet’s SkySat imagery and Artificial Intelligence (AI).  The first image shows a heavy concentration of cars in the parking lots in January, corresponding to the SARS image from ALOS-2. In the July image using Planet data, there are far fewer cars in the pay lots. The number of cars in the rental car lots remained high, indicating less demand for those vehicles.
+Figures 3 shows car detection in red using Planet’s SkySat imagery and Artificial Intelligence (AI). The number of cars in the rental car lots remained high, indicating less demand for those vehicles.
 
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E9_car_containers/US021-E9-Fig3.png)
-
-*Figure 3. Car number estimation in January by Planet SkySat and AI*
 
 ![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E9_car_containers/US021-E9-Fig4.png)
 
-*Figure 4 Car number estimation in July Planet SkySat and AI*
+*Figure 3 Car number estimation in July Planet SkySat and AI*
 
 Overall, Planet’s SkySat estimated 3,708 cars parked on January 9 2020 and 1,943 on July 8 2020. This corresponds with SAR data from ALOS-2 and Sentinel-1. 
 
