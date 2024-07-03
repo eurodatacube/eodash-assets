@@ -1,4 +1,6 @@
-## Atmospheric Carbon Dioxide from OCO-2
+## Atmospheric Carbon Dioxide Difference from 2015-2019 baseline (from OCO-2)
+
+These maps show The difference in carbon dioxide (CO2) levels compared to the 2015-2019 baseline. Redder colors indicate increases in CO2. Bluer colors indicate lower levels of CO2. 
 
 Carbon dioxide (CO2) is a greenhouse gas primarily emitted from the combustion of fossil fuels such as petroleum, coal, and natural gas. Scientists widely agree that the build-up of excess carbon dioxide and other greenhouse gases within Earth’s atmosphere has contributed to the rapid change in global climate.
 
