@@ -1,7 +1,7 @@
-# Global PALSAR-2/PALSAR Forest/Non-Forest Map
+# Global Forest/Non-Forest Map PALSAR-2/PALSAR 
 
 This indicator shows the worldwide forest distribution for forest monitoring activities, including climate change countermeasures and is based 
-on PALSAR-2/PALSAR imageries.
+on PALSAR-2/PALSAR imagery.
 The global Forest/Non-Forest (FNF) map has a 25-meter resolution and is available in 2007-2010 interannual maps by ALOS PALSAR and 2015-2021 by ALOS-2 PALSAR-2.
 
 
