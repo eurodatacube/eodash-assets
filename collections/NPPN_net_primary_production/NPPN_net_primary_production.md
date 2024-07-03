@@ -6,7 +6,9 @@ Aquatic and terrestrial photosynthetic plants use some of their newly formed car
 The remaining photosynthetic products are available for plant growth or consumption by the heterotrophic community.
 We refer to this "available" carbon as net primary production, and it is equal to gross photosynthetic carbon fixation minus the carbon respired to support maintenance requirements of the whole plant.
 
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/NPPN_net_primary_production/phytoplankton.jpg)
+<center>
+<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/NPPN_net_primary_production/phytoplankton.jpg" width="500">
+</center>
 
 Total net primary production on Earth exceeds 100 billion tons of carbon per year, and it plays a profound role in the global carbon cycle.
 Many people are surprised to learn, however, that roughly half of this productivity occurs in the oceans and is conducted by microscopic plants called phytoplankton.
