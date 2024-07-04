@@ -1,19 +1,16 @@
-# Soil Moisture Content
+# Vegetation Index (NDVI)
 
 [JAXA](https://global.jaxa.jp/)(Japan Aerospace Exploration Agency) together with Japanese Ministry of Agriculture, Forestry and Fisheries (MAFF) provide bi-monthly agrometeorological information for Asia on [JASMIN](https://suzaku.eorc.jaxa.jp/JASMIN/index.html) and on [JASMAI](https://jasmai.maff.go.jp/) for selected world areas.
 
 This agrometeorological information is obtained from satellite observations (e.g. SHIZUKU (GCOM-W), MODIS, Multiple Satellites (GSMaP)) and GPM Core Observatory, and includes precipitation, drought index, soil moisture, solar radiation, surface temperature, vegetation index and anomaly, rainfall, and other relevant agriculture and land products. 
 
-The soil water content calculated from satellite data is the volumetric water content (volume ratio of water contained in soil per unit volume). It corresponds to the soil moisture near the ground surface at a depth of several centimeters from the surface.
+The vegetation index (NDVI) is an index that uses the sunlight reflection characteristics of plants to indicate the amount and activity of green leaves in plants. 
 
-## Access datasets
 
-Visit the JASMAI website for more details about the calculation methods and to access additional data: https://jasmai.maff.go.jp/user_guide/#item_2_7 
+### Additional information
 
-### References
-
-* Soil Water Content: Ministry of Agriculture, Forestry and Fisheries "Agricultural Meteorological Information Satellite Monitoring System"
-(Created by processing JAXA's "AMSR2/AMSR-E Soil Moisture Product")
+* Vegetation Index (NDVI): Ministry of Agriculture, Forestry and Fisheries "Agricultural Meteorological Information Satellite Monitoring System"
+(Created by processing JAXA's "Natural Vegetation Index (NDVI) Product")
 * JAXA Earth Observation Research Center (EORC)	http://www.eorc.jaxa.jp
 * JAXA "Earth observation satellite data provision system (G-Portal)"	https://gportal.jaxa.jp/gpr/?lang=en
 * JAXA "AMSR/AMSR-E"	https://sharaku.eorc.jaxa.jp/AMSR/index_j.html
