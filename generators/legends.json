@@ -794,6 +794,13 @@
       "range": [0, 4],
       "cm": "ice",
       "label": "[m]"
+    },
+    "Polartep_S2_segmentation_demo": {
+      "range": [0, 1],
+      "cm": "Greys",
+      "label": "",
+      "ticks": [0, 1],
+      "tickLabels": ["land", "water"]
     }
   },
   "ideas": {
