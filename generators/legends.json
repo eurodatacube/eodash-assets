@@ -717,6 +717,12 @@
         "#bd0026"
       ],
       "label": "[kWh/m²/day]"
+    },
+    "HAUC1_land_surface_temperature_analysis": {
+      "range": [4, 32],
+      "cm": "viridis",
+      "label": "[°C]",
+      "ticks": [4,11,18,25,32]
     }
   },
   "polar": {
