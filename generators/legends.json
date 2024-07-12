@@ -719,11 +719,42 @@
       "label": "[kWh/m²/day]"
     },
     "HAUC1_land_surface_temperature_analysis": {
-      "range": [4, 32],
-      "cm": "viridis",
+      "range": [0, 40],
+      "cm": [
+        "#2b83ba",
+        "#abdda4",
+        "#ffffbf",
+        "#fdae61",
+        "#d7191c"
+      ],
       "label": "[°C]",
-      "ticks": [4,11,18,25,32]
+      "ticks": [0, 5, 10, 15, 20, 25, 30, 35, 40]
+    },
+    "HAUC2_ipcc_scenarios_cities": {
+      "range": [0, 20],
+      "cm": [
+        "#2b83ba",
+        "#abdda4",
+        "#ffffbf",
+        "#fdae61",
+        "#d7191c"
+      ],
+      "label": "[°C]",
+      "ticks": [0, 5, 10, 15, 20]
+    },
+    "HAUC3_sealing_impact": {
+      "range": [23, 35],
+      "cm": [
+        "#2b83ba",
+        "#abdda4",
+        "#ffffbf",
+        "#fdae61",
+        "#d7191c"
+      ],
+      "label": "[°C]",
+      "ticks": [23, 26, 29, 32, 35]
     }
+    
   },
   "polar": {
     "TOPAZ5_P1D_SIAGE": {
