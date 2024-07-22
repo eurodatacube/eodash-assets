@@ -842,27 +842,27 @@
   },
   "ideas": {
     "IDEAS1_hopi_b1": {
-      "range": [0, 0.65],
+      "range": [0, 1],
       "cm": "hot_r",
       "label": "[index]"
     },
     "IDEAS1_hopi_b2": {
-      "range": [0, 25],
+      "range": [0, 10000],
       "cm": "hot_r",
       "label": "[people]"
     },
     "IDEAS1_hopi_b3": {
-      "range": [0, 25],
+      "range": [0, 200],
       "cm": "hot_r",
       "label": "[km]"
     },
     "IDEAS1_hopi_b4": {
-      "range": [0, 15],
+      "range": [0, 90],
       "cm": "hot_r",
       "label": "[days]"
     },
     "IDEAS1_hopi_b5": {
-      "range": [-10, 30],
+      "range": [-10, 50],
       "cm": "hot_r",
       "label": "[°C]"
     },
