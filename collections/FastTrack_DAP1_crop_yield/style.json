@@ -1,0 +1,98 @@
+{
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "year": {
+        "type": "string",
+        "enum": ["0", "1", "2", "3", "4", "5", "6"],
+        "options": {
+          "enum": [
+            {"title": "2014"},
+            {"title": "2015"},
+            {"title": "2016"},
+            {"title": "2017"},
+            {"title": "2018"},
+            {"title": "2019"},
+            {"title": "2020"}
+          ]
+        },
+        "default": "0"
+      },
+      "vminmax": {
+        "title": "Predicted Yield ",
+        "description": "Yield [kg/ha]",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 6000,
+            "format": "range",
+            "default": 200
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 6000,
+            "format": "range",
+            "default": 4000
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  },
+  "variables": {
+    "vmin": 200,
+    "vmax": 4000,
+    "year": 0
+  },
+  "fill-color": [
+    "interpolate",
+    ["linear"],
+    [
+      "/",
+      [
+        "-",
+        ["get", "Predicted_Yield", ["var", "year"]],
+        ["var", "vmin"]
+      ],
+      ["var", "vmax"]
+    ],
+    0,
+    [68, 1, 84, 1],
+    0.06666666666666667,
+    [70, 23, 103, 1],
+    0.13333333333333333,
+    [71, 44, 122, 1],
+    0.2,
+    [65, 63, 131, 1],
+    0.26666666666666666,
+    [59, 81, 139, 1],
+    0.3333333333333333,
+    [52, 97, 141, 1],
+    0.4,
+    [44, 113, 142, 1],
+    0.4666666666666667,
+    [39, 129, 142, 1],
+    0.5333333333333333,
+    [33, 144, 141, 1],
+    0.6,
+    [39, 173, 129, 1],
+    0.6666666666666666,
+    [66, 187, 114, 1],
+    0.7333333333333333,
+    [92, 200, 99, 1],
+    0.8,
+    [131, 210, 75, 1],
+    0.8666666666666667,
+    [170, 220, 50, 1],
+    0.9333333333333333,
+    [212, 226, 44, 1],
+    1,
+    [253, 231, 37, 1]
+  ],
+  "stroke-color": "black",
+  "stroke-width": 1
+}
