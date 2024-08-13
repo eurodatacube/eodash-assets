@@ -5,23 +5,17 @@
     "properties": {
       "year": {
         "type": "string",
+        "title": "Year",
         "enum": ["0", "1", "2", "3", "4", "5", "6"],
         "options": {
-          "enum": [
-            {"title": "2014"},
-            {"title": "2015"},
-            {"title": "2016"},
-            {"title": "2017"},
-            {"title": "2018"},
-            {"title": "2019"},
-            {"title": "2020"}
+          "enum_titles": [
+            "2014", "2015", "2016", "2017", "2018", "2019", "2020"
           ]
         },
         "default": "0"
       },
       "vminmax": {
-        "title": "Predicted Yield ",
-        "description": "Yield [kg/ha]",
+        "title": "Predicted Yield [kg/ha]",
         "type": "object",
         "properties": {
           "vmin": {
