@@ -866,6 +866,11 @@
       "cm": "hot_r",
       "label": "[°C]"
     },
+    "IDEAS2_wildlife": {
+      "range": [0, 5],
+      "cm": "viridis",
+      "label": "[index]"
+    },
     "IDEAS3_locust": {
       "range": [0.7, 1],
       "cm": "hot_r",
