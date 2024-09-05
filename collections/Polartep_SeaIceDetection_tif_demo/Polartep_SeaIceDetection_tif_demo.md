@@ -7,8 +7,8 @@ A schematic overview of a regular four-level U-Net architecture is shown in Fig.
 ![Schematic overview of a four-level U-Net architecture](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/Polartep_SeaIceDetection_tif_demo/model_schema.png "Schematic overview of a four-level U-Net architecture")
 
 
-References
-1. O. Ronneberger, P. Fischer and T. Brox, "U-Net: Convolutional networks for biomedical image segmentation", Proc. Int. Conf. Med. Image Comput. Comput.-Assist. Intervent., pp. 234-241, Oct. 2015.
-2. A. Stokholm and A. Kucik, U-Net model PyTorch implementation, 2021, [online] Available: https://github.com/astokholm/AI4SeaIce.git.
+### References
+[1] O. Ronneberger, P. Fischer and T. Brox, "U-Net: Convolutional networks for biomedical image segmentation", Proc. Int. Conf. Med. Image Comput. Comput.-Assist. Intervent., pp. 234-241, Oct. 2015.               
+[2] A. Stokholm and A. Kucik, U-Net model PyTorch implementation, 2021, [online] Available: https://github.com/astokholm/AI4SeaIce.git.
 
 
