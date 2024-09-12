@@ -6,10 +6,11 @@ The dataset is derived from high-resolution multi-temporal repeat-pass interfero
 
 
 ## Dataset description
-The dataset covers seasonal (DJF/MAM/JJA/SON) metrics of:
+The dataset covers seasonal (DJF/MAM/JJA/SON)of:
 
-- Metric: COH12 
+
 - Median 12- repeat coherence estimates for C-band *HH* polarized data
+- Metric: COH12 
 - Local incidence and layover/shadow regions for all relative Sentinel-1A and Sentinel-1B orbits. Note that in the dataset filenames seasons - were referred to as *northern hemisphere seasons*, namely winter (DJF), spring (MAM), summer (JJA), and fall (SON).
 
 The dataset was developed by [Earth Big Data LLC](https://earthbigdata.com/) and [Gamma Remote Sensing AG](https://www.gamma-rs.ch/), under contract for [NASA’s Jet Propulsion Laboratory](https://www.jpl.nasa.gov/).
