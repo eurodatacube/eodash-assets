@@ -405,6 +405,21 @@
       ],
       "label": "Wind field [m/s]",
       "ticks": [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+    },
+    "SHC1_era5_u_winds": {
+      "range": [0, 5],
+      "cm": "viridis",
+      "label": "Wind field [m/s]"
+    },
+    "SHC3_tropomi_cube": {
+      "range": [0, 100],
+      "cm": "viridis",
+      "label": "CO [ppbv]"
+    },
+    "SHC4_propagated_uncertainty": {
+      "range": [0, 0.006],
+      "cm": "plasma",
+      "label": "[mean uncertainty of the pixels]"
     }
   },
   "gtif": {
