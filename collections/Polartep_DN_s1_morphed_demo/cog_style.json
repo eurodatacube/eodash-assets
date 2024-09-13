@@ -1,0 +1,61 @@
+{
+  "variables": {
+    "prediction_hour": 6
+  },
+  "color": [
+    "case",
+    [
+      ">",
+      [
+        "band",
+        ['/', [ "var", "prediction_hour"], 6]
+      ],
+      0
+    ],
+    [
+      "interpolate",
+      [
+        "linear"
+      ],
+      [
+        "band",
+        ['/', [ "var", "prediction_hour"], 6]
+      ],
+      0,
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      1000,
+      [
+        255,
+        255,
+        255,
+        1
+      ]
+    ],
+    [
+      "color",
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Prediction hour",
+    "properties": {
+      "prediction_hour": {
+        "type": "number",
+        "minimum": 6,
+        "maximum": 48,
+        "step": 6,
+        "format": "range",
+        "default": 6
+      }
+    }
+  }
+}
