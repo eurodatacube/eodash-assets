@@ -420,6 +420,16 @@
       "range": [0, 0.006],
       "cm": "plasma",
       "label": "[mean uncertainty of the pixels]"
+    },
+    "OHC300_Ocean_Heat_Content_upper_300m": {
+      "range": [-2, 30],
+      "cm": [
+        "#0000FF",
+        "#00FFFF",
+        "#FFFF00",
+        "#FF0000"
+      ],
+      "label": "[GJ/m2]"
     }
   },
   "gtif": {
