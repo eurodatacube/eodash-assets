@@ -888,13 +888,15 @@
     },
     "IDEAS1_hopi_b5": {
       "range": [-10, 50],
-      "cm": "hot_r",
+      "cm": "RdBu_r",
       "label": "[°C]"
     },
     "IDEAS2_wildlife": {
-      "range": [0, 5],
-      "cm": "viridis",
-      "label": "[index]"
+      "range": [0, 1],
+      "cm": "viridis_r",
+      "label": "[index]",
+      "ticks": [0, 1],
+      "tickLabels": ["low", "high"]
     },
     "IDEAS3_locust": {
       "range": [0.7, 1],
