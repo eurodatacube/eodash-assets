@@ -26,7 +26,7 @@ function evaluatePixel(samples) {
   if (samples.OHC >= 1e20) {
     validValue = 0
   }
-  let index = samples.AIR2MT;
+  let index = samples.OHC;
   return {
     data: [index],
     dataMask: [samples.dataMask * validValue]
