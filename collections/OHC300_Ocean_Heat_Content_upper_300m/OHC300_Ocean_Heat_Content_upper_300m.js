@@ -21,14 +21,9 @@ function setup() {
   }
 }
 function evaluatePixel(samples) {
-  let validValue = 1
-  // data sanitation
-  if (samples.OHC >= 1e20) {
-    validValue = 0
-  }
-  let index = samples.OHC;
+  let index = samples.OHC / 10e9;
   return {
     data: [index],
-    dataMask: [samples.dataMask * validValue]
+    dataMask: [samples.dataMask]
   }
 }
