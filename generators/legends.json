@@ -417,9 +417,9 @@
       "label": "CO [ppbv]"
     },
     "SHC4_propagated_uncertainty": {
-      "range": [0, 0.006],
+      "range": [0, 0.6],
       "cm": "plasma",
-      "label": "[mean uncertainty of the pixels]"
+      "label": "[% mean uncertainty of the pixels]"
     },
     "OHC300_Ocean_Heat_Content_upper_300m": {
       "range": [-2, 30],
