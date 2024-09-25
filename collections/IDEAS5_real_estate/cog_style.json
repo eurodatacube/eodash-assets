@@ -1,0 +1,48 @@
+{
+  "variables": {
+    "vmin": 0,
+    "vmax": 6
+  },
+  "color": [
+      "case",
+      ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
+      [
+          "interpolate",
+          ["linear"],
+          ["band", 1],
+          0, [255, 255, 255, 1],
+          6, [189, 6, 6, 1]
+      ],
+      [
+          "color", 0, 0, 0, 0
+      ]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "vminmax": {
+        "title": "Heat Risk Class",
+        "description": "[unitless]",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 6,
+            "format": "range",
+            "default": 1
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 6,
+            "format": "range",
+            "default": 6
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  }
+}

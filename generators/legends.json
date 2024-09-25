@@ -903,6 +903,11 @@
       "cm": "hot_r",
       "label": ""
     },
+    "IDEAS5_real_estate": {
+      "range": [0, 6],
+      "cm": "hot_r",
+      "label": "[0 is best, 6 is worst]"
+    },
     "SLSTR1_Sentinel-3-SLSTR-L2-LST": {
       "range": [250, 330],
       "cm": [
