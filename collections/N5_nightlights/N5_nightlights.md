@@ -1,4 +1,4 @@
-# Nightlights - VIIRS Day/Night Band (DNB)
+# Nightlights 
 The Nightlights dataset is collected by the Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB) aboard the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) satellite, a joint mission of the National Oceanic and Atmospheric Administration (NOAA) and NASA. The Nightlights data is processed and made available through NASA's Black Marble product suite, which provides consistent, high-quality images of nighttime lights across the globe. These data are essential for analyzing human activity, urbanization patterns, energy consumption, and even socio-economic trends.
 
 The High Definition Nightlights dataset is designed to eliminate interference from natural sources such as moonlight and cloud cover, ensuring a clear representation of human-made light sources. The dataset uses varying shades of color to represent different intensities of light; darker shades indicate areas with less artificial light (e.g., rural or undeveloped regions), while lighter shades of yellow signify regions with higher concentrations of light (e.g., cities and industrial zones).
