@@ -1,4 +1,4 @@
-# Enhanced Sea Surface Temperature (ENSST) by GCOM-W AMSR JAXA
+# Sea Surface Temperature by GCOM-W AMSR JAXA
 This dataset, ENSST (Enhanced Sea Surface Temperature), provides global coverage of sea surface temperature (SST) data derived from the Advanced Microwave Scanning Radiometer 2 (AMSR2) onboard the GCOM-W (Global Change Observation Mission - Water) satellite. It is crucial for analyzing sea surface temperature variations across the globe, which are important for climate research, weather forecasting, and marine ecosystem studies. The dataset offers insights into oceanic conditions, supporting the monitoring of marine environments, weather patterns, and ocean circulation.
 
 The dataset uses color gradients to represent different SST levels; cooler ocean temperatures are shown in darker blue hues, while warmer sea temperatures appear in shades of yellow to red, indicating regions of increased heat such as the tropics or areas impacted by oceanic currents.
