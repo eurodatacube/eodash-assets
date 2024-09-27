@@ -5,9 +5,7 @@ The dataset uses color gradients to represent different SST levels; cooler ocean
 
 ## Dataset description
 The dataset covers global oceans, focusing on sea surface temperature to support studies in climate change, weather prediction, marine ecosystems, and oceanography.
-Metric: Sea surface temperature values (measured in degrees Celsius, °C), providing a precise measurement of the thermal state of the ocean surface. The data can be further analyzed for temporal trends in ocean warming and cooling patterns.
-Temporal coverage includes long-term, multi-year data, enabling robust analysis of trends in sea surface temperature and oceanic heat content over time.
-The dataset was developed by JAXA to contribute to global climate and oceanographic research, providing consistent, high-quality SST data for worldwide use. The AMSR2 sensor onboard the GCOM-W satellite offers reliable microwave-based measurements, which are less affected by cloud cover compared to optical methods, making it ideal for all-weather SST observation.
+- Metric: Sea surface temperature values (measured in degrees Celsius, °C), providing a precise measurement of the thermal state of the ocean surface. The data can be further analyzed for temporal trends in ocean warming and cooling patterns.
+- Temporal coverage includes long-term, multi-year data, enabling robust analysis of trends in sea surface temperature and oceanic heat content over time.
 
-The dataset is often referenced in climate science and oceanographic research. For instance, Aiko Yamashita (2022) used SST data in the study "Global sea surface temperature trends and the role of ocean currents," presented at the International Oceanography Conference, to examine how ocean currents influence global SST patterns.
-Citation: Aiko Yamashita, "Global sea surface temperature trends and the role of ocean currents," International Oceanography Conference 2022, https://doi.org/10.12345/ioc.2022.0_sst_ocean.
+The dataset was developed by [JAXA](https://global.jaxa.jp/), using the [AMSR2 sensor](https://www.earthdata.nasa.gov/sensors/amsr2) onboard the [GCOM-W satellite](https://global.jaxa.jp/projects/sat/gcom_w/).
