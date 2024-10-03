@@ -11,4 +11,4 @@
 | Input datasets |Sentinel-2 derived Albedo, Spectral Response Curve, ASTM Global Solar Irradiance |
 | Reported accuracy | N/A |
 | License | https://creativecommons.org/licenses/by/4.0/ |
-| Acknowledgements | UCL team (Jan-Peter Muller et al.) for processing and providing Sentinel-2 albedo layers; University of New South Wales (Martin A. Green et al.) for providing PV Spectral Response Curves; PLES team (Leticia Perez and James Wheeler) for formulating and processing the final product|
+| Acknowledgements | University College London (Jan-Peter Muller & Rui Song) for processing and providing Sentinel-2 albedo layers using the S2GM open access system (https://s2gm.land.copernicus.eu/); University of New South Wales (Martin A. Green) for providing PV Spectral Response Curves; PLES team (Leticia Perez and James Wheeler) for formulating and processing the final product; ESA philab (Alistair Francis) for providing valuable input to the formula used. |
