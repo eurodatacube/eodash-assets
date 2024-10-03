@@ -1,0 +1,15 @@
+|Product Name| Albedo-Single Product |
+| --- | --- |
+| Spatial resolution | 10 m |
+| Temporal coverage | June-August 2022 |
+| CRS | EPSG: 3857 |
+| Coverage | Austria (9.5°, 46.3°, 17.2°, 49°) |
+| Value range | 0-1 (albedo), with -1 (nodata) and 0 (water bodies) |
+| Product description | Depending on the surface characteristics and the distribution of solar radiation reaching the Earth, the ground reflects radiation. The ratio between the ground reflected radiation and the incident radiation is called albedo (α) and takes values ranging from 0 (all the incident radiation is absorbed by the ground) to 1 (all the incident radiation is reflected by the ground). Lighter-coloured surfaces (i.e. snow, ice) present higher albedo than darker-coloured ones (i.e. asphalt, bare soil). Albedo can be computed over the entire spectrum of solar radiation or for a specific wavelength or wavelength band. For this layer, only the albedo corresponding to 4 bands of
+Sentinel-2 were used. <br/>The albedo product has been calculated based on the information provided by Sentinel 2 bands. Since we are only interested in the albedo in the context of solar cell efficiency, the estimation of the electric current is constrained to the S2 spectral bands covering the operational spectral range of a silicon cell, . To appropriately weight the albedo from each band to produce a single meaningful value in this context, the average incoming solar energy in those bands was used. The Solar Radiation Distribution used is the ASTM G-173-03 Reference Spectra Derived from SMARTS v. 2.9.2 AM1.5, which is the Standard model used in middle latitudes. In this way, the corrected, weighted albedo (α') from the albedo in four Sentinel-2 bands provided is:<br/>![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/gtif-datainfo/albedo_single_formula1.png)<br/> Where λ is wavelength (measured in nm), b is the Sentinel-2 band, α is the albedo from Sentinel-2 (a scalar), L is the solar irradiance (measured in W/m²), and λl, λu represent the lower and upper wavelength limit for each of the considered bands.<br/>Water bodies have been masked from this dataset using high resolution water and wetness layers from the European Environment Agency (EEA).|
+| Source URL | http://hr-albedo.org/docs/HR_Albedo_ATBD+verification_UCL-final.pdf https://pveducation.org/pvcdrom/appendices/standard-solar-spectra, https://onlinelibrary.wiley.com/doi/10.1002/pip.3646 |
+| Source DOI | n/a |
+| Input datasets |Sentinel-2 derived Albedo, Spectral Response Curve, ASTM Global Solar Irradiance |
+| Reported accuracy | N/A |
+| License | https://creativecommons.org/licenses/by/4.0/ |
+| Acknowledgements | University College London (Jan-Peter Muller & Rui Song) for processing and providing Sentinel-2 albedo layers using the S2GM open access system (https://s2gm.land.copernicus.eu/); PLES team (Leticia Perez and James Wheeler) for formulating and processing the final product; ESA philab (Alistair Francis) for providing valuable input to the formula used.|
