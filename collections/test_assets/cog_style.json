@@ -1,5 +1,27 @@
 {
-    "variables": {
+  "legend": {
+    "title": "Global horizontal irradiation [kWh/m²/day]",
+    "range": [
+      "rgba(68, 1, 84, 1)",
+      "rgba(70, 23, 103, 1)",
+      "rgba(71, 44, 122, 1)",
+      "rgba(65, 63, 131, 1)",
+      "rgba(59, 81, 139, 1)",
+      "rgba(52, 97, 141, 1)",
+      "rgba(44, 113, 142, 1)",
+      "rgba(39, 129, 142, 1)",
+      "rgba(33, 144, 141, 1)",
+      "rgba(39, 173, 129, 1)",
+      "rgba(66, 187, 114, 1)",
+      "rgba(92, 200, 99, 1)",
+      "rgba(131, 210, 75, 1)",
+      "rgba(170, 220, 50, 1)",
+      "rgba(212, 226, 44, 1)",
+      "rgba(253, 231, 37, 1)"
+    ],
+    "domainProperties": ["vmin", "vmax"]
+  },  
+  "variables": {
       "vmin": 2,
       "vmax": 5,
       "settlementDistance": 0
