@@ -26,13 +26,6 @@ The Sentinel-1’s radar can operate in four modes: Interferometric Wide Swath (
 [Sentinel-1 Homepage on ESA Website](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1)
 
 
-<iframe src="https://www.esa.int/content/view/embedjw/428481" width="640" height="360" frameborder="0"></iframe>
-
-[Access Video URL](https://www.esa.int/content/view/embedjw/428481)
-
-Copyright: ESA/ATG medialab, source: [ESA Multimedia](https://dlmultimedia.esa.int/download/public/videos/2014/03/026/1403_026_AR_EN.mp4)
-
-
 
 
 
