@@ -4,8 +4,7 @@ This indicator has been developed to be a powerful, impacting, visual indicator 
 
 In the Analysis panel it is possible to explore correlation of the underlying datasets by allowing filtering of the indicator based on the underlying data.
 
-
-Following layers can be explored:
+Following filters are available:
 
 - **Vegetation health indicator**: 1 being the areas in the worst health and 5 the areas in the best health in 2023 compared to long term trends
 - **Road pressure indicator**:  fragmentation of natural habitats due to roads by calculating and comparing connectivity areas bordered only by coastlines and those interrupted by roads. The results quantify the pressure exerted by road networks on natural spaces, helping to identify areas under high road pressure. Where 1 is an area with very high road pressure, the difference between the connectivity of the area with and without roads is great, and 5 is an area with very little road pressure.
