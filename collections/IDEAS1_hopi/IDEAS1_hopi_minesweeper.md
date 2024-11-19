@@ -1,7 +1,6 @@
 # HOUHPI Minesweeper Game
 
-Get to learn about the risks of air pollution and urban heat by exploring an risk index through a minesweeper game.
-Once you finish the daily location you will get information on available species in the area, as well as their endangered status and a summary of how you did with an easy to share function.
+Get to learn about the risks of air pollution and urban heat by exploring the Health-Oriented Urban Heat and Pollution Index (HOUHPI) through a minesweeper game.
 
 ## How-to
 Open fields by left clicking on them, mark them with a flag with right click.
