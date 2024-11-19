@@ -1,4 +1,4 @@
-# Air pollution Indicator
+# Health-Oriented Urban Heat and Pollution Index
 
 V2 - 2024/07/19
 
@@ -9,20 +9,14 @@ V2 - 2024/07/19
 
 
 Includes the following layers
-- **vulnerable_population** : number of people of age < 5 or > 60. This indicator is an
-extraction from HDX data and gives information about the number of elderly or
-children in an area.
-- **healthcare_access** : distance to nearest hospital or clinic (km). This indicator is
-computed from the Healthcare Infrastructures indicator with bird's-eye distances.
-- **air_pollution** : maximum number of days per season where air pollution exceeded the
-WHO threshold between 2021 and 2023. The indicator takes into account PM2.5,
-PM10, Ozone and NO2 from CAMS. If one of the pollutants exceeds the daily
-threshold, it is considered a polluted day.
-- **lst**: maximum monthly-average land surface temperature per season between 2019
+- **Number of people of age < 5 or > 60** : extraction from HDX data and gives information about the number of elderly or children in an area.
+- **Distance to nearest hospital or clinic (km)** : computed from the Healthcare Infrastructures indicator with bird's-eye distances.
+- **Number of days per season where air pollution exceeded the
+WHO threshold** : The indicator takes into account PM2.5,
+PM10, Ozone and NO2 from CAMS (between 2021 and 2023). If one of the pollutants exceeds the daily threshold, it is considered a polluted day.
+- **Land surface temperature**: maximum monthly-average land surface temperature per season between 2019
 and 2023. We consider that there is a risk for human health above an average 25°C.
-- **houhpi** : Health-Oriented Urban Heat and Pollution Index (combination of the layers
-above). This indicator is the sum of the normalized healthcare access and vulnerable
-population indicators multiplied by the risk factor. The risk factor is computed using
+- **Health-Oriented Urban Heat and Pollution Index** : sum of the normalized healthcare access and vulnerable population indicators multiplied by the risk factor. The risk factor is computed using
 the following knowledge [1] :
     - Air Pollution Risk (APR): Increment of 5% mortality risk when air pollution
 exceeds WHO thresholds.
