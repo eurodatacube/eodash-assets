@@ -1,0 +1,19 @@
+{
+    "options": {
+        "execute": true
+    },
+    "type": "object",
+    "properties": {
+        "feature": {
+            "type": "spatial",
+            "title": "Select feature on map",
+            "options": {
+                "for": "eox-map#main",
+                "layerId": "geodb-collection",
+                "type": "string",
+                "featureProperty": "id"
+            },
+            "format": "feature"
+        }
+    }
+}
