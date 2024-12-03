@@ -1,4 +1,4 @@
-## Real Estate Indicator
+## Heat Risk Indicator
 
 This indicator is a combination of satellite and field data.
 
