@@ -1,9 +1,10 @@
 # Flood mapping 
 The Flood Mapping dataset supports the analysis and visualization of flood events using advanced algorithms and satellite imagery. This dataset integrates data from multiple sources, offering comprehensive tools for detecting and monitoring floods in both open and urban areas. 
-Maps of flood were computed for both open area (i.e. bare soil) and urban area. Two different methods were applied to detect this two complementary types of flood.
+The dataset shows flooded areas and areas with permanent water bodies.
+
 
 ## Dataset Description
-- Coverage: THe dataset focuses on flood-prone areas in both open landscapes and urban environments. Algorithms leverage data from the Sentinel missions to ensure diverse spatial and environmental coverage.
+- Coverage: Maps of flood were computed for both open area (i.e. bare soil) and urban area. Two different methods were applied to detect this two complementary types of flood.
 - Metric: Flood extent and intensity derived from spatial grids and imagery analysis, with temporal layering for tracking flood evolution.
   -   **Flood Monitoring in Open Areas**: - The method used to produce flood maps over open area is integrated in an app named SAR Flood Archive Generator 3.3.4 available in the [WASDI platform](https://www.wasdi.cloud/). It is an automated application designed to process the Sentinel-1 GRD archive for a specified Area of Interest (AoI), compiling historical flood maps in open areas. The application generates maps for every day for which a Sentinel-1 GRD image is available over the AoI. In the specific case study, about 70 Sentinel-1 GRD images were processed. Flood detection is performed by analysing intensity values. The output is an archive of maps that, according to the input parameters, can be either in binary format (flooded or not-flooded) or as a three-state classification (flooded, not-flooded, permanent water). 
   -  **Urban Flood Mapping**: Concerning urban area, a different method is applied. It relies on the information contained in the phase, rather than the intensity used for open area. Flood is detected analyzing the difference of coherence between a pair of 2 pre-event Sentinel-1 SLC images and a pair of 1 pre-event Sentinel-1 SLC image and 1 post-event Sentinel-1 SLC image. This application, named Urban Flood, available in the [WASDI platform](https://www.wasdi.cloud/), needs as a prerequisite the availability of a building map, to constrain the areas where to look for differences of coherence.
