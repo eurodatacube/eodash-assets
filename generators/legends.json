@@ -196,15 +196,15 @@
     "N1_SO2": {
       "range": [1, 9],
       "cm": [
-        [1, [248, 246, 244]],
-        [2, [158, 97, 168]],
-        [3, [83, 102, 182]],
-        [4, [60, 140, 198]],
-        [5, [81, 172, 162]],
-        [6, [227, 166, 37]],
-        [7, [235, 73, 14]],
-        [8, [186, 0, 6]],
-        [9, [116, 18, 13]]
+        [1, [248, 246, 244, 255]],  // Light gray for lowest SO2
+        [2, [158, 97, 168, 255]],   // Purple
+        [3, [83, 102, 182, 255]],   // Blue
+        [4, [60, 140, 198, 255]],   // Sky blue
+        [5, [81, 172, 162, 255]],   // Aqua
+        [6, [227, 166, 37, 255]],   // Yellow-orange
+        [7, [235, 73, 14, 255]],    // Orange-red
+        [8, [186, 0, 6, 255]],      // Deep red
+        [9, [116, 18, 13, 255]]     // Dark red
       ],
       "label": "SO2 column number density [DU]",
       "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -907,6 +907,18 @@
       "range": [0, 6],
       "cm": "hot_r",
       "label": "[0 is best, 6 is worst]"
+    },
+    "WASDI_FLOOD": {
+      "range": [2, 3],
+      "cm": [
+        [2, [0, 0, 255, 255]],  // Blue for Permanent Water
+        [3, [255, 0, 0, 255]]  // Red for Flood
+      ],
+      "label": "Flood Analysis",
+      "logarithmic": false,
+      "ticks": [2, 3],
+      "tickLabels": ["Permanent Water", "Flood"],
+      "discrete": true
     },
     "SLSTR1_Sentinel-3-SLSTR-L2-LST": {
       "range": [250, 330],
