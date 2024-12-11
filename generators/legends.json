@@ -911,8 +911,8 @@
     "WASDI_FLOOD": {
       "range": [2, 3],
       "cm": [
-        [2, [0, 0, 255, 255]],  // Blue for Permanent Water
-        [3, [255, 0, 0, 255]]  // Red for Flood
+        [2, [0, 0, 255, 255]],  
+        [3, [255, 0, 0, 255]]  
       ],
       "label": "Flood Analysis",
       "logarithmic": false,
