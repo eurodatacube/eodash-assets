@@ -1,5 +1,6 @@
 # Flood mapping 
-The Flood Mapping dataset supports the analysis and visualization of flood events using advanced algorithms and satellite imagery. This dataset integrates data from multiple sources, including Sentinel-1, Sentinel-2, offering comprehensive tools for detecting and monitoring floods in both open and urban areas. 
+The Flood Mapping dataset supports the analysis and visualization of flood events using advanced algorithms and satellite imagery. This dataset integrates data from multiple sources, offering comprehensive tools for detecting and monitoring floods in both open and urban areas. 
+Maps of flood were computed for both open area (i.e. bare soil) and urban area. Two different methods were applied to detect this two complementary types of flood.
 
 ## Dataset Description
 - Coverage: THe dataset focuses on flood-prone areas in both open landscapes and urban environments. Algorithms leverage data from the Sentinel missions to ensure diverse spatial and environmental coverage.
