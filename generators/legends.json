@@ -911,14 +911,14 @@
     "WASDI_FLOOD": {
       "range": [2, 3],
       "cm": [
-        [2, [0, 0, 255, 255]],  
-        [3, [255, 0, 0, 255]]  
-      ],
-      "label": "Flood Analysis",
-      "logarithmic": false,
-      "ticks": [2, 3],
-      "tickLabels": ["Permanent Water", "Flood"],
-      "discrete": true
+        "#0000ff",
+        "#ff0000"
+      ],              
+      "label": "Flood events",          
+      "logarithmic": false,              
+      "ticks": [2, 3],             
+      "tickLabels": ["Permanent water", "Flooding"],
+      "discrete": true   
     },
     "SLSTR1_Sentinel-3-SLSTR-L2-LST": {
       "range": [250, 330],
