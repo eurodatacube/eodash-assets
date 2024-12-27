@@ -7,4 +7,4 @@ Crop Model API model measures the actual crop development instead of purely mode
 
 The API takes location, crop type, crop variety, sowing date, and irrigation water application data as user inputs, HR-VPP data from [Copernicus Land Services](https://land.copernicus.eu/en), Meteorological and Soil data from DDC data sources, and retrieves daily crop development (phenology), biomass, water need, and predicted yield data.
 
-**CropOM** is a technology company (SME) that develops data integration platform services and integrated software for agriculture, insurance, and education. For more information, go to [cropom.com](https://cropom.com/)
+**CropOM** is a technology company (SME) that develops data integration platform services and integrated software for agriculture, insurance, and education. Read more about this technology on a [dedicated online story](https://race.esa.int/story?id=yield-forecast-crop-water-demand#section-crop-yield) for more information or go to [cropom.com](https://cropom.com/).
