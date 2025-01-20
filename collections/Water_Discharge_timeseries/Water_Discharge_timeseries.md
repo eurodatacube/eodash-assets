@@ -1,7 +1,7 @@
 ## Water Turbidity from Sentinel-2
 
 Satellite-based turbidity products from Sentinel-2 MSI reveal water variability in the upper Adriatic region. This study examined the Po River basin, from Ferrara to the river mouth, where freshwater and saltwater mix.
-Sentinel-2A and 2B images (2019–2022) covering 3700 km² were analyzed. Using ACOLITE software, 42 cloud-free images were processed to create 10 m resolution turbidity maps. These maps correlated with Po River discharge data from ARPA-ER and water levels from AIPO.
+Sentinel-2A and 2B images (2019–2022) covering 3700 km² were analyzed. Using ACOLITE software, 42 cloud-free images were processed to create 10 m resolution turbidity maps. These maps correlated with Po River discharge data from ARPA-ER and water levels from AIPO. 
 
 
 #### Water Connectivity and Turbidity Patterns
