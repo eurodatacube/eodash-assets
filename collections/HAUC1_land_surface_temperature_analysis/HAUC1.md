@@ -20,4 +20,4 @@ The land cover layer is part The LULUCF (Land Use, Land Use Change, and Forestry
 
 The Global Human Settlement Layer (GHSL) dataset provides valuable insights into the distribution of the residential population across different epochs, offering multitemporal data from 1975 to 2030. This dataset, developed through disaggregation methods, uses census or administrative unit data alongside the classification and volume of built-up areas mapped in GHSL. The GHSL data supports population-related studies and planning by offering detailed, spatially disaggregated estimates, with values expressed as decimals representing the absolute number of people per grid cell, at a 70-meter resolution.
 
-<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/heatadaptassets/collections/HAUC1_land_surface_temperature_analysis/GeoVille_Logo.png"  width="15%">
+<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/HAUC1_land_surface_temperature_analysis/GeoVille_Logo.png"  width="15%">
