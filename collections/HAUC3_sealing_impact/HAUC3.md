@@ -11,4 +11,4 @@ The Land Surface Temperature (LST) dataset provides crucial insights into surfac
 
 Impervious areas refer to regions where natural surfaces, like soil or water, have been replaced with artificial, non-permeable materials. This transformation can lead to significant environmental issues, such as soil degradation, reduced biodiversity, and increased flooding risks. This dataset indicates the percentage of land covered by artificial materials and was developed using semi-automatic methods on Sentinel 1 and 2 satellite data. This dataset provides per-pixel estimates of impervious cover, ranging from 0 to 100%, at a 70-meter resolution.
 
-<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/heatadaptassets/collections/HAUC1_land_surface_temperature_analysis/GeoVille_Logo.png"  width="15%">
+<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/HAUC1_land_surface_temperature_analysis/GeoVille_Logo.png"  width="15%">
