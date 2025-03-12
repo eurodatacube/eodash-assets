@@ -4,6 +4,8 @@ This indicator shows the distribution of soil moisture acquired by the ESA Earth
 
 ### Dataset description
 -  Data is acquired by the sensor onboard SMOS, the [Microwave Imaging Radiometer with Aperture Synthesis (MIRAS)](https://earth.esa.int/eogateway/instruments/miras). MIRAS creates images of radiation emitted in the microwave L-band (1.4 GHz), by measuring soil moisture  observing variations in the natural microwave emission coming up off the surface of the planet.
--  The Level 2 Soil Moisture (SM) product comprises soil moisture measurements geo-located in an equal-area grid system ISEA 4H9.
--  The product contains one single swath-based sea surface salinity retrieved with and without Land-Sea contamination correction, SSS anomaly based on WOA-2009 referred to Land-Sea corrected sea surface salinity, brightness temperature at the top of the atmosphere and at the sea surface with their corresponding uncertainties.
--  The pixels are consolidated in a pole-to-pole product file (50 minutes of sensing time), with a maximum size of about 7MB (25MB uncompressed data) per half orbit (29 half orbits per day). 
+-  The Level 2 Soil Moisture (SM) product comprises soil moisture measurements geo-located in an equal-area (grid system ISEA 4H9).
+-  Spatial resolution: ~40 km (varies due to the SMOS interferometric imaging technique)
+
+### Applications
+Soil moisture can be used for various applications, including climate monitoring, weather forecasting, agriculture and water management.
