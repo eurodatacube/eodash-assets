@@ -9,7 +9,7 @@ This study examined the Po River basin, from Ferrara to the river mouth, where f
 - Units metric: Formazin Nephelometric Unit (FNU) - are a metric to measure turbidity by the scattered light method
 - Colore range interpretation: ranging from low FNU (blue/green) to higher FNU (yelllow-red)
 
-Find more about this case study, and main conclusions about Water Connectivity and Turbidity Patterns, as well as exposed riverbeds on a dedicated story.
+Find more about this case study, and main conclusions about Water Connectivity and Turbidity Patterns, as well as exposed riverbeds on a [dedicated story](https://race.esa.int/story?id=po-river-discharge).
 
 
 
