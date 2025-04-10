@@ -1,0 +1,125 @@
+{
+    "width": "container",
+    "autosize": "fit",
+    "resize": true,
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": []
+    },
+    "transform": [
+      {
+        "calculate": "datum.bands.B0.stats.mean",
+        "as": "mean"
+      },
+      {
+        "calculate": "datum.bands.B0.stats.min",
+        "as": "min"
+      },
+      {
+        "calculate": "datum.bands.B0.stats.max",
+        "as": "max"
+      },
+      {
+        "calculate": "datum.bands.B0.stats.stDev",
+        "as": "stDev"
+      },
+      {
+        "window": [{ "op": "row_number", "as": "index" }],
+        "frame": [null, null]
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "timeUnit": "binnedutcyearmonthdate",
+        "title": "Date",
+        "axis": { "labelAngle": 45 }
+      }
+    },
+    "layer": [
+      {
+        "mark": { "type": "area" },
+        "encoding": {
+          "y": { "field": "mean", "type": "quantitative" },
+          "y2": { "field": "max", "type": "quantitative" },
+          "fill": { "value": "#E1BE6A" },
+          "opacity": { "value": 0.7 }
+        }
+      },
+      {
+        "mark": { "type": "line", "filled": false },
+        "encoding": {
+          "y": {
+            "field": "mean",
+            "type": "quantitative",
+            "scale": { "zero": false },
+            "title": "value"
+          },
+          "color": { "value": "black" }
+        }
+      },
+      {
+        "mark": { "type": "area" },
+        "encoding": {
+          "y": { "field": "min", "type": "quantitative" },
+          "y2": { "field": "mean", "type": "quantitative" },
+          "fill": { "value": "#40B0A6" },
+          "opacity": { "value": 0.5 }
+        }
+      },
+      {
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": { "value": 0.3, "param": "hover", "empty": false },
+            "value": 0
+          },
+          "tooltip": [
+            {
+              "field": "index",
+              "type": "ordinal",
+              "title": "Measurement #"
+            },
+            {
+              "field": "mean",
+              "type": "quantitative",
+              "format": ".3f",
+              "title": "mean"
+            },
+            {
+              "field": "min",
+              "type": "quantitative",
+              "format": ".3f",
+              "title": "minimum"
+            },
+            {
+              "field": "max",
+              "type": "quantitative",
+              "format": ".3f",
+              "title": "maximum"
+            },
+            {
+              "field": "stDev",
+              "type": "quantitative",
+              "format": ".3f",
+              "title": "std dev"
+            }
+          ]
+        },
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["index"],
+              "nearest": true,
+              "on": "pointerover",
+              "clear": "pointerout"
+            }
+          }
+        ]
+      }
+    ],
+    "background": "transparent"
+  }
