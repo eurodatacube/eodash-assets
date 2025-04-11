@@ -751,7 +751,7 @@
       "cm": ["#d7191c", "#f3854e", "#fee93f", "#eff9b1", "#aedd72", "#1a9641"],
       "label": "[%]",
       "ticks": [1, 2, 3, 4, 5, 6, 7],
-      "tickLabels": ["0", "5", "10", "20", "35", "50", "100"],
+      "tickLabels": [0, 5, 10, 20, 35, 50, 100],
       "discrete": true
     },
     "SOL1_5_Green_Roofs_co2red_05": {
