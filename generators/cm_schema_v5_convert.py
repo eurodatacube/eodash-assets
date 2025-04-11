@@ -2,36 +2,7 @@
 """
 go through all RACE and eodashboard indicators, get their collection
 find a matching definition programatically
-
-old - new
-label - title
-keyname -> find file in folder collections with key Legend: 4D_Greenland_Meltmap/legend.png
-cm -> range in some cases (needs if/elif behavior)
-tickLabels/ticks/range -> domain (needs if/elif behavior)
-tickLabels -> tickValues
-discrete:true -> scaletype (continuous/discrete)
-Threshold: 6 domains, 5 colors?
-Categorical can be used for, custom mapping where it makes sense
-"Polartep_S2_segmentation_demo": {
-      "range": [0, 1],
-      "cm": "Greys",
-      "label": "",
-      "ticks": [0, 1],
-      "tickLabels": ["land", "water"]
-    }
-
-check lengths
-catalogs are a submodule of eodash-catalog repo?
-let's not edit the source (editting YAML on the fly) because of comments
-- rather print the correct section to a file and manually copy paste it from it
-syntax:
-CollectionFile ____
-New part
-
-Problems:
-Our custom label text overrides are not reproducible in the new tool
-therefore sentinelhub non-continuous color schemas will not have a correct legend
-(SLSTR1_Sentinel-3-SLSTR-L2-LST)
+convert schema from v4 schema to v5 schema https://github.com/eodash/eodash_catalog/wiki/Colorlegend
 """
 
 from typing import Any, Dict
@@ -52,9 +23,15 @@ COUNTER = 0
 LEGENDS_JSON_PATH = Path(
     "/home/lubomir/projects/eodash-assets/generators/legends.json"
 ).resolve()
-collections_dir = Path("/home/lubomir/projects/eodash-catalog/collections/").resolve()
-indicators_dir = Path("/home/lubomir/projects/eodash-catalog/indicators/").resolve()
-catalogs_dir = Path("/home/lubomir/projects/eodash-catalog/catalogs/").resolve()
+collections_dir = Path(
+    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/collections/"
+).resolve()
+indicators_dir = Path(
+    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/indicators/"
+).resolve()
+catalogs_dir = Path(
+    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/catalogs/"
+).resolve()
 
 # prepare a special legend cfastie (NDVI), as its not in matplotlib
 cfastie = np.load(os.path.join(os.path.dirname(__file__), "cfastie.npy"))
@@ -91,7 +68,6 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
         "title": "Sample text",
         "range": "",  # individual colors as html hexcode
         "domain": "",  # default [0, 1], that translates to range
-        "tickFormat": ".0f",  # .1f default
         "scaleType": "continuous",  # default, also discrete/threshold
     }
     output["title"] = old_label_config_dict["label"]
@@ -103,7 +79,7 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
 
     if isinstance(cm_def_old, str):
         # single colorscale name, convert to hex
-        cmap = cm.get_cmap(cm_def_old, 20)  # 20 discrete colors
+        cmap = cm.get_cmap(cm_def_old, 14)  # 14 discrete colors
         hex_colors = [mcolors.to_hex(cmap(i)) for i in range(cmap.N)]
     elif isinstance(cm_def_old, list):
         if isinstance(cm_def_old[0], str):
@@ -116,13 +92,8 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
                 [rgb_n[0] / 255, rgb_n[1] / 255, rgb_n[2] / 255] for rgb_n in rgb
             ]
             hex_colors = [mcolors.to_hex(rgb_val) for rgb_val in normalized_rgb]
-
-    if not old_label_config_dict.get("ticks") and not old_label_config_dict.get(
-        "tickLabels"
-    ):
-        # directly use range as domain 1:1
-        output["domain"] = old_label_config_dict["range"]
-    elif old_label_config_dict.get("ticks") and old_label_config_dict.get("tickLabels"):
+    output["domain"] = old_label_config_dict["range"]
+    if old_label_config_dict.get("ticks") and old_label_config_dict.get("tickLabels"):
         if isinstance(old_label_config_dict["tickLabels"][-1], str):
             # categorical scale
             output["domain"] = old_label_config_dict["tickLabels"]
@@ -133,7 +104,8 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
                 old_label_config_dict["tickLabels"][0],
                 old_label_config_dict["tickLabels"][1],
             ]
-
+    if output["scaleType"] == "continuous":
+        output["tickFormat"] = ".0f"
     output["range"] = hex_colors
     return output
 
@@ -236,9 +208,9 @@ def found_match(contained_collection_str: str):
                     # convert to new syntax
                     converted_output: dict = convert_v5_syntax(legend_def)
                     # modify original dictionary (YAML comments are lost)
-                    collection_yaml_content["Colorlegend"] = converted_output
+                    yaml_section_to_add = {"Colorlegend": converted_output}
                     # change files in place
-                    yaml.dump(collection_yaml_content, hh, default_flow_style=False)
+                    yaml.dump(yaml_section_to_add, hh, default_flow_style=False)
             else:
                 pass
                 # print("not found", contained_collection_str)
