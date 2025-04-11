@@ -215,7 +215,7 @@
       "ticks": [-12, -8, -4, 0, 4, 8, 12]
     },
     "CDS7_windu_ERA5-SingleLevel_100m_GLOBAL": {
-      "range": [-12, 12],
+      "range": [-4, 4],
       "cm": [
         [-4, [11, 53, 135]],
         [-3, [11, 116, 197]],
@@ -430,9 +430,7 @@
     "crop_forecast_CropOM": {
       "range": [0, 1],
       "cm": "viridis",
-      "ticks": [0, 1],
-      "label": "",
-      "tickLabels": ["min", "max"]
+      "label": ""
     },
     "SLSTR1_Sentinel-3-SLSTR-L2-LST": {
       "range": [1, 7],

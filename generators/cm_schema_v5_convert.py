@@ -93,20 +93,31 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
             ]
             hex_colors = [mcolors.to_hex(rgb_val) for rgb_val in normalized_rgb]
     output["domain"] = old_label_config_dict["range"]
+    output["range"] = hex_colors
+
     if old_label_config_dict.get("ticks") and old_label_config_dict.get("tickLabels"):
         if isinstance(old_label_config_dict["tickLabels"][-1], str):
             # categorical scale
+            # only take as many hexcode entries, as there is labels - linear space
+            indices = np.linspace(
+                0,
+                len(output["range"]) - 1,
+                len(old_label_config_dict["tickLabels"]),
+                dtype=int,
+            )
+            selected_hex_colors = [output["range"][i] for i in indices]
+            output["range"] = selected_hex_colors
             output["domain"] = old_label_config_dict["tickLabels"]
             output["scaleType"] = "categorical"
         else:
             # numerical scale
             output["domain"] = [
                 old_label_config_dict["tickLabels"][0],
-                old_label_config_dict["tickLabels"][1],
+                old_label_config_dict["tickLabels"][-1],
             ]
     if output["scaleType"] == "continuous":
         output["tickFormat"] = ".0f"
-    output["range"] = hex_colors
+
     return output
 
 
@@ -198,7 +209,10 @@ def found_match(contained_collection_str: str):
         # read the collection_yaml and do the collection search
         collection_yaml_content = yaml.safe_load(hh)
         # only print match for those where Legend key exists to migrate
-        if "Legend" in collection_yaml_content:
+        if (
+            "Legend" in collection_yaml_content
+            and "Colorlegend" not in collection_yaml_content
+        ):
             (match, legend_def) = find_matching_legend_definition(
                 contained_collection_str, collection_yaml_content
             )
