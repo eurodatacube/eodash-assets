@@ -2,7 +2,7 @@
 """
 go through all RACE and eodashboard indicators, get their collection
 find a matching definition programatically
-convert schema from v4 schema to v5 schema https://github.com/eodash/eodash_catalog/wiki/Colorlegend
+convert schema from v4 config in legends.json to v5 schema https://github.com/eodash/eodash_catalog/wiki/Colorlegend
 """
 
 from typing import Any, Dict
@@ -20,18 +20,14 @@ import cmocean
 import os
 
 COUNTER = 0
-LEGENDS_JSON_PATH = Path(
-    "/home/lubomir/projects/eodash-assets/generators/legends.json"
-).resolve()
-collections_dir = Path(
-    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/collections/"
-).resolve()
-indicators_dir = Path(
-    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/indicators/"
-).resolve()
-catalogs_dir = Path(
-    "/home/lubomir/projects/eodash-v4-catalog-for-migration-tests/catalogs/"
-).resolve()
+generator_script_dir = Path(__file__).parent
+LEGENDS_JSON_PATH = Path(generator_script_dir / "legends.json").resolve()
+folder_eodash_catalog_v4_configs = (
+    Path(__file__).parent.parent / "eodash-v4-catalog-for-migration-tests"
+)
+collections_dir = Path(folder_eodash_catalog_v4_configs / "collections").resolve()
+indicators_dir = Path(folder_eodash_catalog_v4_configs / "indicators").resolve()
+catalogs_dir = Path(folder_eodash_catalog_v4_configs / "catalogs").resolve()
 
 # prepare a special legend cfastie (NDVI), as its not in matplotlib
 cfastie = np.load(os.path.join(os.path.dirname(__file__), "cfastie.npy"))
@@ -63,7 +59,7 @@ def load_json(file_path: str) -> Dict[str, Any]:
     return data
 
 
-def convert_v5_syntax(old_label_config_dict: dict) -> dict:
+def convert_v5_syntax(old_label_config_dict: Dict[str, Any]) -> Dict[str, Any]:
     output = {
         "title": "Sample text",
         "range": "",  # individual colors as html hexcode
@@ -123,7 +119,7 @@ def convert_v5_syntax(old_label_config_dict: dict) -> dict:
 
 # load legends definitions in legends.json
 data = load_json(LEGENDS_JSON_PATH)
-# mapping of collection file yaml to legend key
+# mapping of collection file yaml to legend key for cases where renaming was not fully done
 CUSTOM_MAPPING_MANUAL_MATCH = {
     "GHS_BUILT-S-R2023A": "GHS-BUILT-S-R2023A",
     "CROPOMAT1_crop_forecast_at": "crop_forecast_CropOM",
@@ -180,8 +176,8 @@ CUSTOM_MAPPING_MANUAL_MATCH = {
 
 
 def find_matching_legend_definition(
-    contained_collection_str: str, collection_yaml_content: str
-) -> str:
+    contained_collection_str: str,
+) -> tuple[str, dict]:
     """Find a matching collection YAML based on the key and
     shout if we do not have a match"""
     if contained_collection_str in CUSTOM_MAPPING_MANUAL_MATCH:
@@ -203,7 +199,7 @@ def find_matching_legend_definition(
     return (None, None)
 
 
-def found_match(contained_collection_str: str):
+def add_colorlegend_to_yaml(contained_collection_str: str):
     global COUNTER
     with open(collections_dir / f"{contained_collection_str}.yaml", "r+") as hh:
         # read the collection_yaml and do the collection search
@@ -226,11 +222,9 @@ def found_match(contained_collection_str: str):
                     # change files in place
                     yaml.dump(yaml_section_to_add, hh, default_flow_style=False)
             else:
-                pass
-                # print("not found", contained_collection_str)
+                print("match not found", contained_collection_str)
         else:
-            # print("Legend key not present in", contained_collection_str)
-            pass
+            print("Legend key not present in", contained_collection_str)
 
 
 if __name__ == "__main__":
@@ -262,10 +256,9 @@ if __name__ == "__main__":
                         ]
                         for contained_collection_str in list_of_contained_collections:
                             # read the collection_yaml and do the collection search
-                            found_match(contained_collection_str)
+                            add_colorlegend_to_yaml(contained_collection_str)
 
                 else:
                     # it is a collection
                     # read the collection_yaml and do the collection search
-                    found_match(indicator_or_collection)
-print("count", COUNTER)
+                    add_colorlegend_to_yaml(indicator_or_collection)
