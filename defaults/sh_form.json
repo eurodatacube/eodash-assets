@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "bbox": {
+            "type": "array",
+            "title": "Select area (bbox) on map",
+            "options": {
+                "drawtools": {
+                    "for": "eox-map#main",
+                    "projection": "EPSG:4326"
+                }
+            },
+            "format": "bounding-box"
+        },
+        "start_date":{
+            "type": "string",
+            "title": "Start date",
+            "format": "date"
+        },
+        "end_date":{
+            "type": "string",
+            "title": "End date",
+            "format": "date"
+        },
+        "distribution":{
+            "type":"string",
+            "enum":[
+                "daily",
+                "weekly",
+                "monthly",
+                "yearly"
+            ]
+        }
+    }
+}
