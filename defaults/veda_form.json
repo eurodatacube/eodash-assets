@@ -2,7 +2,7 @@
     "type": "object",
     "properties": {
         "bbox": {
-            "type": "array",
+            "type": "geojson",
             "title": "Select area (bbox) on map",
             "options": {
                 "drawtools": {
