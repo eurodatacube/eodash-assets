@@ -31,5 +31,8 @@
                 "yearly"
             ]
         }
-    }
+    },
+    "required":[
+        "bbox"
+    ]
 }
