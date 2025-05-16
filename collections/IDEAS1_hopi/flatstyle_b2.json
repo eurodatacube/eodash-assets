@@ -1,0 +1,90 @@
+{
+  "legend": {
+    "title": "Number of people of age > 60 or <5",
+    "range": [
+      "rgba(255,255,255,1)",
+      "rgba(255,244,191,1)",
+      "rgba(255,233,128,1)",
+      "rgba(255,221,64,1)",
+      "rgba(255,210,0,1)",
+      "rgba(247,140,0,1)",
+      "rgba(238,70,0,1)",
+      "rgba(230,0,0,1)",
+      "rgba(153,0,0,1)",
+      "rgba(77,0,0,1)",
+      "rgba(0,0,0,1)"
+    ],
+
+    "domainProperties": ["vmin", "vmax"]
+  },
+
+  "variables": {
+    "vmin": 0,
+    "vmax": 10000
+  },
+  "color": [
+    "case",
+    ["==", ["band", 1], 0],
+    ["color", 0, 0, 0, 0],
+    ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
+    [
+      "interpolate",
+      ["linear"],
+      ["band", 1],
+      [
+        0,
+        [255, 255, 255, 1],
+        1000,
+        [255, 244, 191, 1],
+        2000,
+        [255, 233, 128, 1],
+        3000,
+        [255, 221, 64, 1],
+        4000,
+        [255, 210, 0, 1],
+        5000,
+        [247, 140, 0, 1],
+        6000,
+        [238, 70, 0, 1],
+        7000,
+        [230, 0, 0, 1],
+        8000,
+        [153, 0, 0, 1],
+        9000,
+        [77, 0, 0, 1],
+        10000,
+        [0, 0, 0, 1]
+      ]
+    ],
+    ["color", 0, 0, 0, 0]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "vminmax": {
+        "title": "Number of people of age > 60 or <5",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000,
+            "step": 100,
+            "format": "range",
+            "default": 0
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000,
+            "step": 100,
+            "format": "range",
+            "default": 10000
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  }
+}

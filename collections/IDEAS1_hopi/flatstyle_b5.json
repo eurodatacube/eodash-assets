@@ -1,0 +1,91 @@
+{
+  "legend": {
+    "title": "Land Surface Temperature °C",
+    "range": [
+      "rgba(255,0,0,1)",
+      "rgba(230,0,25,1)",
+      "rgba(204,0,51,1)",
+      "rgba(179,0,77,1)",
+      "rgba(153,0,102,1)",
+      "rgba(128,0,128,1)",
+      "rgba(102,0,153,1)",
+      "rgba(77,0,179,1)",
+      "rgba(51,0,204,1)",
+      "rgba(26,0,230,1)",
+      "rgba(0,0,255,1)"
+    ],
+
+    "domainProperties": ["vmin", "vmax"]
+  },
+
+  "variables": {
+    "vmin": -10,
+    "vmax": 50
+  },
+  "color": [
+    "case",
+    ["==", ["band", 1], 0],
+    ["color", 0, 0, 0, 0],
+    ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
+    [
+      "interpolate",
+      ["linear"],
+      ["band", 1],
+
+      [
+        -10,
+        [255, 0, 0, 1],
+        -4,
+        [230, 0, 25, 1],
+        2,
+        [204, 0, 51, 1],
+        8,
+        [179, 0, 77, 1],
+        14,
+        [153, 0, 102, 1],
+        20,
+        [128, 0, 128, 1],
+        26,
+        [102, 0, 153, 1],
+        32,
+        [77, 0, 179, 1],
+        38,
+        [51, 0, 204, 1],
+        44,
+        [26, 0, 230, 1],
+        50,
+        [0, 0, 255, 1]
+      ]
+    ],
+    ["color", 0, 0, 0, 0]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "vminmax": {
+        "title": "Land Surface Temperature [°C]",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": -10,
+            "maximum": 50,
+            "step": 1,
+            "format": "range",
+            "default": -10
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": -10,
+            "maximum": 50,
+            "step": 1,
+            "format": "range",
+            "default": 50
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  }
+}
