@@ -1,26 +1,8 @@
 {
-  "legend": {
-    "title": "Number of days where air pollution exceeded WHO threshold",
-    "range": [
-      "rgba(255,255,255,1)",
-      "rgba(255,244,191,1)",
-      "rgba(255,233,128,1)",
-      "rgba(255,221,64,1)",
-      "rgba(255,210,0,1)",
-      "rgba(247,140,0,1)",
-      "rgba(238,70,0,1)",
-      "rgba(230,0,0,1)",
-      "rgba(153,0,0,1)",
-      "rgba(77,0,0,1)",
-      "rgba(0,0,0,1)"
-    ],
-
-    "domainProperties": ["vmin", "vmax"]
-  },
 
   "variables": {
     "vmin": 0,
-    "vmax": 200
+    "vmax": 85
   },
   "color": [
     "case",
@@ -34,25 +16,25 @@
       [
         0,
         [255, 255, 255, 1],
-        1000,
+        8.5,
         [255, 244, 191, 1],
-        2000,
+        17,
         [255, 233, 128, 1],
-        3000,
+        25.5,
         [255, 221, 64, 1],
-        4000,
+        34,
         [255, 210, 0, 1],
-        5000,
+        42.5,
         [247, 140, 0, 1],
-        6000,
+        51,
         [238, 70, 0, 1],
-        7000,
+        59.5,
         [230, 0, 0, 1],
-        8000,
+        68,
         [153, 0, 0, 1],
-        9000,
+        76.5,
         [77, 0, 0, 1],
-        10000,
+        85,
         [0, 0, 0, 1]
       ]
     ],
@@ -69,18 +51,18 @@
           "vmin": {
             "type": "number",
             "minimum": 0,
-            "maximum": 200,
-            "step": 10,
+            "maximum": 85,
+            "step": 1,
             "format": "range",
             "default": 0
           },
           "vmax": {
             "type": "number",
             "minimum": 0,
-            "maximum": 200,
-            "step": 10,
+            "maximum": 85,
+            "step": 1,
             "format": "range",
-            "default": 200
+            "default": 85
           }
         },
         "format": "minmax"

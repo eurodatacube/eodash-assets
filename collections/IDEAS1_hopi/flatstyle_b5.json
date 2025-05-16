@@ -1,23 +1,4 @@
 {
-  "legend": {
-    "title": "Land Surface Temperature °C",
-    "range": [
-      "rgba(255,0,0,1)",
-      "rgba(230,0,25,1)",
-      "rgba(204,0,51,1)",
-      "rgba(179,0,77,1)",
-      "rgba(153,0,102,1)",
-      "rgba(128,0,128,1)",
-      "rgba(102,0,153,1)",
-      "rgba(77,0,179,1)",
-      "rgba(51,0,204,1)",
-      "rgba(26,0,230,1)",
-      "rgba(0,0,255,1)"
-    ],
-
-    "domainProperties": ["vmin", "vmax"]
-  },
-
   "variables": {
     "vmin": -10,
     "vmax": 50

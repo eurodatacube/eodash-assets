@@ -1,23 +1,4 @@
 {
-  "legend": {
-    "title": "Number of people of age > 60 or <5",
-    "range": [
-      "rgba(255,255,255,1)",
-      "rgba(255,244,191,1)",
-      "rgba(255,233,128,1)",
-      "rgba(255,221,64,1)",
-      "rgba(255,210,0,1)",
-      "rgba(247,140,0,1)",
-      "rgba(238,70,0,1)",
-      "rgba(230,0,0,1)",
-      "rgba(153,0,0,1)",
-      "rgba(77,0,0,1)",
-      "rgba(0,0,0,1)"
-    ],
-
-    "domainProperties": ["vmin", "vmax"]
-  },
-
   "variables": {
     "vmin": 0,
     "vmax": 10000

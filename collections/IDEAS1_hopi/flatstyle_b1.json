@@ -1,29 +1,4 @@
 {
-  "legend": {
-    "title": "Health risk due to urban heat and pollution (0 being no risk on health and 2 extreme risk on health)",
-    "range": [
-      "rgba(255, 255, 255, 1)",
-      "rgba(255, 248, 213, 1)",
-      "rgba(255, 240, 170, 1)",
-      "rgba(255, 233, 128, 1)",
-      "rgba(255, 225, 85, 1)",
-      "rgba(255, 218, 43, 1)",
-      "rgba(255, 210, 0, 1)",
-      "rgba(249, 158, 0, 1)",
-      "rgba(243, 105, 0, 1)",
-      "rgba(236, 53, 0, 1)",
-      "rgba(230, 0, 0, 1)",
-      "rgba(173, 0, 0, 1)",
-      "rgba(115, 0, 0, 1)",
-      "rgba(58, 0, 0, 1)",
-      "rgba(0, 0, 0, 1)"
-    ],
-    "domainProperties": ["vmin", "vmax"]
-  },
-  "variables": {
-    "vmin": 0,
-    "vmax": 1
-  },
   "color": [
     "case",
     ["==", ["band", 1], 0],
