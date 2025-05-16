@@ -1,4 +1,8 @@
 {
+  "variables": {
+    "vmin": 0,
+    "vmax": 1
+  },
   "color": [
     "case",
     ["==", ["band", 1], 0],
