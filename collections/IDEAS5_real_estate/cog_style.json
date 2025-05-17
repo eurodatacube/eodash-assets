@@ -4,18 +4,45 @@
     "vmax": 6
   },
   "color": [
-      "case",
-      ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
-      [
-          "interpolate",
-          ["linear"],
-          ["band", 1],
-          0, [255, 255, 255, 1],
-          6, [189, 6, 6, 1]
-      ],
-      [
-          "color", 0, 0, 0, 0
-      ]
+    "case",
+    ["==", ["band", 1], 0],
+    ["color", 0, 0, 0, 0],
+    ["between", ["band", 1],
+      ["*", ["var", "vmin"], 10000],
+      ["*", ["var", "vmax"], 10000]
+    ],
+    [
+      "interpolate",
+      ["linear"],
+      ["band", 1],
+      0,
+      [255, 255, 255, 1],
+      5000,
+      [255, 246, 204, 1],
+      10000,
+      [255, 237, 153, 1],
+      15000,
+      [255, 228, 102, 1],
+      20000,
+      [255, 219, 51, 1],
+      25000,
+      [255, 210, 0, 1],
+      30000,
+      [247, 140, 0, 1],
+      35000,
+      [238, 70, 0, 1],
+      40000,
+      [230, 0, 0, 1],
+      45000,
+      [173, 0, 0, 1],
+      50000,
+      [115, 0, 0, 1],
+      55000,
+      [58, 0, 0, 1],
+      60000,
+      [0, 0, 0, 1]
+    ],
+    ["color", 0, 0, 0, 0]
   ],
   "jsonform": {
     "type": "object",
@@ -23,19 +50,17 @@
     "properties": {
       "vminmax": {
         "title": "Heat Risk Class",
-        "description": "[unitless]",
+        "description": "",
         "type": "object",
         "properties": {
           "vmin": {
             "type": "number",
             "minimum": 0,
-            "maximum": 6,
             "format": "range",
-            "default": 1
+            "default": 0
           },
           "vmax": {
             "type": "number",
-            "minimum": 0,
             "maximum": 6,
             "format": "range",
             "default": 6
