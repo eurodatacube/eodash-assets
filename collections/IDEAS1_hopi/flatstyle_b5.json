@@ -1,0 +1,69 @@
+{
+  "variables": {
+    "vmin": -10,
+    "vmax": 50
+  },
+  "color": [
+    "case",
+    ["==", ["band", 1], 0],
+    ["color", 0, 0, 0, 0],
+    ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
+    [
+      "interpolate",
+      ["linear"],
+      ["band", 1],
+      -10,
+      [178, 10, 28, 1],
+      -4,
+      [195, 55, 49, 1],
+      2,
+      [213, 100, 69, 1],
+      8,
+      [230, 145, 90, 1],
+      14,
+      [220, 170, 132, 1],
+      20,
+      [190, 190, 190, 1],
+      26,
+      [106, 137, 247, 1],
+      32,
+      [81, 105, 228, 1],
+      38,
+      [56, 74, 210, 1],
+      44,
+      [30, 42, 191, 1],
+      50,
+      [5, 10, 172, 1]
+    ],
+    ["color", 0, 0, 0, 0]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "vminmax": {
+        "title": "Land Surface Temperature [°C]",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": -10,
+            "maximum": 50,
+            "step": 1,
+            "format": "range",
+            "default": -10
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": -10,
+            "maximum": 50,
+            "step": 1,
+            "format": "range",
+            "default": 50
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  }
+}

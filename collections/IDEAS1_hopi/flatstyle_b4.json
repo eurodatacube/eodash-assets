@@ -1,45 +1,39 @@
 {
+
   "variables": {
     "vmin": 0,
-    "vmax": 6
+    "vmax": 85
   },
   "color": [
     "case",
     ["==", ["band", 1], 0],
     ["color", 0, 0, 0, 0],
-    ["between", ["band", 1],
-      ["*", ["var", "vmin"], 10000],
-      ["*", ["var", "vmax"], 10000]
-    ],
+    ["between", ["band", 1], ["var", "vmin"], ["var", "vmax"]],
     [
       "interpolate",
       ["linear"],
       ["band", 1],
       0,
       [255, 255, 255, 1],
-      5000,
-      [255, 246, 204, 1],
-      10000,
-      [255, 237, 153, 1],
-      15000,
-      [255, 228, 102, 1],
-      20000,
-      [255, 219, 51, 1],
-      25000,
+      8.5,
+      [255, 244, 191, 1],
+      17,
+      [255, 233, 128, 1],
+      25.5,
+      [255, 221, 64, 1],
+      34,
       [255, 210, 0, 1],
-      30000,
+      42.5,
       [247, 140, 0, 1],
-      35000,
+      51,
       [238, 70, 0, 1],
-      40000,
+      59.5,
       [230, 0, 0, 1],
-      45000,
-      [173, 0, 0, 1],
-      50000,
-      [115, 0, 0, 1],
-      55000,
-      [58, 0, 0, 1],
-      60000,
+      68,
+      [153, 0, 0, 1],
+      76.5,
+      [77, 0, 0, 1],
+      85,
       [0, 0, 0, 1]
     ],
     ["color", 0, 0, 0, 0]
@@ -49,21 +43,24 @@
     "title": "Data configuration",
     "properties": {
       "vminmax": {
-        "title": "Heat Risk Class",
-        "description": "",
+        "title": "Number of days where air pollution exceeded WHO threshold",
         "type": "object",
         "properties": {
           "vmin": {
             "type": "number",
             "minimum": 0,
+            "maximum": 85,
+            "step": 1,
             "format": "range",
             "default": 0
           },
           "vmax": {
             "type": "number",
-            "maximum": 6,
+            "minimum": 0,
+            "maximum": 85,
+            "step": 1,
             "format": "range",
-            "default": 6
+            "default": 85
           }
         },
         "format": "minmax"
