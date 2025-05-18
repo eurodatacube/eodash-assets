@@ -1,0 +1,6 @@
+{
+  "stroke-color": "red",
+  "stroke-width": 3,
+  "fill-color": "none",
+  "tooltip": [{ "id": "predicted_value", "title": "Predicted value: " }]
+}

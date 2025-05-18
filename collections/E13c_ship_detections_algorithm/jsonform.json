@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "bbox": {
+      "type": "array",
+      "title": "Select area on map",
+      "options": {
+        "autoStartSelection": false,
+        "drawtools": {
+          "for": "eox-map#main",
+          "projection": "EPSG:4326",
+          "featureStyles": {
+            "layer": {
+              "fill-color": "none",
+              "stroke-color": "#ca42cf",
+              "stroke-width": 3
+            }
+          }
+        }
+      },
+      "format": "bounding-box"
+    },
+    "start_date": {
+      "title": "Select date",
+      "type": "date",
+      "format": "date"
+    },
+    "threshold": {
+      "title": "Threshold for detection algorithm",
+      "type": "number",
+      "format": "number",
+      "step": 0.05,
+      "default": 0.5,
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
