@@ -12,14 +12,14 @@
             },
             "format": "bounding-box"
         },
-        "end_date":{
-            "type": "string",
-            "title": "End date",
-            "format": "date"
-        },
         "start_date":{
             "type": "string",
             "title": "Start date",
+            "format": "date"
+        },
+        "end_date":{
+            "type": "string",
+            "title": "End date",
             "format": "date"
         },
         "distribution":{
