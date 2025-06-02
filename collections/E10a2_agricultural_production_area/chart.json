@@ -41,7 +41,10 @@
     "y": {
       "field": "value",
       "type": "quantitative",
-      "title": "Cumulative proportion of\ntotal areas under active management"
+      "title": [
+        "Cumulative proportion of total",
+        "areas under active management"
+    ]
     },
     "color": {
       "field": "year",
