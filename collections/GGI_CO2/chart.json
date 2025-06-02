@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped CO₂ bar chart by time and component (safe JSON parsing workaround)",
+  "data": {
+    "name": "process_eox"
+  },
+  "transform": [
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "CO2 Inventory"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "CO2 Inversion in-situ"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[2]",
+      "as": "CO2 Inversion satellite"
+    },
+    {
+      "fold": [
+        "CO2 Inventory",
+        "CO2 Inversion in-situ",
+        "CO2 Inversion satellite"
+      ],
+      "as": ["component", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "numeric_value"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "timeUnit": "year",
+      "title": "Year"
+    },
+    "xOffset": {
+      "field": "component",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "numeric_value",
+      "type": "quantitative",
+      "title": "CO₂ Value [Tg C]"
+    },
+    "color": {
+      "field": "component",
+      "type": "nominal",
+      "title": "CO₂ Component",
+      "scale": {
+        "domain": [
+          "CO2 Inventory",
+          "CO2 Inversion satellite",
+          "CO2 Inversion in-situ"
+        ],
+        "range": ["#4c78a8", "#f58518", "#e45756"]
+      }
+    },
+    "tooltip": [
+      {"field": "time", "type": "temporal", "title": "Date"},
+      {"field": "component", "type": "nominal", "title": "Component"},
+      {"field": "numeric_value", "type": "quantitative", "title": "CO₂ Value"}
+    ]
+  }
+}
