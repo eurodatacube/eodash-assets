@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart by month and year for measurement_value",
+  "data": {
+    "name": "process_eox"
+  },
+  "transform": [
+    {
+      "calculate": "month(datum.time)",
+      "as": "month"
+    },
+    {
+      "calculate": "year(datum.time)",
+      "as": "year"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "ordinal",
+      "title": "Month",
+      "axis": {
+        "labelExpr": "timeFormat(datetime(2020, datum.value, 1), '%B')"
+      }
+    },
+    "xOffset": {
+      "field": "year",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "measurement_value",
+      "type": "quantitative",
+      "title": "ppmv"
+    },
+    "color": {
+      "field": "year",
+      "type": "nominal",
+      "title": "Year"
+    },
+    "tooltip": [
+      {"field": "year", "type": "ordinal"},
+      {"field": "month", "type": "ordinal"},
+      {"field": "measurement_value", "type": "quantitative", "title": "ppmv"}
+    ]
+  }
+}
