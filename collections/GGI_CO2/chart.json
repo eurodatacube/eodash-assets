@@ -52,6 +52,9 @@
       "title": "CO₂ Value [Tg C]"
     },
     "color": {
+      "legend": {
+        "orient": "top"
+      },
       "field": "component",
       "type": "nominal",
       "title": "CO₂ Component",
