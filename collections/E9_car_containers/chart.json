@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bar chart with bars evenly spaced, sorted by date, same color",
+  "data": {
+    "name": "process_eox"
+  },
+  "mark": {
+    "type": "bar",
+    "color": "steelblue"
+  },
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "ordinal",
+      "title": "Date",
+      "sort": "ascending",
+      "axis": {
+        "labelAngle": -45,
+        "labelExpr": "timeFormat(datum.value, '%Y-%m-%d')"
+      }
+    },
+    "y": {
+      "field": "measurement_value",
+      "type": "quantitative",
+      "title": "Car density"
+    },
+    "tooltip": [
+      {"field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
+      {"field": "measurement_value", "type": "quantitative", "title": "Car density"}
+    ]
+  }
+}
