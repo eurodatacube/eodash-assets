@@ -9,21 +9,24 @@
     "interpolate": "monotone",
     "point": true
   },
+  "transform": [
+    {"flatten": ["result"],"as": ["data"]}
+  ],
   "encoding": {
     "x": {
-      "field": "time",
+      "field": "data.time",
       "type": "temporal",
       "title": "Year",
       "axis": {"format": "%Y"}
     },
     "y": {
-      "field": "median",
+      "field": "data.median",
       "type": "quantitative",
       "title": "Median Value"
     },
     "tooltip": [
-      {"field": "time", "type": "temporal", "title": "Year"},
-      {"field": "median", "type": "quantitative", "title": "Median"}
+      {"field": "data.time", "type": "temporal", "title": "Year"},
+      {"field": "data.median", "type": "quantitative", "title": "Median"}
     ]
   },
   "config": {
