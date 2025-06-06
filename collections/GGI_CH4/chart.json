@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped CO₂ bar chart by time and component (safe JSON parsing workaround)",
+  "data": {
+    "name": "process_eox"
+  },
+  "transform": [
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "CH4 Inventory Agriculture and waste"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "CH4 Inventory Biomass"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[2]",
+      "as": "CH4 Inventory Fossil"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[3]",
+      "as": "CH4 Inversion satellite Agriculture and waste"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[4]",
+      "as": "CH4 Inversion satellite Biomass"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[5]",
+      "as": "CH4 Inversion satellite Fossil"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[6]",
+      "as": "CH4 Inversion in-situ Agriculture and waste"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[7]",
+      "as": "CH4 Inversion in-situ Biomass"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[8]",
+      "as": "CH4 Inversion in-situ Fossil"
+    },
+    {
+      "fold": [
+        "CH4 Inventory Agriculture and waste",
+        "CH4 Inventory Biomass",
+        "CH4 Inventory Fossil",
+        "CH4 Inversion satellite Agriculture and waste",
+        "CH4 Inversion satellite Biomass",
+        "CH4 Inversion satellite Fossil",
+        "CH4 Inversion in-situ Agriculture and waste",
+        "CH4 Inversion in-situ Biomass",
+        "CH4 Inversion in-situ Fossil"
+      ],
+      "as": ["component", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "numeric_value"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "timeUnit": "year",
+      "title": "Year"
+    },
+    "xOffset": {
+      "field": "component",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "numeric_value",
+      "type": "quantitative",
+      "title": "CH4 Value [Tg CH4]"
+    },
+    "color": {
+      "legend": {
+        "orient": "top",
+        "direction": "vertical"
+      },
+      "field": "component",
+      "type": "nominal",
+      "title": "CH4 Component",
+      "scale": {
+        "domain": [
+          "CH4 Inventory Agriculture and waste",
+          "CH4 Inventory Biomass",
+          "CH4 Inventory Fossil",
+          "CH4 Inversion satellite Agriculture and waste",
+          "CH4 Inversion satellite Biomass",
+          "CH4 Inversion satellite Fossil",
+          "CH4 Inversion in-situ Agriculture and waste",
+          "CH4 Inversion in-situ Biomass",
+          "CH4 Inversion in-situ Fossil"
+        ],
+        "range": ["#114f1c", "#4f0619", "#0a345e", "#318717", "#c4295a", "#508ab3", "#97e970", "#dd67aa", "#66cbed"]
+      }
+    },
+    "tooltip": [
+      {"field": "time", "type": "temporal", "title": "Date"},
+      {"field": "component", "type": "nominal", "title": "Component"},
+      {"field": "numeric_value", "type": "quantitative", "title": "CH4 Value"}
+    ]
+  }
+}
