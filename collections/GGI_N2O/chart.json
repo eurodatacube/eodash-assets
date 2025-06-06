@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped N₂O bar chart by time and component (safe JSON parsing workaround)",
+  "data": {
+    "name": "process_eox"
+  },
+  "transform": [
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "N₂O Inventory"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "N₂O Inversion in-situ"
+    },
+    {
+      "fold": [
+        "N₂O Inventory",
+        "N₂O Inversion in-situ"
+      ],
+      "as": [
+        "component",
+        "value"
+      ]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "numeric_value"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "timeUnit": "year",
+      "title": "Year"
+    },
+    "xOffset": {
+      "field": "component",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "numeric_value",
+      "type": "quantitative",
+      "title": "N₂O Value [Tg N]"
+    },
+    "color": {
+      "legend": {
+        "orient": "top"
+      },
+      "field": "component",
+      "type": "nominal",
+      "title": "N₂O Component",
+      "scale": {
+        "domain": [
+          "N₂O Inventory",
+          "N₂O Inversion in-situ"
+        ],
+        "range": [
+          "#4c78a8",
+          "#f58518"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "time",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "component",
+        "type": "nominal",
+        "title": "Component"
+      },
+      {
+        "field": "numeric_value",
+        "type": "quantitative",
+        "title": "N₂O Value"
+      }
+    ]
+  }
+}
