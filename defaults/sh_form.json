@@ -5,6 +5,7 @@
             "type": "array",
             "title": "Select area (bbox) on map",
             "options": {
+                "autoStartSelection": false,
                 "drawtools": {
                     "for": "eox-map#main",
                     "projection": "EPSG:4326"
