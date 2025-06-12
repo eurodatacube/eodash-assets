@@ -25,12 +25,10 @@
         },
         "distribution":{
             "type":"string",
-            "enum":[
-                "daily",
-                "weekly",
-                "monthly",
-                "yearly"
-            ]
+            "options": {
+                "hidden": true
+            },
+            "default": "weekly"
         }
     },
     "required":[
