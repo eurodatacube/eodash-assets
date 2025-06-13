@@ -1,0 +1,148 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Soil moisture time series with auto legend",
+  "data": {
+    "name": "timeseries"
+  },
+  "transform": [
+    {
+      "fold": ["measurement_value", "reference_value"],
+      "as": ["Series", "value"]
+    },
+    {
+      "calculate": "datum.Series === 'measurement_value' ? 'Soil moisture contents' : 'Climatic average'",
+      "as": "SeriesLabel"
+    }
+  ],
+  "layer":[
+    {
+      "mark": {
+      "type": "line",
+      "strokeWidth": 2
+    },
+    "encoding": {
+      "x": {
+        "field": "time",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {
+          "format": "%Y",
+          "tickCount": {"interval": "year", "step": 1}
+        }
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Soil moisture contents [%]",
+        "scale": {
+          "zero": false
+        }
+      },
+      "color": {
+        "field": "SeriesLabel",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Soil moisture contents", "Climatic average"],
+          "range": ["black", "blue"]
+        },
+        "legend": {
+          "title": "Legend",
+          "orient": "top"
+        }
+      },
+      "strokeDash": {
+        "field": "SeriesLabel",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Soil moisture contents", "Climatic average"],
+          "range": [[1, 0], [4, 2]]
+        }
+      },
+      "tooltip": [
+        {"field": "time", "type": "temporal", "title": "Date"},
+        {"field": "SeriesLabel", "type": "nominal", "title": "Series"},
+        {"field": "value", "type": "quantitative", "title": "Value"}
+      ]
+    }
+    },
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "transform": [],
+      "mark": {
+        "type": "rule",
+        "color": "grey"
+      },
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.5,
+            "empty": false
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "time", "type": "temporal", "title": "Date"},
+          {"field": "measurement_value", "type": "quantitative", "title": "Value"},
+          {"field": "reference_value", "type": "quantitative", "title": "Reference "}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover"}}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90
+      },
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "y": {"field": "measurement_value", "type": "quantitative"},
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.5,
+            "empty": false
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover"}}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90
+      },
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "y": {"field": "reference_value", "type": "quantitative"},
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.5,
+            "empty": false
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}
