@@ -22,7 +22,10 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
-      "title": "Median Value"
+      "title": "Median Value",
+      "scale": {
+        "zero": false
+      }
     },
     "tooltip": [
       {"field": "data.time", "type": "temporal", "title": "Year"},
