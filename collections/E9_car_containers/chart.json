@@ -11,7 +11,7 @@
   "encoding": {
     "x": {
       "field": "time",
-      "type": "ordinal",
+      "type": "temporal",
       "title": "Date",
       "sort": "ascending",
       "axis": {
