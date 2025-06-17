@@ -1,0 +1,85 @@
+{
+  "data": {
+    "name": "process_eox",
+    "values": []
+  },
+  "layer": [
+    {
+      "layer": [
+        {
+          "mark": "line"
+        },
+        {
+          "mark": "point",
+          "transform": [
+            {
+              "filter": {
+                "empty": false,
+                "param": "hover"
+              }
+            }
+          ]
+        }
+      ],
+      "encoding": {
+        "y": {
+          "type": "quantitative",
+          "field": "measurement_value"
+        },
+        "color": {
+          "type": "nominal",
+          "field": "eo_sensor",
+          "title": "Sensor Type"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "on": "pointerover",
+            "type": "point",
+            "clear": "pointerout",
+            "fields": [
+              "time"
+            ],
+            "nearest": true
+          }
+        }
+      ],
+      "encoding": {
+        "opacity": {
+          "value": 0,
+          "condition": {
+            "empty": false,
+            "param": "hover",
+            "value": 0.3
+          }
+        },
+        "tooltip": [
+          {
+            "type": "nominal",
+            "field": "eo_sensor",
+            "title": "Sensor"
+          },
+          {
+            "type": "quantitative",
+            "field": "measurement_value",
+            "title": "Value"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "encoding": {
+    "x": {
+      "type": "temporal",
+      "field": "time"
+    }
+  },
+  "background": "transparent",
+  "description": "A chart visualizing data fetched from a geoDB endpoint"
+}
