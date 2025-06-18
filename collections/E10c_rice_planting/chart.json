@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "parseFloat(datum.measurement_value)",
+      "as": "measurement"
+    }
+  ],
+  "mark": {"type": "line", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "timeUnit": "monthdate",
+      "axis": {
+        "title": "Month",
+        "format": "%B",
+        "tickCount": 12,
+        "domain": [
+          {
+            "year": 0,
+            "month": 0,
+            "date": 1
+          },
+          {
+            "year": 0,
+            "month": 11,
+            "date": 31
+          }
+        ]
+      }
+    },
+    "y": {
+      "field": "measurement",
+      "type": "quantitative",
+      "title": "NVDI"
+    },
+    "color": {
+      "field": "time",
+      "timeUnit": "year",
+      "title": "Year",
+      "type": "nominal"
+    },
+    "detail": [
+      {
+        "field": "site_name",
+        "type": "nominal"
+      },
+      {
+        "field": "time",
+        "timeUnit": "year",
+        "type": "nominal"
+      }
+    ]
+  }
+}
