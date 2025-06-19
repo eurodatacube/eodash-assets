@@ -11,4 +11,4 @@ Dataset represents a NDVI calculated from Harmonized Landsat and Sentinel-2 Data
 
 ## Data Access
 
-- "[VEDA Catalog](https://staging-stac.delta-backend.com/collections/hls-ndvi)"
+- "[VEDA Catalog](https://openveda.cloud/api/stac/collections/hls-ndvi)"
