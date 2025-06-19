@@ -14,4 +14,4 @@ This data can be used by researchers to better compare the national-level invent
 
 ## Data Access
 
-- "[VEDA Catalog](https://staging-stac.delta-backend.com/collections/EPA-monthly-emissions_4F_Field_Burning)"
+- "[VEDA Catalog](https://openveda.cloud/api/stac/collections/EPA-monthly-emissions_4F_Field_Burning)"

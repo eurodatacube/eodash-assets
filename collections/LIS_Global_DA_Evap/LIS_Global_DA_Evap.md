@@ -11,4 +11,4 @@ Dataset represents Gridded total evapotranspiration (in kg m-2 s-1) from 10km gl
 
 ## Data Access
 
-- "[VEDA Catalog](https://staging-stac.delta-backend.com/collections/lis-global-da-evap)"
+- "[VEDA Catalog](https://openveda.cloud/api/stac/collections/lis-global-da-evap)"

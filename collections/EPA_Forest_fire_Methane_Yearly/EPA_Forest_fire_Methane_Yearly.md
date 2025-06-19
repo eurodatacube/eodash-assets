@@ -14,4 +14,4 @@ This data can be used by researchers to better compare the national-level invent
 
 ## Data Access
 
-- "[VEDA Catalog](https://staging-stac.delta-backend.com/collections/EPA-annual-emissions_5_Forest_Fires)"
+- "[VEDA Catalog](https://openveda.cloud/api/stac/collections/EPA-annual-emissions_5_Forest_Fires)"
