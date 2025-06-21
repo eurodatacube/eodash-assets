@@ -1,34 +1,38 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Chart with parsed reference_value topics",
+  "description": "Chart with measurement_value and parsed reference_value topics",
   "data": {
     "name": "geodb_example",
     "values": []
   },
   "transform": [
-      {
+    {
       "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
       "as": "ref_clean"
     },
     {
-      "calculate": "split(datum.ref_clean, ',')[0]",
+      "calculate": "datum.measurement_value",
       "as": "Grocery"
     },
     {
-      "calculate": "split(datum.ref_clean, ',')[1]",
+      "calculate": "split(datum.ref_clean, ',')[0]",
       "as": "Parks"
     },
     {
-      "calculate": "split(datum.ref_clean, ',')[2]",
+      "calculate": "split(datum.ref_clean, ',')[1]",
       "as": "Residential"
     },
     {
-      "calculate": "split(datum.ref_clean, ',')[3]",
+      "calculate": "split(datum.ref_clean, ',')[2]",
       "as": "Retail Recreation"
     },
     {
-      "calculate": "split(datum.ref_clean, ',')[4]",
+      "calculate": "split(datum.ref_clean, ',')[3]",
       "as": "Transit Systems"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[4]",
+      "as": "Workplaces"
     },
     {
       "fold": [
@@ -36,7 +40,8 @@
         "Parks",
         "Residential",
         "Retail Recreation",
-        "Transit Systems"
+        "Transit Systems",
+        "Workplaces"
       ],
       "as": ["topic", "value"]
     },

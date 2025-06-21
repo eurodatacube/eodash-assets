@@ -56,7 +56,13 @@
           {
             "type": "quantitative",
             "field": "measurement_value"
-          }
+          },
+          {
+	    "field": "time",
+	    "type": "temporal",
+	    "title": "Date",
+	    "format": "%Y-%m-%d"
+          },
         ]
       }
     }
@@ -65,7 +71,9 @@
   "encoding": {
     "x": {
       "type": "temporal",
-      "field": "time"
+      "field": "time",
+      "title": "Year",
+      "axis": {"format": "%b %Y"}
     }
   },
   "background": "transparent",
