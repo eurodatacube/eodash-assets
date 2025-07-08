@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A multi-line chart visualizing data by indicator value type",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "encoding": {
+    "x": {
+      "field": "time", 
+      "type": "temporal"
+    },
+    "y": {
+      "field": "measurement_value", 
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "indicator_value",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Incoming domestic", "Outgoing domestic", "Incoming International"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]
+      },
+      "legend": {
+        "title": "Indicator Type"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": false,
+        "strokeWidth": 2
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover", "empty": false}}
+      ],
+      "mark": {
+        "type": "point",
+        "size": 100
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "time", "type": "temporal", "title": "Time"},
+          {"field": "indicator_value", "type": "nominal", "title": "Indicator"},
+          {"field": "measurement_value", "type": "quantitative", "title": "Value"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
