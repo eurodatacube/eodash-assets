@@ -62,7 +62,7 @@
 	    "type": "temporal",
 	    "title": "Date",
 	    "format": "%Y-%m-%d"
-          },
+          }
         ]
       }
     }
