@@ -1,0 +1,5 @@
+{
+    "collection": "eodash_MODIS_timeseries",
+    "select": "brightness,geometry,date_time,confidence,frp,daynight,type,bright_t31",
+    "where": "ST_Intersects(ST_GeomFromText('{{polygon}}',4326), geometry) AND date_time LIKE '{{date}}%'"
+}

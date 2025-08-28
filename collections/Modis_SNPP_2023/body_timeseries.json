@@ -1,0 +1,6 @@
+{
+    "collection": "eodash_MODIS_timeseries",
+    "select": "date_time,geometry",
+    "order": "date_time",
+    "where": "ST_Intersects(ST_GeomFromText('{{polygon}}',4326), geometry)"
+}

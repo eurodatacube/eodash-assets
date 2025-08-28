@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "polygon": {
+            "type": "geojson",
+            "title": "Select area (bbox) on map",
+            "options": {
+                "autoStartSelection": false,
+                "drawtools": {
+                    "for": "eox-map#main",
+                    "projection": "EPSG:4326"
+                }
+            },
+            "format": "bounding-box"
+        },
+        "date":{
+            "type": "string",
+            "title": "Date",
+            "format": "date",
+            "default": "2023-05-05"
+        }
+    },
+    "required":[
+        "bbox"
+    ]
+}
