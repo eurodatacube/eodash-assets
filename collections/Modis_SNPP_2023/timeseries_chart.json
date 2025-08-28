@@ -1,23 +1,64 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Detected fires time series",
-    "data": {"name": "timeseries"},
-    "mark": "bar",
-    "encoding": {
-        "x": {
-        "timeUnit": "yearmonthdate",
-        "field": "date_time",
-        "type": "temporal",
-        "title": "Date"
-        },
-        "y": {
-        "aggregate": "count",
-        "type": "quantitative",
-        "title": "Active fires detected",
-        "axis": {
-            "format": "d"
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"description": "Count of fire instances per day",
+    "transform": [
+        {
+            "flatten": ["src"],
+            "as": ["data"]
         }
-    }
-  },
-  "background": "transparent"
+    ],
+	"data": {
+		"name": "timeseries"
+	},
+	"mark": "bar",
+	"encoding": {
+		"x": {
+			"timeUnit": "yearmonthdate",
+			"field": "data.date_time",
+			"type": "temporal",
+			"title": "Date"
+		},
+		"y": {
+			"aggregate": "count",
+			"type": "quantitative",
+			"title": "Detected fires in area",
+			"axis": {
+				"format": "d"
+			}
+		},
+		"tooltip": [
+			{
+				"timeUnit": "yearmonthdate",
+				"field": "data.date_time",
+				"type": "temporal",
+				"title": "Date"
+			},
+			{
+				"aggregate": "count",
+				"type": "quantitative",
+				"title": "Detected fires"
+			}
+		],
+		"opacity": {
+			"condition": {
+				"param": "hover",
+				"value": 1
+			},
+			"value": 0.6
+		}
+	},
+	"params": [
+		{
+			"name": "hover",
+			"select": {
+				"type": "point",
+				"nearest": true,
+				"on": "mousemove",
+				"encodings": [
+					"x"
+				]
+			}
+		}
+	],
+	"background": "transparent"
 }
