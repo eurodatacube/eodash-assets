@@ -21,6 +21,6 @@
         }
     },
     "required":[
-        "bbox"
+        "polygon"
     ]
 }
