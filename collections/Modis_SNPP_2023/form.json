@@ -2,7 +2,7 @@
     "type": "object",
     "properties": {
         "polygon": {
-            "type": "geojson",
+            "type": "wkt",
             "title": "Select area (bbox) on map",
             "options": {
                 "autoStartSelection": false,
