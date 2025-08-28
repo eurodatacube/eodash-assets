@@ -12,12 +12,6 @@
                 }
             },
             "format": "bounding-box"
-        },
-        "date":{
-            "type": "string",
-            "title": "Date",
-            "format": "date",
-            "default": "2023-05-05"
         }
     },
     "required":[
