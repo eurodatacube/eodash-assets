@@ -12,6 +12,15 @@
                 }
             },
             "format": "bounding-box"
+        },
+        "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Select date",
+            "default": "2023-01-01",
+            "options": {
+                "hidden": true
+            }
         }
     },
     "required":[
