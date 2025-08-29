@@ -1,4 +1,9 @@
 {
     "circle-radius": 10,
-    "circle-fill-color": "red"
+    "circle-fill-color": "blue",
+    "circle-stroke-color": "red",
+    "circle-stroke-width": 1,
+    "fill-color": "red",
+    "stroke-color": "black",
+    "stroke-width": 1
 }
