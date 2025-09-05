@@ -1,9 +1,11 @@
 {
-    "circle-radius": 10,
-    "circle-fill-color": "blue",
+    "circle-radius": 3,
     "circle-stroke-color": "red",
-    "circle-stroke-width": 1,
-    "fill-color": "red",
-    "stroke-color": "black",
-    "stroke-width": 1
+    "circle-stroke-width": 2,
+    "tooltip": [
+        {"id": "date_time", "title": "Timestamp"},
+        {"id": "confidence" "title": "Confidence"},
+        {"id": "frp", "title": "Fire Radiative Power"},
+        {"id": "bright_t31", "title": "Brightness Temperature at 3.7 µm"}
+    ]
 }
