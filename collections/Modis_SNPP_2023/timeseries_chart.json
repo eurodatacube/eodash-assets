@@ -4,10 +4,10 @@
   "background": "transparent",
   "transform": [
     {"flatten": ["src"], "as": ["data"]},
-    {"timeUnit": "yearmonthdate", "field": "data.date_time", "as": "day"},
+    {"timeUnit": "yearmonthdate", "field": "data.date_time", "as": "date"},
     {
       "aggregate": [{"op": "count", "field": "data.date_time", "as": "fire_count"}],
-      "groupby": ["day"]
+      "groupby": ["date"]
     }
   ],
   "data": {
@@ -17,21 +17,21 @@
     {
       "mark": {"type": "line", "interpolate": "monotone"},
       "encoding": {
-        "x": {"field": "day", "type": "temporal", "title": "Date"},
+        "x": {"field": "date", "type": "temporal", "title": "Date"},
         "y": {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
       }
     },
     {
       "mark": {"type": "point", "filled": true, "size": 40},
       "encoding": {
-        "x": {"field": "day", "type": "temporal"},
+        "x": {"field": "date", "type": "temporal"},
         "y": {"field": "fire_count", "type": "quantitative"},
         "opacity": {
           "condition": {"param": "hover", "value": 1},
           "value": 0
         },
         "tooltip": [
-          {"field": "day", "type": "temporal", "title": "Date"},
+          {"field": "date", "type": "temporal", "title": "Date"},
           {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
         ]
       },
