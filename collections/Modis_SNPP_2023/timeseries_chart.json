@@ -13,6 +13,7 @@
   "data": {
 		"name": "timeseries"
 	},
+  "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date"}},
   "layer": [
     {
       "mark": {"type": "line", "interpolate": "monotone"},
