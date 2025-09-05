@@ -1,64 +1,52 @@
 {
-	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-	"description": "Count of fire instances per day",
-    "transform": [
-        {
-            "flatten": ["src"],
-            "as": ["data"]
-        }
-    ],
-	"data": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Daily fire counts",
+  "background": "transparent",
+  "transform": [
+    {"flatten": ["src"], "as": ["data"]},
+    {"timeUnit": "yearmonthdate", "field": "data.date_time", "as": "day"},
+    {
+      "aggregate": [{"op": "count", "field": "data.date_time", "as": "fire_count"}],
+      "groupby": ["day"]
+    }
+  ],
+  "data": {
 		"name": "timeseries"
 	},
-	"mark": "bar",
-	"encoding": {
-		"x": {
-			"timeUnit": "yearmonthdate",
-			"field": "data.date_time",
-			"type": "temporal",
-			"title": "Date"
-		},
-		"y": {
-			"aggregate": "count",
-			"type": "quantitative",
-			"title": "Detected fires in area",
-			"axis": {
-				"format": "d"
-			}
-		},
-		"tooltip": [
-			{
-				"timeUnit": "yearmonthdate",
-				"field": "data.date_time",
-				"type": "temporal",
-				"title": "Date"
-			},
-			{
-				"aggregate": "count",
-				"type": "quantitative",
-				"title": "Detected fires"
-			}
-		],
-		"opacity": {
-			"condition": {
-				"param": "hover",
-				"value": 1
-			},
-			"value": 0.6
-		}
-	},
-	"params": [
-		{
-			"name": "hover",
-			"select": {
-				"type": "point",
-				"nearest": true,
-				"on": "mousemove",
-				"encodings": [
-					"x"
-				]
-			}
-		}
-	],
-	"background": "transparent"
+  "layer": [
+    {
+      "mark": {"type": "line", "interpolate": "monotone"},
+      "encoding": {
+        "x": {"field": "day", "type": "temporal", "title": "Date"},
+        "y": {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 40},
+      "encoding": {
+        "x": {"field": "day", "type": "temporal"},
+        "y": {"field": "fire_count", "type": "quantitative"},
+        "opacity": {
+          "condition": {"param": "hover", "value": 1},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "day", "type": "temporal", "title": "Date"},
+          {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "nearest": true,
+            "on": "mousemove",
+            "encodings": ["x"],
+            "clear": "mouseout"
+          }
+        }
+      ]
+    }
+  ]
 }
