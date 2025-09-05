@@ -16,7 +16,7 @@
   "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date"}},
   "layer": [
     {
-      "mark": {"type": "line", "interpolate": "monotone"},
+      "mark": {"type": "line"},
       "encoding": {
         "x": {"field": "date", "type": "temporal", "title": "Date"},
         "y": {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
