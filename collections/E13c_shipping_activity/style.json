@@ -1,0 +1,8 @@
+{
+    "stroke-width": 2,
+    "stroke-color": "#0af",
+    "fill-color": 'rgba(255,255,255,0.3)',
+    "tooltip": [
+        {"id": "time", "title": "Timestamp"}
+    ]
+}
