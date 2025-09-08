@@ -11,7 +11,7 @@
       "field": "indicator_value",
       "type": "nominal",
       "scale": {
-        "domain": ["Vehicle Traffic in Port", "NO2 (rescaled)"],
+        "domain": ["Total traffic", "NO2 (rescaled)"],
         "range": ["#1f77b4", "#ff7f0e"]
       },
       "legend": {"title": "Indicator Type"}
@@ -19,7 +19,7 @@
   },
   "layer": [
     {
-      "encoding": {"y": {"field": "measurement_value", "type": "quantitative", "title": "Normalized NO2 concentration & monthly number of cars"}},
+      "encoding": {"y": {"field": "measurement_value", "type": "quantitative", "title": "Normalized NO2 concentration & monthly boat count"}},
       "layer": [
         {"mark": {"type": "line", "strokeWidth": 2}},
         {

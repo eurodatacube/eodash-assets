@@ -6,22 +6,13 @@
     "values": []
   },
   "encoding": {
-    "x": {"field": "time", "type": "temporal", "axis": {"format": "%Y-%m"}},
-    "color": {
-      "field": "indicator_value",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Vehicle Traffic in Port", "NO2 (rescaled)"],
-        "range": ["#1f77b4", "#ff7f0e"]
-      },
-      "legend": {"title": "Indicator Type"}
-    }
+    "x": {"field": "time", "type": "temporal", "axis": {"format": "%Y-%m"}}
   },
   "layer": [
     {
-      "encoding": {"y": {"field": "measurement_value", "type": "quantitative", "title": "Normalized NO2 concentration & monthly number of cars"}},
+      "encoding": {"y": {"field": "measurement_value", "type": "quantitative", "title": "Water discharge"}},
       "layer": [
-        {"mark": {"type": "line", "strokeWidth": 2}},
+        {"mark": {"type": "line", "strokeWidth": 1.5}},
         {
           "transform": [{"filter": {"param": "hover", "empty": false}}],
           "mark": {"type": "point", "size": 100}
@@ -37,8 +28,7 @@
         },
         "tooltip": [
           {"field": "time", "type": "temporal", "title": "Date"},
-          {"field": "indicator_value", "type": "nominal", "title": "Indicator"},
-          {"field": "measurement_value", "type": "quantitative", "title": "Value"}
+          {"field": "measurement_value", "type": "quantitative", "title": "Water discharge"}
         ]
       },
       "params": [
