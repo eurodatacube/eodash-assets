@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with measurement_value and parsed reference_value measurement_types",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "datum.measurement_value",
+      "as": "Tropospheric NO2 (µmol/m²)"
+    },
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "Median"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "Min"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[2]",
+      "as": "Max"
+    },
+    {
+      "calculate": "toNumber(datum.measurement_value) + toNumber(split(datum.ref_clean, ',')[3])",
+      "as": "STD upper"
+    },
+    {
+      "calculate": "datum.measurement_value - split(datum.ref_clean, ',')[3]",
+      "as": "STD lower"
+    },
+    {
+      "fold": [
+        "Tropospheric NO2 (µmol/m²)",
+        "Median",
+        "Min",
+        "Max",
+        "STD upper",
+        "STD lower"
+      ],
+      "as": ["measurement", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "Tropospheric NO2 (µmol/m²)"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "y": {
+              "field": "Tropospheric NO2 (µmol/m²)",
+              "type": "quantitative"
+            },
+            "color": { "field": "measurement", "type": "nominal" },
+            "strokeWidth": {
+              "field": "measurement",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Tropospheric NO2 (µmol/m²)"],
+                "range": [3, 3]
+              }
+            }
+          }
+        },
+        {
+          "transform": [{ "filter": { "param": "hover", "empty": false } }],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          { "field": "value", "type": "quantitative", "title": "Value" },
+          { "field": "measurement", "type": "nominal", "title": "measurement" }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
