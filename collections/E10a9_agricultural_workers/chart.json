@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with parsed measurement_value Type of workers",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "slice(datum.measurement_value, 1, length(datum.measurement_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "National Workers"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "Foreign Workers"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[2]",
+      "as": "Unknown"
+    },
+    {
+      "fold": ["National Workers", "Foreign Workers", "Unknown"],
+      "as": ["Type of workers", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "numeric_value"
+    }
+  ],
+  "encoding": {
+    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m" } }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": { "field": "numeric_value", "type": "quantitative" },
+        "color": {
+          "field": "Type of workers",
+          "type": "nominal",
+          "title": "Type of workers"
+        }
+      },
+      "layer": [
+        { "mark": "line" },
+        {
+          "transform": [{ "filter": { "param": "hover", "empty": false } }],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          { "field": "value", "type": "quantitative", "title": "Value" },
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          {
+            "field": "Type of workers",
+            "type": "nominal",
+            "title": "Type of workers"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
