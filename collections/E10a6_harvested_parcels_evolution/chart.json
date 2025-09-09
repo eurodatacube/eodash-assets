@@ -41,9 +41,7 @@
     "y": {
       "field": "value",
       "type": "quantitative",
-      "title": [
-        "Cumulative % harvest evolution",
-    ]
+      "title": ["Cumulative % harvest evolution"]
     },
     "color": {
       "field": "year",
@@ -51,14 +49,14 @@
       "title": "Year"
     },
     "tooltip": [
-      {"field": "year", "type": "nominal", "title": "Year"},
+      { "field": "year", "type": "nominal", "title": "Year" },
       {
         "field": "original_date",
         "type": "temporal",
         "title": "Date",
         "format": "%Y-%m-%d"
       },
-      {"field": "value", "type": "quantitative", "title": "Value"}
+      { "field": "value", "type": "quantitative", "title": "Value" }
     ]
   }
 }
