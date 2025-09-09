@@ -1,0 +1,28 @@
+{
+    "options": {
+        "execute": true
+    },
+    "type": "object",
+    "properties": {
+        "feature": {
+            "type": "string",
+            "title": "Click anywhere on a map to get a chart",
+            "options": {
+                "drawtools": {
+                    "for": "eox-map#main",
+                    "layerId": "geodb-collection",
+                    "continuous": true,
+                    "featureStyles": {
+                        "layer": {
+                            "circle-radius": 10,
+                            "circle-stroke-width": 1,
+                            "circle-stroke-color": "#3399CC"
+                        }
+                    }
+                },
+                "featureProperty": "id"
+            },
+            "format": "feature"
+        }
+    }
+}

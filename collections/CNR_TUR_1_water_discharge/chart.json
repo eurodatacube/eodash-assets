@@ -10,12 +10,26 @@
   },
   "layer": [
     {
-      "encoding": {"y": {"field": "measurement_value", "type": "quantitative", "title": "Water discharge"}},
+      "encoding": {
+        "y": {
+          "field": "measurement_value",
+          "type": "quantitative",
+          "title": "Water discharge"
+        }
+      },
       "layer": [
-        {"mark": {"type": "line", "strokeWidth": 1.5}},
+        {"mark": {"type": "line", "strokeWidth": 1, "color": "#000000", "opacity": 0.1}},
         {
           "transform": [{"filter": {"param": "hover", "empty": false}}],
           "mark": {"type": "point", "size": 100}
+        },
+        {
+          "transform": [{"filter": "datum.input_data == '/'"}],
+          "mark": {"type": "point", "size": 1, "color": "#000000", "opacity": 0.1}
+        },
+        {
+          "transform": [{"filter": "datum.input_data != '/'"}],
+          "mark": {"type": "point", "size": 70}
         }
       ]
     },
@@ -28,7 +42,11 @@
         },
         "tooltip": [
           {"field": "time", "type": "temporal", "title": "Date"},
-          {"field": "measurement_value", "type": "quantitative", "title": "Water discharge"}
+          {
+            "field": "measurement_value",
+            "type": "quantitative",
+            "title": "Water discharge"
+          }
         ]
       },
       "params": [
