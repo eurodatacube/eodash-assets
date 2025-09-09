@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with measurement_value and parsed reference_value measurement_types",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "datum.measurement_value",
+      "as": "Value"
+    },
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "7-day mean"
+    },
+    {
+      "fold": ["Value", "7-day mean"],
+      "as": ["topic", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "numeric_value"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": { "field": "numeric_value", "type": "quantitative" },
+        "color": { "field": "topic", "type": "nominal", "title": "Topic" }
+      },
+      "layer": [
+        { "mark": "line" },
+        {
+          "transform": [{ "filter": { "param": "hover", "empty": false } }],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          { "field": "value", "type": "quantitative", "title": "Value" },
+          { "field": "topic", "type": "nominal", "title": "Topic" }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}

@@ -73,6 +73,12 @@
           "value": 0
         },
         "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
           {"field": "value", "type": "quantitative", "title": "Value"},
           {"field": "topic", "type": "nominal", "title": "Topic"}
         ]
