@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Overlay 2019 and 2020 values with aligned x-axis, show original dates on tooltip.",
+  "data": {
+    "name": "process_eox"
+  },
+  "transform": [
+    {
+      "fold": ["measurement_value", "reference_value"],
+      "as": ["year_field", "value"]
+    },
+    {
+      "calculate": "datum.year_field === 'measurement_value' ? '2020' : '2019'",
+      "as": "year"
+    },
+    {
+      "calculate": "datum.year_field === 'measurement_value' ? toDate(datum.time) : toDate(datum.reference_time)",
+      "as": "original_date"
+    },
+    {
+      "calculate": "timeFormat(datum.original_date, '%m-%d')",
+      "as": "month_day"
+    },
+    {
+      "calculate": "toDate('2000-' + datum.month_day)",
+      "as": "aligned_date"
+    }
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "aligned_date",
+      "type": "temporal",
+      "title": "Month",
+      "axis": {
+        "format": "%b",
+        "labelAngle": 0,
+        "tickCount": "month"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": ["Number of trucks in the greenhouse area"]
+    },
+    "color": {
+      "field": "year",
+      "type": "nominal",
+      "title": "Year"
+    },
+    "tooltip": [
+      { "field": "year", "type": "nominal", "title": "Year" },
+      {
+        "field": "original_date",
+        "type": "temporal",
+        "title": "Date",
+        "format": "%Y-%m-%d"
+      },
+      { "field": "value", "type": "quantitative", "title": "Value" }
+    ]
+  }
+}
