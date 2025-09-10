@@ -8,7 +8,7 @@
   "transform": [
     {
       "calculate": "datum.measurement_value",
-      "as": "Tropospheric NO2 (µmol/m²)"
+      "as": "O3 Surface Concentration µg/m3"
     },
     {
       "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
@@ -16,31 +16,31 @@
     },
     {
       "calculate": "split(datum.ref_clean, ',')[0]",
-      "as": "Median"
+      "as": "7-day mean"
     },
     {
       "calculate": "split(datum.ref_clean, ',')[1]",
-      "as": "Min"
+      "as": "2017-2019 7-day mean"
     },
     {
       "calculate": "split(datum.ref_clean, ',')[2]",
-      "as": "Max"
+      "as": "2017-2019 range max"
     },
     {
-      "calculate": "toNumber(datum.measurement_value) + toNumber(split(datum.ref_clean, ',')[3])",
-      "as": "STD upper"
+      "calculate": "split(datum.ref_clean, ',')[3]",
+      "as": "2017-2019 range min"
     },
     {
-      "calculate": "datum.measurement_value - split(datum.ref_clean, ',')[3]",
-      "as": "STD"
-    },
-    {
-      "fold": ["Tropospheric NO2 (µmol/m²)", "Median", "Min", "Max"],
+      "fold": [
+        "O3 Surface Concentration µg/m3",
+        "7-day mean",
+        "2017-2019 7-day mean"
+      ],
       "as": ["measurement", "value"]
     },
     {
       "calculate": "toNumber(datum.value)",
-      "as": "Tropospheric NO2 (µmol/m²)"
+      "as": "O3 Surface Concentration µg/m3"
     }
   ],
   "encoding": {
@@ -58,15 +58,18 @@
         "color": "#CCCCCC"
       },
       "encoding": {
-        "y": { "field": "STD", "type": "quantitative" },
-        "y2": { "field": "STD upper" }
+        "y": { "field": "2017-2019 range max", "type": "quantitative" },
+        "y2": { "field": "2017-2019 range min" }
       }
     },
     {
-      "mark": "line",
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1
+      },
       "encoding": {
         "y": {
-          "field": "Tropospheric NO2 (µmol/m²)",
+          "field": "O3 Surface Concentration µg/m3",
           "type": "quantitative"
         },
         "color": {
@@ -74,20 +77,14 @@
           "type": "nominal",
           "scale": {
             "domain": [
-              "Tropospheric NO2 (µmol/m²)",
-              "Median",
-              "Min",
-              "Max",
-              "STD"
+              "O3 Surface Concentration µg/m3",
+              "7-day mean",
+              "2017-2019 7-day mean",
+              "2017-2019 range"
             ],
-            "range": ["#22AA99", "#000000", "#228833", "#AA3377", "#cccccc"]
+            "range": ["#ff0000", "#0000ff", "#555555", "#cccccc"]
           },
           "legend": { "title": "Measurement" }
-        },
-        "strokeWidth": {
-          "field": "measurement",
-          "type": "nominal",
-          "legend": null
         }
       }
     },
