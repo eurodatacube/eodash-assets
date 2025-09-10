@@ -1,0 +1,133 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with measurement_value and parsed reference_value measurement_types",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "pow(10, toNumber(datum.measurement_value))",
+      "as": "CHL-A Concentration mg/m3"
+    },
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "isNaN(toNumber(split(datum.ref_clean, ' ')[0])) || toNumber(split(datum.ref_clean, ' ')[0]) <= 0 ? null : pow(10,toNumber(split(datum.ref_clean, ' ')[0]))",
+      "as": "Weekly climatology of CHL-A concentration"
+    },
+    {
+      "calculate": "isNaN(toNumber(split(datum.ref_clean, ' ')[0])) || toNumber(split(datum.ref_clean, ' ')[0]) <= 0 ? null : pow(10,toNumber(split(datum.ref_clean, ' ')[0]) + toNumber(split(datum.ref_clean, ' ')[1]))",
+      "as": "STD upper"
+    },
+    {
+      "calculate": "isNaN(toNumber(split(datum.ref_clean, ' ')[0])) || toNumber(split(datum.ref_clean, ' ')[0]) <= 0 ? null : pow(10,toNumber(split(datum.ref_clean, ' ')[0]) - toNumber(split(datum.ref_clean, ' ')[1]))",
+      "as": "STD lower"
+    },
+    {
+      "fold": [
+        "CHL-A Concentration mg/m3",
+        "Weekly climatology of CHL-A concentration"
+      ],
+      "as": ["measurement", "value"]
+    },
+    {
+      "calculate": "toNumber(datum.value)",
+      "as": "CHL-A Concentration mg/m3"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.7,
+        "color": "#CCCCCC"
+      },
+      "encoding": {
+        "y": {
+          "field": "STD lower",
+          "type": "quantitative",
+          "scale": {
+            "type": "log"
+          },
+          "axis": {
+            "title": "CHL-A Concentration (mg/m³)"
+          }
+        },
+        "y2": { "field": "STD upper" }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "CHL-A Concentration mg/m3",
+          "type": "quantitative",
+          "scale": { "type": "log" }
+        },
+        "color": {
+          "field": "measurement",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "CHL-A Concentration mg/m3",
+              "Weekly climatology of CHL-A concentration",
+              "STD"
+            ],
+            "range": ["#22AA99", "#000000", "#cccccc"]
+          },
+          "legend": { "title": "Measurement" }
+        },
+        "strokeWidth": {
+          "field": "measurement",
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          { "field": "value", "type": "quantitative", "title": "Value" },
+          { "field": "measurement", "type": "nominal", "title": "measurement" }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
