@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with measurement_value and parsed reference_value measurement_types",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2},
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "y": {"field": "measurement_value", "type": "quantitative"},
+        "color": {"value": "#000000"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "window": [{"op": "row_number", "as": "row_index"}]
+        },
+        {
+          "filter": "datum.row_index % 4 == 0"
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 2, "strokeDash": [4,2]},
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "y": {"field": "measurement_value", "type": "quantitative",
+        "scale": {"zero": false}},
+        "color": {"value": "#aaaaaa"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "datum.indicator_value == 'Orange (Low)' ? 0.3 : datum.indicator_value == 'Green' ? 0.6 : 1",
+          "as": "binary_y"
+        }
+      ],
+      "mark": {"type": "point", "size": 100},
+      "encoding": {
+        "x": {"field": "time", "type": "temporal"},
+        "y": {"field": "binary_y", "type": "quantitative",
+        "axis": {
+      "title": "Crude Oil Storage Index"
+    }
+    },
+        "color": {
+          "field": "indicator_value",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Crude Oil Storage Index", "Cluster Storage Utilization","Green", "Orange (Low)", "Red (High)"],
+            "range": ["#000000","#aaaaaa","green", "orange", "red"]
+          }
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          { "field": "measurement_value", "type": "nominal", "title": "Crude Oil Storage Index" }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
