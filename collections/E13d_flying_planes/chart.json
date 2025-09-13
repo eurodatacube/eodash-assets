@@ -1,0 +1,72 @@
+{
+  "data": {
+    "name": "process_eox"
+  },
+  "encoding": {
+    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m" } }
+  },
+  "config": {
+    "numberFormat": ".2f"
+  },
+  "layer": [
+    {
+      "encoding": {
+        "color": {
+          "condition": [
+            { "test": "datum.color_code == 'BLUE'", "value": "blue" },
+            { "test": "datum.color_code == 'GREEN'", "value": "green" }
+          ],
+          "value": "red",
+          "legend": {
+            "title": "Indicator Type",
+            "values": ["red", "green", "blue"]
+          }
+        },
+        "y": {
+          "field": "measurement_value",
+          "type": "quantitative",
+          "axis": {
+            "title": "Number of flying planes"
+          }
+        }
+      },
+      "layer": [
+        { "mark": "bar" },
+        {
+          "transform": [{ "filter": { "param": "hover", "empty": false } }],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "measurement_value",
+            "type": "quantitative",
+            "title": "Number of flying planes"
+          },
+          { "field": "time", "type": "temporal", "format": "%Y-%m-%d" }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
