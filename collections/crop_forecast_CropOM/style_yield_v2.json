@@ -102,7 +102,7 @@
   "stroke-color": "black",
   "stroke-width": 1,
   "text": {
-    "text": ["get", "yield", ["var", "crop"], ["var", "vstat"]],
+    "text": "test",
     "font": "12px Calibri,sans-serif",
     "fill-color": "black",
     "stroke-color": "white",
