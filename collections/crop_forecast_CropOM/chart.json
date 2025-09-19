@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Historic crop yields grouped by year and crop",
+  "data": {"name": "timeseries"},
+  "background": "transparent",
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "axis": {"title": "Year"}},
+    "y": {"field": "yield", "type": "quantitative", "axis": {"title": "Yield (t/ha)"}},
+    "xOffset": {"field": "crop"},
+    "color": {"field": "crop", "type": "nominal", "legend": {"title": "Crop"}},
+    "tooltip": [
+      {"field": "year", "type": "ordinal"},
+      {"field": "crop", "type": "nominal"},
+      {"field": "yield", "type": "quantitative", "format": ".2f"}
+    ]
+  },
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+    }
+  ]
+}
+
