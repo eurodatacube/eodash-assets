@@ -1,0 +1,29 @@
+{
+    "options": {
+        "execute": true
+    },
+    "type": "object",
+    "properties": {
+        "feature": {
+            "type": "object",
+            "title": "Select administrative area on map",
+            "options": {
+                "drawtools": {
+                    "for": "eox-map#main",
+                    "layerId": "crop_forecast_at;:;2024-03-09T00:00:00Z;:;2",
+                    "continuous": true,
+                    "featureStyles" :{
+                        "click": {
+                          "fill-color": "rgba(51, 153, 204,0.5)",
+                          "stroke-color": "#3399CC",
+                          "stroke-width": 2.5
+                        }
+                      }
+                },
+                "type": "object",
+                "featureProperty": "historic_yield"
+            },
+            "format": "feature"
+        }
+    }
+}
