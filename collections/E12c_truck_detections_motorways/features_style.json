@@ -1,0 +1,6 @@
+{
+    "circle-radius": 4,
+    "circle-fill-color": "rgba(255,255,255,0.1)",
+    "circle-stroke-color": "red",
+    "circle-stroke-width": 2
+}

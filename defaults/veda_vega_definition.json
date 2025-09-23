@@ -1,8 +1,4 @@
 {
-    "width": "container",
-"height": 280,
-    "autosize": "fit",
-    "resize": true,
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
         "values": []

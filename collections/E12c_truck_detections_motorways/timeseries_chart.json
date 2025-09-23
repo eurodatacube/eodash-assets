@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Daily truck detections",
+  "data": {
+    "name": "process_eox",
+    "values": []
+  },
   "background": "transparent",
   "mark": {"type": "line", "interpolate": "monotone", "point": true},
   "transform": [{"flatten": ["src"], "as": ["data"]}],
@@ -8,7 +11,7 @@
     "x": {
       "field": "data.time",
       "type": "temporal",
-      "title": "Year",
+      "title": "Date",
       "axis": {"format": "%Y-%m-%d"}
     },
     "y": {

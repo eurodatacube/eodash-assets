@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Xcube dataset",
   "data": {
-    "name": "xcube_example"
+    "name": "xcube_example",
+    "values": []
   },
   "mark": {
     "type": "line",
