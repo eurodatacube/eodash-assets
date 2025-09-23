@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Daily truck detections",
+  "background": "transparent",
+  "mark": {"type": "line", "interpolate": "monotone", "point": true},
+  "transform": [{"flatten": ["src"], "as": ["data"]}],
+  "encoding": {
+    "x": {
+      "field": "data.time",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"format": "%Y-%m-%d"}
+    },
+    "y": {
+      "field": "data.sum",
+      "type": "quantitative",
+      "title": "Sum of trucks",
+      "scale": {"zero": false}
+    },
+    "tooltip": [
+      {"field": "data.time", "type": "temporal", "title": "Year"},
+      {"field": "data.sum", "type": "quantitative", "title": "Trucks detected"}
+    ]
+  },
+  "config": {
+    "line": {"color": "#1f77b4", "strokeWidth": 2},
+    "point": {"filled": true, "color": "#1f77b4", "size": 10}
+  }
+}

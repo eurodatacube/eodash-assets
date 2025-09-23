@@ -1,0 +1,7 @@
+{
+    "collection": "eodash_E12c-detections",
+    "select": "time,SUM(ST_NPoints(ST_Intersection(ST_GeomFromText('{{polygon}}',4326), geometry)))",
+    "order": "time",
+    "group": "time",
+    "where": "ST_Intersects(ST_GeomFromText('{{polygon}}',4326), geometry)"
+}
