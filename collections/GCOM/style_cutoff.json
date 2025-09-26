@@ -1,0 +1,61 @@
+{
+    "color": [
+        "case",
+        ["==", ["band", 1], 0],
+        ["color", 0, 0, 0, 0],
+        ["between", ["-", ["*", ["band", 1], 0.02], 273.15], ["var", "vmin"], ["var", "vmax"]],
+        [
+            "interpolate",
+            ["linear"],
+            ["-", ["*", ["band", 1], 0.02], 273.15],
+            0, [252, 253, 191, 1],
+            10, [254, 176, 120, 1],
+            20, [241, 96, 93, 1],
+            30, [183, 55, 121, 1],
+            40, [114, 31, 129, 1],
+            50, [44, 17, 95, 1],
+            60, [0, 0, 4, 1]
+        ],
+        ["color", 0, 0, 0, 0]
+    ],
+    "legend": {
+        "title": "Temperature [°C]",
+        "range": [
+            "rgba(252, 253, 191, 1)",
+            "rgba(254, 176, 120, 1)",
+            "rgba(241, 96, 93, 1)",
+            "rgba(183, 55, 121, 1)",
+            "rgba(114, 31, 129, 1)",
+            "rgba(44, 17, 95, 1)",
+            "rgba(0, 0, 4, 1)"
+        ],
+        "domain": [0, 60]
+    },
+    "variables": {"vmin": 0, "vmax": 60},
+    "jsonform": {
+        "type": "object",
+        "title": "Data configuration",
+        "properties": {
+            "vminmax": {
+                "title": "Temperature [°C]",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "vmin": {
+                        "type": "number",
+                        "minimum": 0,
+                        "format": "range",
+                        "default": 0
+                    },
+                    "vmax": {
+                        "type": "number",
+                        "maximum": 60,
+                        "format": "range",
+                        "default": 60
+                    }
+                },
+                "format": "minmax"
+            }
+        }
+    }
+}
