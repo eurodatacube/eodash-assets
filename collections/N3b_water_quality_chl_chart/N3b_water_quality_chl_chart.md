@@ -13,7 +13,7 @@ Despite existing differences in spatial, temporal, and spectral resolution of th
 
 These anomalously low values were found to result from the cumulated impact of a number of natural phenomena. In particular, low wind magnitudes (top plot of Fig.1) were recorded at the AAOT from 5th to 20th April, which, by preserving the vertical stratification of the water column, hindered upwelling of nutrient-rich waters that may enhance the growth of phytoplankton. Such hypothesis is confirmed by significant increase of SST (bottom plot of Fig. 1), as measured by a multi-sensor product (including data from NOAA-18, MetOpA-B, Aqua, Terra, MSG1, NPP, Meteosat11, Sentinel 3A-B) at the AAOT  during that period.
 
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality_chl_chart/N3b_Figure1.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality_tsm_chart/N3b_Figure1.png)
 
 *Figure 1. Time series of (Top) Wind measurements at the AAOT station and (Bottom) Mean Sea Surface Temperature from multi-sensors product at the AAOT station*
 
@@ -21,6 +21,6 @@ On top of this particular local conditions, water level data of Po River at Pont
 
 Finally, we cannot exclude **a mutual role of a decrease of human activities that enhanced the negative anomaly in Chl concentration** as highlighted by the low turbidity values in the Po river measured by Sentinel-2 in the lockdown phase (top panel of Fig. 2)
 
-![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality_chl_chart/N3b_Figure2.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/N3b_water_quality_tsm_chart/N3b_Figure2.png)
 
 *Figure 2. STop) S2-derived turbidity maps in the last inland branch of the Po River March, 19th 2020 (beginning of lockdown) and April, 8th (middle of lockdown), (Bottom) Time series of the Po river water discharge at Pontelagoscuro station.* 
