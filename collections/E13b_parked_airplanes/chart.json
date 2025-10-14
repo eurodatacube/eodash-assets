@@ -41,7 +41,8 @@
             ],
             "nearest": true
           }
-        }
+        },
+        {"name": "grid", "select": "interval", "bind": "scales"}
       ],
       "encoding": {
         "opacity": {

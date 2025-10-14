@@ -65,7 +65,8 @@
             "on": "pointerover",
             "clear": "pointerout"
           }
-        }
+        },
+        {"name": "grid", "select": "interval", "bind": "scales"}
       ]
     }
   ],

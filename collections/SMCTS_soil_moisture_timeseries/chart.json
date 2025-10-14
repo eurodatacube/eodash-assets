@@ -76,7 +76,8 @@
             "on": "mouseover",
             "clear": "mouseout"
           }
-        }
+        },
+        {"name": "grid", "select": "interval", "bind": "scales"}
       ],
       "transform": [],
       "mark": {

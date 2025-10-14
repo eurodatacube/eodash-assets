@@ -27,10 +27,7 @@
           "as": "index"
         }
       ],
-      "frame": [
-        null,
-        null
-      ]
+      "frame": [null, null]
     }
   ],
   "encoding": {
@@ -118,11 +115,7 @@
           "value": 0
         },
         "tooltip": [
-          {
-            "field": "index",
-            "type": "ordinal",
-            "title": "Measurement #"
-          },
+          { "field": "date", "type": "temporal", "title": "Date" },
           {
             "field": "mean",
             "type": "quantitative",
@@ -154,14 +147,13 @@
           "name": "hover",
           "select": {
             "type": "point",
-            "fields": [
-              "index"
-            ],
+            "fields": ["index"],
             "nearest": true,
             "on": "pointerover",
             "clear": "pointerout"
           }
-        }
+        },
+        { "name": "grid", "select": "interval", "bind": "scales" }
       ]
     }
   ],

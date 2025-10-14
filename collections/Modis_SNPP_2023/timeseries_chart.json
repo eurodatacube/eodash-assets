@@ -46,7 +46,8 @@
             "encodings": ["x"],
             "clear": "mouseout"
           }
-        }
+        },
+        {"name": "grid", "select": "interval", "bind": "scales"}
       ]
     }
   ]

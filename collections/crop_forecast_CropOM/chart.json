@@ -19,7 +19,8 @@
     {
       "name": "highlight",
       "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
-    }
+    },
+    {"name": "grid", "select": "interval", "bind": "scales"}
   ]
 }
 
