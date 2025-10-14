@@ -15,7 +15,6 @@
       "title": "Date",
       "sort": "ascending",
       "axis": {
-        "labelAngle": -45,
         "labelExpr": "timeFormat(datum.value, '%Y-%m-%d')"
       }
     },

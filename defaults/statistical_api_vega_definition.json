@@ -35,10 +35,7 @@
       "field": "date",
       "type": "temporal",
       "timeUnit": "binnedutcyearmonthdate",
-      "title": "Date",
-      "axis": {
-        "labelAngle": 45
-      }
+      "title": "Date"
     }
   },
   "layer": [
