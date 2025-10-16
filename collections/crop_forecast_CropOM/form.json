@@ -10,7 +10,7 @@
             "options": {
                 "drawtools": {
                     "for": "eox-map#main",
-                    "layerId": "CROPOM_crop_forecast;:;2024-03-09T00:00:00Z;:;2",
+                    "layerId": "CROPOM_yield;:;2024-03-09T00:00:00Z;:;2",
                     "continuous": true,
                     "featureStyles" :{
                         "click": {
