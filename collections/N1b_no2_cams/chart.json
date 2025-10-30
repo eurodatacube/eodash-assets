@@ -14,10 +14,7 @@
       "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
       "as": "ref_clean"
     },
-    {
-      "calculate": "split(datum.ref_clean, ',')[0]",
-      "as": "7-day mean"
-    },
+    { "calculate": "split(datum.ref_clean, ',')[0]", "as": "7-day mean" },
     {
       "calculate": "split(datum.ref_clean, ',')[1]",
       "as": "2017-2019 7-day mean"
@@ -43,31 +40,31 @@
       "as": "NO2 Surface Concentration µg/m3"
     }
   ],
-  "encoding": {
-    "x": {
-      "field": "time",
-      "type": "temporal",
-      "axis": { "format": "%Y-%m-%d" }
-    }
-  },
   "layer": [
     {
-      "mark": {
-        "type": "area",
-        "opacity": 0.7,
-        "color": "#CCCCCC"
-      },
+      "mark": { "type": "area", "opacity": 0.7, "color": "#CCCCCC" },
       "encoding": {
-        "y": { "field": "2017-2019 range max", "type": "quantitative" },
+        "x": {
+          "field": "time",
+          "type": "temporal",
+          "axis": { "format": "%Y-%m-%d" }
+        },
+        "y": {
+          "field": "2017-2019 range max",
+          "type": "quantitative",
+          "axis": { "title": "NO2 Surface Concentration µg/m3" }
+        },
         "y2": { "field": "2017-2019 range min" }
       }
     },
     {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 1
-      },
+      "mark": { "type": "line", "strokeWidth": 1 },
       "encoding": {
+        "x": {
+          "field": "time",
+          "type": "temporal",
+          "axis": { "format": "%Y-%m-%d" }
+        },
         "y": {
           "field": "NO2 Surface Concentration µg/m3",
           "type": "quantitative"
@@ -89,12 +86,28 @@
       }
     },
     {
+      "encoding": {
+        "x": {
+          "field": "time",
+          "type": "temporal",
+          "axis": { "format": "%Y-%m-%d" }
+        },
+        "y": {
+          "field": "NO2 Surface Concentration µg/m3",
+          "type": "quantitative"
+        }
+      },
       "transform": [{ "filter": { "param": "hover", "empty": false } }],
       "mark": "point"
     },
     {
       "mark": "rule",
       "encoding": {
+        "x": {
+          "field": "time",
+          "type": "temporal",
+          "axis": { "format": "%Y-%m-%d" }
+        },
         "opacity": {
           "condition": { "value": 0.3, "param": "hover", "empty": false },
           "value": 0
@@ -121,7 +134,7 @@
             "clear": "pointerout"
           }
         },
-        {"name": "grid", "select": "interval", "bind": "scales"}
+        { "name": "grid", "select": "interval", "bind": "scales" }
       ]
     }
   ],
