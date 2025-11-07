@@ -36,7 +36,7 @@
             "x": {
               "field": "time",
               "type": "temporal",
-              "axis": { "format": "%Y-%m" }
+              "axis": { "format": "%Y-%m-%d" }
             },
             "y": { "field": "value", "type": "quantitative", "title": "Observation & Model Values" },
             "color": {

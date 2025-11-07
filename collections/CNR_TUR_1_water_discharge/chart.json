@@ -6,7 +6,7 @@
     "values": []
   },
   "encoding": {
-    "x": {"field": "time", "type": "temporal", "axis": {"format": "%Y-%m"}}
+    "x": {"field": "time", "type": "temporal", "axis": {"format": "%Y-%m-%d"}}
   },
   "layer": [
     {

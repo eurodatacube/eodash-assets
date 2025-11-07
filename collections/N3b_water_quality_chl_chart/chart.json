@@ -16,7 +16,7 @@
         "x": {
           "field": "time",
           "type": "temporal",
-          "axis": { "format": "%Y-%m" }
+          "axis": { "format": "%Y-%m-%d" }
         },
         "y": {"type": "quantitative", "field": "measurement_value", "title": "CHl concentration anomaly [%]"},
         "color": {
