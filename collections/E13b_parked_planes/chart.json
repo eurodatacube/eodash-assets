@@ -5,9 +5,6 @@
   "encoding": {
     "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m-%d" } }
   },
-  "config": {
-    "numberFormat": ".2f"
-  },
   "layer": [
     {
       "encoding": {

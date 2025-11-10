@@ -31,6 +31,9 @@
             "default": "weekly"
         }
     },
+    "options": {
+        "show_errors": "never"
+    },
     "required":[
         "bbox"
     ]
