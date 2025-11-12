@@ -43,7 +43,7 @@
       "type": "quantitative",
       "title": [
         "total observed active fields ",
-        "in the cultivated areas"
+        "in the cultivated areas [ha]"
     ]
     },
     "color": {
@@ -59,7 +59,7 @@
         "title": "Date",
         "format": "%Y-%m-%d"
       },
-      {"field": "value", "type": "quantitative", "title": "Value"}
+      {"field": "value", "type": "quantitative", "title": "Value [ha]"}
     ]
   }
 }
