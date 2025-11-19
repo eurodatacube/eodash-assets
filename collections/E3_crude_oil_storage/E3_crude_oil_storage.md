@@ -1,6 +1,6 @@
 ## Crude oil storage monitoring
 
-This indicator aims at showing the storage level of crude oil tanks by means of X-band [Iceye SAR imagery]((https://www.iceye.com/hubfs/Downloadables/ICEYE-SAR-Product-Guide.pdf)).
+This indicator aims at showing the storage level of crude oil tanks by means of X-band [Iceye SAR imagery](https://sar.iceye.com/5.0/).
 The storage volume can be calculated by measuring the height and perimenter of the floating tanks roof that rises and falls with the oil volume to reduce the vapor space above the liquid surface.
 
 ## The impacts of COVID-19 on oil tanks storages

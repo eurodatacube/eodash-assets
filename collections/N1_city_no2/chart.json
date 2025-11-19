@@ -55,7 +55,7 @@
       "mark": {
         "type": "area",
         "opacity": 0.7,
-        "color": "#CCCCCC"
+        "color": "#faf9b1"
       },
       "encoding": {
         "y": { "field": "STD", "type": "quantitative" },
@@ -80,7 +80,7 @@
               "Max",
               "STD"
             ],
-            "range": ["#22AA99", "#000000", "#228833", "#AA3377", "#cccccc"]
+            "range": ["#22AA99", "#000000", "#228833", "#AA3377", "#faf9b1"]
           },
           "legend": { "title": "Measurement" }
         },

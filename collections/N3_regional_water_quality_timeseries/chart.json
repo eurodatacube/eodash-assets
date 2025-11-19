@@ -50,7 +50,7 @@
       "mark": {
         "type": "area",
         "opacity": 0.7,
-        "color": "#CCCCCC"
+        "color": "#faf9b1"
       },
       "encoding": {
         "y": {
@@ -86,7 +86,7 @@
               "Weekly climatology of CHL-A concentration",
               "STD"
             ],
-            "range": ["#22AA99", "#000000", "#cccccc"]
+            "range": ["#22AA99", "#000000", "#faf9b1"]
           },
           "legend": { "title": "Measurement" }
         },

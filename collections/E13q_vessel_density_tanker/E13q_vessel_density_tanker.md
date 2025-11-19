@@ -9,7 +9,5 @@ These maps have been made from ship reporting data of the Automatic Identificati
 
 EMODnet Human Activities creates vessel density maps of EU waters showing the average number of vessels of certain type (tanker, passenger, fishing etc.) in a given period within a grid cell.
 
-<div style="display: flex;">
-    <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13o_vessel_density_all/E13o_vessel_density_all.png" alt="Image";" />
-    <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13o_vessel_density_all/E13o_legend.png" alt="Legend" style="width: 30%;" />
-</div>
+<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13o_vessel_density_all/E13o_vessel_density_all.png" alt="Image" />
+<img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13o_vessel_density_all/E13o_legend.png" alt="Legend" style="width: 30%;" />

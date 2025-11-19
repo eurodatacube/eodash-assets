@@ -42,7 +42,7 @@
   ],
   "layer": [
     {
-      "mark": { "type": "area", "opacity": 0.7, "color": "#CCCCCC" },
+      "mark": { "type": "area", "opacity": 0.7, "color": "#faf9b1" },
       "encoding": {
         "x": {
           "field": "time",
@@ -79,7 +79,7 @@
               "2017-2019 7-day mean",
               "2017-2019 range"
             ],
-            "range": ["#ff0000", "#0000ff", "#555555", "#cccccc"]
+            "range": ["#ff0000", "#0000ff", "#555555", "#faf9b1"]
           },
           "legend": { "title": "Measurement" }
         }
