@@ -2,7 +2,7 @@
 
 Chlorophyll-a (Chl-a) concentration is an indicator of algae abundance which fluctuates naturally over space and time, as a result of combined atmospheric and oceanic effects (e.g., marine currents and upwelling). In coastal areas, strongly influenced by river inputs and human activities, high Chl concentration can result from the discharge of urban sewage, industrial runoffs, and fertilizers from agriculture activities over watersheds. In particular, nutrient inputs of anthropogenic origin affect the natural amount of phytoplankton in marine and inland waters, representing a continuous threat to biodiversity and leading to undesirable modifications of phytoplankton concentration (i.e., eutrophication).
 
-The time series shows weekly Chl-a concentration offshore the Venice lagoon (45.30 N, 12.50 E) as calculated from [Sentinel-3](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-olci) full resolution (250m) data:
+The time series shows weekly Chl-a concentration offshore the Venice lagoon (45.30 N, 12.50 E) as calculated from [Sentinel-3](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3) full resolution (250m) data:
 
 * Green dots show weekly values lower than the climatological mean (in black), indicating good water quality.
 * Blue dots show weekly values greater than the climatological mean but still inside the climatological variability, indicating regular water quality.
