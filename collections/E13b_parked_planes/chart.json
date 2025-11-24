@@ -3,10 +3,7 @@
     "name": "process_eox"
   },
   "encoding": {
-    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m" } }
-  },
-  "config": {
-    "numberFormat": ".2f"
+    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m-%d" } }
   },
   "layer": [
     {

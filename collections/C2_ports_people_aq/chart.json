@@ -13,7 +13,7 @@
     }
   ],
   "encoding": {
-    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m" } },
+    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m-%d" } },
     "color": {
       "field": "indicator_value",
       "type": "nominal",
@@ -39,7 +39,7 @@
             "x": {
               "field": "time",
               "type": "temporal",
-              "axis": { "format": "%Y-%m" }
+              "axis": { "format": "%Y-%m-%d" }
             },
             "y": { "field": "measurement_value", "type": "quantitative", "title": "Normalized NO2 concentration & monthly number of people" },
             "color": {

@@ -5,12 +5,21 @@
     "type": "object",
     "properties": {
         "feature": {
-            "type": "spatial",
+            "type": "string",
             "title": "Select feature on map",
             "options": {
-                "for": "eox-map#main",
-                "layerId": "geodb-collection",
-                "type": "string",
+                "drawtools": {
+                    "for": "eox-map#main",
+                    "layerId": "geodb-collection",
+                    "continuous": true,
+                    "featureStyles": {
+                        "layer": {
+                            "circle-radius": 16,
+                            "circle-stroke-width": 3,
+                            "circle-stroke-color": "#3399CC"
+                        }
+                    }
+                },
                 "featureProperty": "id"
             },
             "format": "feature"

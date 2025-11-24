@@ -2,6 +2,8 @@
     "circle-radius": 10,
     "circle-stroke-color": "red",
     "circle-stroke-width": 3,
+    "stroke-color": "red",
+    "stroke-width": 3,
     "tooltip": [
         {"id": "time", "title": "Timestamp"}
     ]

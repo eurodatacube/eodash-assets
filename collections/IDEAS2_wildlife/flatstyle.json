@@ -72,7 +72,7 @@
         "properties": {
           "wildlifemin": {
             "type": "number",
-            "minimum": 0.25,
+            "minimum": 0,
             "format": "range",
             "default": 0.25
           },
@@ -86,14 +86,14 @@
         "format": "minmax"
       },
       "road_pressure_indicatorminmax": {
-        "title": "Road Pressure Indicator; 0 is high, 5 is low",
+        "title": "Road Pressure Filter; 0 is high, 5 is low",
         "type": "object",
         "properties": {
           "road_pressure_indicatormin": {
             "type": "number",
-            "minimum": -1,
+            "minimum": 0,
             "format": "range",
-            "default": -1
+            "default": 0
           },
           "road_pressure_indicatormax": {
             "type": "number",
@@ -105,7 +105,7 @@
         "format": "minmax"
       },
       "species_count_quintileminmax": {
-        "title": "Categorized species density; 0 is low, 5 is high",
+        "title": "Categorized species density filter; 0 is low, 5 is high",
         "type": "object",
         "properties": {
           "species_count_quintilemin": {
@@ -124,7 +124,7 @@
         "format": "minmax"
       },
       "vegetationminmax": {
-        "title": "Vegetation health indicator; 0 is worst, 5 is best",
+        "title": "Vegetation health filter; 0 is worst, 5 is best",
         "type": "object",
         "properties": {
           "vegetationmin": {
