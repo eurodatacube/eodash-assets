@@ -4,6 +4,9 @@
   "data": {
     "name": "process_eox"
   },
+  "config": {
+    "numberFormat": ".5f"
+  },
   "transform": [
     {
       "fold": ["measurement_value", "reference_value"],
@@ -21,22 +24,14 @@
       "calculate": "timeFormat(datum.original_date, '%m-%d')",
       "as": "month_day"
     },
-    {
-      "calculate": "toDate('2000-' + datum.month_day)",
-      "as": "aligned_date"
-    }
+    { "calculate": "toDate('2000-' + datum.month_day)", "as": "aligned_date" }
   ],
-  "mark": "line",
   "encoding": {
     "x": {
       "field": "aligned_date",
       "type": "temporal",
       "title": "Month",
-      "axis": {
-        "format": "%b",
-        "labelAngle": 0,
-        "tickCount": "month"
-      }
+      "axis": { "format": "%d-%b" }
     },
     "y": {
       "field": "value",
@@ -44,22 +39,66 @@
       "title": [
         "Cumulative proportion of total",
         "areas under active management"
-    ]
+      ]
     },
-    "color": {
-      "field": "year",
-      "type": "nominal",
-      "title": "Year"
-    },
+    "color": { "field": "year", "type": "nominal", "title": "Year" },
     "tooltip": [
-      {"field": "year", "type": "nominal", "title": "Year"},
       {
         "field": "original_date",
         "type": "temporal",
         "title": "Date",
         "format": "%Y-%m-%d"
       },
-      {"field": "value", "type": "quantitative", "title": "Value"}
+      { "field": "value", "type": "quantitative", "title": "Value" }
     ]
-  }
+  },
+  "layer": [
+    { "mark": { "type": "line" } },
+    { "mark": { "type": "point" } },
+    {
+      "transform": [{ "filter": { "param": "hover", "empty": false } }],
+      "mark": { "type": "point", "size": 100 }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "original_date",
+            "type": "temporal",
+            "title": "Year",
+            "format": "%Y"
+          },
+          {
+            "field": "original_date",
+            "type": "temporal",
+            "title": "Time",
+            "format": "%Y-%m-%d"
+          },
+          {
+            "field": "measurement_value",
+            "type": "quantitative",
+            "title": "Cumulative proportion of total areas under active management"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["indicator_value", "original_date"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        },
+        { "name": "grid", "select": "interval", "bind": "scales" }
+      ]
+    }
+  ]
 }

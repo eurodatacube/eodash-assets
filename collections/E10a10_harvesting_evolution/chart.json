@@ -31,6 +31,14 @@
     {
       "layer": [
         {
+          "mark": { "type": "point"},
+          "encoding": {
+            "x": { "field": "time", "type": "temporal" },
+            "y": { "field": "value", "type": "quantitative" },
+            "color": { "field": "series", "type": "nominal" }
+          }
+        },
+        {
           "mark": { "type": "line", "strokeWidth": 2 },
           "encoding": {
             "x": {
