@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart with measurement_value and parsed reference_value measurement_types",
+  "data": {
+    "name": "geodb_example",
+    "values": []
+  },
+  "transform": [
+    {
+      "calculate": "datum.measurement_value",
+      "as": "daily_vaccinations"
+    },
+    {
+      "calculate": "slice(datum.reference_value, 1, length(datum.reference_value) - 1)",
+      "as": "ref_clean"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[0]",
+      "as": "total_vaccinations"
+    },
+    {
+      "calculate": "split(datum.ref_clean, ',')[1]",
+      "as": "people_fully_vaccinated"
+    },
+    {
+      "fold": [
+        "daily_vaccinations",
+        "total_vaccinations",
+        "people_fully_vaccinated"
+      ],
+      "as": ["topic", "vaccinations"]
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": { "field": "vaccinations", "type": "quantitative" },
+        "color": { "field": "topic", "type": "nominal", "title": "Topic" }
+      },
+      "layer": [
+        { "mark": "line" },
+        {
+          "transform": [{ "filter": { "param": "hover", "empty": false } }],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "daily_vaccinations",
+              "as": "daily_vaccinations"
+            },
+            {
+              "op": "max",
+              "field": "total_vaccinations",
+              "as": "total_vaccinations"
+            },
+            {
+              "op": "max",
+              "field": "people_fully_vaccinated",
+              "as": "people_fully_vaccinated"
+            }
+          ],
+          "groupby": ["time"]
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
+          },
+          {
+            "field": "daily_vaccinations",
+            "type": "quantitative",
+            "title": "Daily Vaccinations"
+          },
+          {
+            "field": "total_vaccinations",
+            "type": "quantitative",
+            "title": "Total Vaccinations"
+          },
+          {
+            "field": "people_fully_vaccinated",
+            "type": "quantitative",
+            "title": "People Fully Vaccinated"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        },
+        { "name": "grid", "select": "interval", "bind": "scales" }
+      ]
+    }
+  ],
+  "background": "transparent"
+}
