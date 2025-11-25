@@ -13,7 +13,8 @@
   "data": {
 		"name": "timeseries"
 	},
-  "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date"}},
+  "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date",
+      "axis": { "format": "%Y-%m-%d" }}},
   "layer": [
     {
       "mark": {"type": "line"},
@@ -32,7 +33,7 @@
           "value": 0
         },
         "tooltip": [
-          {"field": "date", "type": "temporal", "title": "Date"},
+          {"field": "date", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
           {"field": "fire_count", "type": "quantitative", "title": "Detected fires"}
         ]
       },

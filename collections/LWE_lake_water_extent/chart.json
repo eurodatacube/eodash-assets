@@ -1,77 +1,77 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A chart visualizing data fetched from a geoDB endpoint",
-    "data": {
-      "name": "geodb_example"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A chart visualizing data fetched from a geoDB endpoint",
+  "data": {
+    "name": "geodb_example"
+  },
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
+    }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "measurement_value",
+          "type": "quantitative",
+          "title": "Lake Water Extent [km2]",
+          "scale": {
+            "zero": false
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": "line"
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "param": "hover",
+                "empty": false
+              }
+            }
+          ],
+          "mark": "point"
+        }
+      ]
     },
-    "encoding": {
-      "x": {
-        "field": "time",
-        "type": "temporal"
-      }
-    },
-    "layer": [
-      {
-        "encoding": {
-          "y": {
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "value": 0.3,
+            "param": "hover",
+            "empty": false
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
             "field": "measurement_value",
             "type": "quantitative",
-	    "scale": {
-              "zero": false
-            }
-          }
-        },
-        "layer": [
-          {
-            "mark": "line"
-          },
-          {
-            "transform": [
-              {
-                "filter": {
-                  "param": "hover",
-                  "empty": false
-                }
-              }
-            ],
-            "mark": "point"
+            "title": "Lake Water Extent [km2]"
           }
         ]
       },
-      {
-        "mark": "rule",
-        "encoding": {
-          "opacity": {
-            "condition": {
-              "value": 0.3,
-              "param": "hover",
-              "empty": false
-            },
-            "value": 0
-          },
-          "tooltip": [
-            {
-              "field": "measurement_value",
-              "type": "quantitative"
-            }
-          ]
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["time"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
         },
-        "params": [
-          {
-            "name": "hover",
-            "select": {
-              "type": "point",
-              "fields": [
-                "time"
-              ],
-              "nearest": true,
-              "on": "pointerover",
-              "clear": "pointerout"
-            }
-          },
-        {"name": "grid", "select": "interval", "bind": "scales"}
-        ]
-      }
-    ]
-  }
-
+        { "name": "grid", "select": "interval", "bind": "scales" }
+      ]
+    }
+  ]
+}

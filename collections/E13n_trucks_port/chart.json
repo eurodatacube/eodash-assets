@@ -8,7 +8,8 @@
   "encoding": {
     "x": {
       "field": "time", 
-      "type": "temporal"
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d"}
     },
     "y": {
       "field": "measurement_value", 
@@ -51,7 +52,7 @@
           "value": 0
         },
         "tooltip": [
-          {"field": "time", "type": "temporal", "title": "Time"},
+          {"field": "time", "type": "temporal", "title": "Time", "format": "%Y-%m-%d"},
           {"field": "indicator_value", "type": "nominal", "title": "Indicator"},
           {"field": "measurement_value", "type": "quantitative", "title": "Value"}
         ]

@@ -53,7 +53,7 @@
             "field": "measurement_value",
             "title": "Chl Anomaly [%]"
           },
-          { "field": "time", "type": "temporal", "title": "Date" }
+          { "field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d" }
         ]
       }
     }

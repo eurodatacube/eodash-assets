@@ -73,7 +73,7 @@
           "value": 0
         },
         "tooltip": [
-          { "field": "time", "type": "temporal", "title": "Date" },
+          { "field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d" },
           {
             "field": "People in port",
             "type": "quantitative",

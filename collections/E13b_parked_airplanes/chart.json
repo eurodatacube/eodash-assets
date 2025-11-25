@@ -36,13 +36,11 @@
             "on": "pointerover",
             "type": "point",
             "clear": "pointerout",
-            "fields": [
-              "time"
-            ],
+            "fields": ["time"],
             "nearest": true
           }
         },
-        {"name": "grid", "select": "interval", "bind": "scales"}
+        { "name": "grid", "select": "interval", "bind": "scales" }
       ],
       "encoding": {
         "opacity": {
@@ -59,10 +57,10 @@
             "field": "measurement_value"
           },
           {
-	    "field": "time",
-	    "type": "temporal",
-	    "title": "Date",
-	    "format": "%Y-%m-%d"
+            "field": "time",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%Y-%m-%d"
           }
         ]
       }
@@ -73,8 +71,8 @@
     "x": {
       "type": "temporal",
       "field": "time",
-      "title": "Year",
-      "axis": {"format": "%b %Y"}
+      "title": "Date",
+      "axis": { "format": "%Y-%m-%d" }
     }
   },
   "background": "transparent",

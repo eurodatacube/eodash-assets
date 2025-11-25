@@ -17,8 +17,8 @@
     "x": {
       "field": "data.time",
       "type": "temporal",
-      "title": "Year",
-      "axis": {"format": "%Y"}
+      "title": "Date",
+      "axis": { "format": "%Y-%m-%d" }
     },
     "y": {
       "field": "data.median",
@@ -29,7 +29,7 @@
       }
     },
     "tooltip": [
-      {"field": "data.time", "type": "temporal", "title": "Year"},
+      {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
       {"field": "data.median", "type": "quantitative", "title": "Median"}
     ]
   },

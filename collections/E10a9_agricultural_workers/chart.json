@@ -44,7 +44,7 @@
       }
     },
     "tooltip": [
-      {"field": "time", "type": "temporal", "title": "Date"},
+      {"field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
       {"field": "Type of workers", "type": "nominal", "title": "Type of Workers"},
       {"field": "numeric_value", "type": "quantitative", "title": "Number of workers"}
     ]

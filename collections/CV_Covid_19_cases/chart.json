@@ -8,7 +8,8 @@
   "encoding": {
     "x": {
       "field": "time",
-      "type": "temporal"
+      "type": "temporal",
+      "axis": { "format": "%Y-%m-%d" }
     }
   },
   "layer": [
