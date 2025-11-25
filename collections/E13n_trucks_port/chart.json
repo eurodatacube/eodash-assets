@@ -5,56 +5,68 @@
     "name": "geodb_example",
     "values": []
   },
+  "transform": [
+    {
+      "calculate": "timeFormat(datum.time, '%Y-%m-%d')",
+      "as": "date_str"
+    }
+  ],
   "encoding": {
     "x": {
-      "field": "time", 
-      "type": "temporal",
-      "axis": { "format": "%Y-%m-%d"}
+      "field": "date_str",
+      "type": "nominal",
+      "axis": { "title": "Date" }
+    },
+    "xOffset": {
+      "field": "indicator_value",
+      "type": "nominal"
     },
     "y": {
-      "field": "measurement_value", 
-      "type": "quantitative"
+      "field": "measurement_value",
+      "type": "quantitative",
+      "axis": {
+        "title": "% of trucks most recent month vs least recent month"
+      }
     },
     "color": {
       "field": "indicator_value",
       "type": "nominal",
       "scale": {
-        "domain": ["Incoming domestic", "Outgoing domestic", "Incoming International"],
+        "domain": [
+          "Incoming domestic",
+          "Outgoing domestic",
+          "Incoming International"
+        ],
         "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]
       },
-      "legend": {
-        "title": "Indicator Type"
-      }
+      "legend": { "title": "Indicator Type" }
     }
   },
   "layer": [
+    { "mark": { "type": "bar" } },
     {
-      "mark": {
-        "type": "line",
-        "point": false,
-        "strokeWidth": 2
-      }
-    },
-    {
-      "transform": [
-        {"filter": {"param": "hover", "empty": false}}
-      ],
-      "mark": {
-        "type": "point",
-        "size": 100
-      }
+      "transform": [{ "filter": { "param": "hover", "empty": false } }],
+      "mark": { "type": "point", "size": 100 }
     },
     {
       "mark": "rule",
       "encoding": {
         "opacity": {
-          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
           "value": 0
         },
         "tooltip": [
-          {"field": "time", "type": "temporal", "title": "Time", "format": "%Y-%m-%d"},
-          {"field": "indicator_value", "type": "nominal", "title": "Indicator"},
-          {"field": "measurement_value", "type": "quantitative", "title": "Value"}
+          {
+            "field": "time",
+            "type": "temporal",
+            "title": "Time",
+            "format": "%Y-%m-%d"
+          },
+          {
+            "field": "measurement_value",
+            "type": "quantitative",
+            "title": "% of the number of trucks most recent month vs least recent month"
+          }
         ]
       },
       "params": [
@@ -62,13 +74,13 @@
           "name": "hover",
           "select": {
             "type": "point",
-            "fields": ["time"],
+            "fields": ["indicator_value", "date_str"],
             "nearest": true,
             "on": "pointerover",
             "clear": "pointerout"
           }
         },
-        {"name": "grid", "select": "interval", "bind": "scales"}
+        { "name": "grid", "select": "interval", "bind": "scales" }
       ]
     }
   ],
