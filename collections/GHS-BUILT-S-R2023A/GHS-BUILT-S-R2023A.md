@@ -17,7 +17,7 @@ For the temporal anchor point of 2018 the data is published at 10m as observed f
 - on Euro Data Cube:
 
 **Use this dataset:**
-- [Execute Jupyter Notebook Fire impact analysis on Euro Data Cube](https://bids2023-nbviewer.hub.eox.at/localfile/bids2023/notebooks/Fire_impact_analysis.ipynb)
+- [Execute Jupyter Notebook Fire impact analysis on Euro Data Cube](https://esa-eodashboards.github.io/eodashboard-notebooks/notebooks/fire-impact-analysis/)
 
 **Cite as:** 
 - Pesaresi M., Politis P. (2023): GHS-BUILT-S R2023A - GHS built-up surface grid, derived from Sentinel2 composite and Landsat, multitemporal (1975-2030)European Commission, Joint Research Centre (JRC)
