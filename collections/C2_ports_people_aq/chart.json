@@ -7,82 +7,63 @@
   },
   "transform": [
     {
-      "pivot": "indicator_value",
-      "value": "measurement_value",
-      "groupby": ["time"]
+      "calculate": "timeFormat(datum.time, '%Y-%m-%d')",
+      "as": "date_str"
     }
   ],
-  "encoding": {
-    "x": { "field": "time", "type": "temporal", "axis": { "format": "%Y-%m-%d" } },
+   "encoding": {
+    "x": {
+      "field": "date_str",
+      "type": "nominal",
+      "axis": { "title": "Date" }
+    },
+    "xOffset": {
+      "field": "indicator_value",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "measurement_value",
+      "type": "quantitative",
+      "axis": {
+        "title": "Normalized NO2 concentration & monthly number of people"
+      }
+    },
     "color": {
       "field": "indicator_value",
       "type": "nominal",
       "scale": {
-        "domain": ["People in port", "NO2 (rescaled)"],
+        "domain": [
+          "People in port", "NO2 (rescaled)"
+        ],
         "range": ["#1f77b4", "#ff7f0e"]
       },
       "legend": { "title": "Indicator Type" }
     }
   },
   "layer": [
+    { "mark": { "type": "bar" } },
     {
-      "transform": [
-        {
-          "fold": ["People in port", "NO2 (rescaled)"],
-          "as": ["indicator", "measurement_value"]
-        }
-      ],
-      "layer": [
-        {
-          "mark": { "type": "line", "strokeWidth": 2 },
-          "encoding": {
-            "x": {
-              "field": "time",
-              "type": "temporal",
-              "axis": { "format": "%Y-%m-%d" }
-            },
-            "y": { "field": "measurement_value", "type": "quantitative", "title": "Normalized NO2 concentration & monthly number of people" },
-            "color": {
-              "field": "indicator",
-              "type": "nominal",
-              "scale": {
-                "domain": ["People in port", "NO2 (rescaled)"],
-                "range": ["#1f77b4", "#ff7f0e"]
-              },
-              "legend": { "title": "Indicator Type" }
-            }
-          }
-        },
-        {
-          "transform": [{ "filter": { "param": "hover", "empty": false } }],
-          "mark": { "type": "point", "size": 100 },
-          "encoding": {
-            "x": { "field": "time", "type": "temporal" },
-            "y": { "field": "measurement_value", "type": "quantitative" },
-            "color": { "field": "indicator", "type": "nominal" }
-          }
-        }
-      ]
+      "transform": [{ "filter": { "param": "hover", "empty": false } }],
+      "mark": { "type": "point", "size": 100 }
     },
     {
       "mark": "rule",
-      "transform": [{ "filter": { "param": "hover" } }],
       "encoding": {
         "opacity": {
-          "condition": { "param": "hover", "value": 0.3 },
+          "condition": { "value": 0.3, "param": "hover", "empty": false },
           "value": 0
         },
         "tooltip": [
-          { "field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d" },
           {
-            "field": "People in port",
-            "type": "quantitative",
-            "title": "People"
+            "field": "time",
+            "type": "temporal",
+            "title": "Time",
+            "format": "%Y-%m-%d"
           },
           {
-            "field": "NO2 (rescaled)",
+            "field": "measurement_value",
             "type": "quantitative",
-            "title": "NO2 (rescaled)"
+            "title": "Value"
           }
         ]
       },
@@ -91,14 +72,13 @@
           "name": "hover",
           "select": {
             "type": "point",
-            "fields": ["time"],
-            "encodings": ["x"],
+            "fields": ["indicator_value", "date_str"],
             "nearest": true,
             "on": "pointerover",
             "clear": "pointerout"
           }
         },
-        {"name": "grid", "select": "interval", "bind": "scales"}
+        { "name": "grid", "select": "interval", "bind": "scales" }
       ]
     }
   ],
