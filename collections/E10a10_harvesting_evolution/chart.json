@@ -53,8 +53,7 @@
               "scale": {
                 "domain": ["Observation", "Model"],
                 "range": ["#1f77b4", "#ff7f0e"]
-              },
-              "legend": {"title": "Series"}
+              }
             }
           }
         },
@@ -81,7 +80,8 @@
           { "field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d" },
           {"field": "indicator_value", "type": "nominal", "title": "Crop"},
           {"field": "series", "type": "nominal", "title": "Type"},
-          {"field": "value", "type": "quantitative", "title": "Value"}
+          {"field": "measurement_value", "type": "quantitative", "title": "Observation: "},
+          {"field": "reference_value", "type": "quantitative", "title": "Model:"}
         ]
       },
       "params": [
