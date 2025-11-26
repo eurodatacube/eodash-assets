@@ -21,7 +21,7 @@
       "calculate": "timeFormat(datum.original_date, '%m-%d')",
       "as": "month_day"
     },
-    { "calculate": "toDate('2000-' + datum.month_day)", "as": "aligned_date" }
+    { "calculate": "toDate('2020-' + datum.month_day)", "as": "aligned_date" }
   ],
   "encoding": {
     "x": {
@@ -66,19 +66,18 @@
           {
             "field": "original_date",
             "type": "temporal",
-            "title": "Year",
-            "format": "%Y"
-          },
-          {
-            "field": "original_date",
-            "type": "temporal",
             "title": "Time",
             "format": "%Y-%m-%d"
           },
           {
             "field": "measurement_value",
             "type": "quantitative",
-            "title": "Cumulative % harvest evolution"
+            "title": "Cumulative % harvest evolution 2020"
+          },
+          {
+            "field": "reference_value",
+            "type": "quantitative",
+            "title": "Cumulative % harvest evolution 2019"
           }
         ]
       },

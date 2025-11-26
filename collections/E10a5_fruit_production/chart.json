@@ -18,10 +18,36 @@
       "as": "original_date"
     },
     {
+      "calculate": "toDate(datum.time)",
+      "as": "time_datetime"
+    },
+    {
+      "calculate": "toDate(datum.reference_time)",
+      "as": "reference_time_datetime"
+    },
+    {
+      "filter": {
+        "field": "time_datetime",
+        "range": [
+          { "year": 2019, "month": 1, "date": 1 },
+          { "year": 2021, "month": 1, "date": 1 }
+        ]
+      }
+    },
+    {
+      "filter": {
+        "field": "reference_time_datetime",
+        "range": [
+          { "year": 2019, "month": 1, "date": 1 },
+          { "year": 2020, "month": 1, "date": 1 }
+        ]
+      }
+    },
+    {
       "calculate": "timeFormat(datum.original_date, '%m-%d')",
       "as": "month_day"
     },
-    { "calculate": "toDate('2000-' + datum.month_day)", "as": "aligned_date" }
+    { "calculate": "toDate('2020-' + datum.month_day)", "as": "aligned_date" }
   ],
   "encoding": {
     "x": {
@@ -33,9 +59,7 @@
     "y": {
       "field": "value",
       "type": "quantitative",
-      "title": [
-        "Number of trucks in the greenhouse area"
-      ]
+      "title": ["Number of trucks in the greenhouse area"]
     },
     "color": { "field": "year", "type": "nominal", "title": "Year" },
     "tooltip": [
@@ -66,19 +90,18 @@
           {
             "field": "original_date",
             "type": "temporal",
-            "title": "Year",
-            "format": "%Y"
-          },
-          {
-            "field": "original_date",
-            "type": "temporal",
             "title": "Time",
             "format": "%Y-%m-%d"
           },
           {
             "field": "measurement_value",
             "type": "quantitative",
-            "title": "Number of trucks in the greenhouse area"
+            "title": "Number of trucks in the greenhouse area: 2020"
+          },
+          {
+            "field": "reference_value",
+            "type": "quantitative",
+            "title": "Number of trucks in the greenhouse area: 2019"
           }
         ]
       },
