@@ -2,9 +2,9 @@
 
 The source of this data is [Our World in Data](https://ourworldindata.org/coronavirus)
 
-The full dataset is is updated daily and includes data on confirmed cases, deaths, hospitalizations, testing, and vaccinations as well as other variables of potential interest. Here, our interactive charts show visualise the variation of the total number of cases and the evolution of vaccinations. 
+The full dataset is updated daily and includes data on confirmed cases, deaths, hospitalizations, testing, and vaccinations, as well as other variables of potential interest. Here, our interactive charts visualize the variation in the total number of cases and the evolution of vaccinations.
 
-Try interacting with the charts to visualise each variable. 
+Try interacting with the charts to explore each variable.
 
 **References:**
 
