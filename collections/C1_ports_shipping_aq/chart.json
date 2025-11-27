@@ -25,7 +25,7 @@
       "field": "measurement_value",
       "type": "quantitative",
       "axis": {
-        "title": "Normalized NO2 concentration & monthly boat count"
+        "title": "NO2 conc. & boats"
       }
     },
     "color": {
@@ -33,7 +33,7 @@
       "type": "nominal",
       "scale": {
         "domain": [
-          "Total boat traffic", "NO2 (rescaled)"
+          "Total traffic", "NO2 (rescaled)"
         ],
         "range": ["#1f77b4", "#ff7f0e"]
       },

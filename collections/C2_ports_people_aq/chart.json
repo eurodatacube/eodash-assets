@@ -25,7 +25,7 @@
       "field": "measurement_value",
       "type": "quantitative",
       "axis": {
-        "title": "Normalized NO2 concentration & monthly number of people"
+        "title": "NO2 conc. & people"
       }
     },
     "color": {
