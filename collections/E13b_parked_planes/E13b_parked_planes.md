@@ -12,7 +12,7 @@ Commercial aviation is one of the sectors that has logically been hit the hardes
 
 The Eurocontrol publication on number of flights shows a striking difference between 2019 and 2020.  A sharp decrease in number of flights was observed mid-March and the difference between 2019 and 2020 reached 80% by April and followed a steady trajectory under flight restrictions measures. 
 
-![](eodash-data/stories/E13b_Fig1.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13b_parked_planes/E13b_Fig1.png)
 
 *Figure 1: [Flights over Europe 2019-2020 Compared](https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html)*
 
@@ -28,11 +28,11 @@ The air travel limitations led to airports becoming flooded with grounded planes
 
 The number of planes grounded worldwide signifies that airlines lack space to store their aircrafts, as long as demand does not resume. Chateauroux airport, France, is thus [renting parking spots](https://www.reuters.com/article/us-health-coronavirus-aircraft-chateauro/grounded-jets-boost-frances-historic-chateauroux-airport-idUSKBN23M1WN), among others to Airbus and British Airways. The result is a considerable increase of the number of planes detected. A growth exceeding 800% when compared to the 2019 baseline was recorded by May. 
 
-![](eodash-data/stories/E13b_Fig2.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13b_parked_planes/E13b_Fig2.png)
 
 *Figure 2: Parked airplanes in Chateauroux-Centre airport in 2020 (compared to 2019 baseline)*
 
-![](eodash-data/stories/E13b_Fig3.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13b_parked_planes/E13b_Fig3.png)
 
 *Figure 3: Parked airplanes in Frankfurt airport in 2020 (compared to 2019 baseline)*
 
@@ -40,11 +40,11 @@ A drop in more recent data points, as seen in Frankfurt, indicates that the airl
 
 Information on unconventional zone occupation is valuable, as it provides insights on how over-used the airport is. Data for Chateauroux and Frankfurt is this time presented in actual number of planes detected, rather than percentage relative to the year 2019. 
 
-![](eodash-data/stories/E13b_Fig4.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13b_parked_planes/E13b_Fig4.png)
 
 *Figure 4: Unconventionally parked airplanes in Chateauroux-Centre (compared to 2019)*
 
-![](eodash-data/stories/E13b_Fig5.png)
+![](https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13b_parked_planes/E13b_Fig5.png)
 
 *Figure 5: Unconventionally parked airplanes in Frankfurt (compared to 2019)*
 
