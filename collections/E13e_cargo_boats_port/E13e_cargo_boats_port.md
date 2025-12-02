@@ -10,11 +10,11 @@ It is interesting understand the percentage decrease of the number of boats, bec
 
 
 <p align="center">
-    <img src="https://github.com/eurodatacube/eodash-assets/blob/fix-invalid-links-2/collections/E13e_cargo_boats_port/E13x-Fig1.png" alt="decrease fishing boats Genoa" style="display: block; margin: 0 auto; width: 600px;" />
+    <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13e_cargo_boats_port/E13x-Fig1.png" alt="decrease fishing boats Genoa" style="display: block; margin: 0 auto; width: 600px;" />
 </p>
 
 <p align="center">
-    <img src="https://github.com/eurodatacube/eodash-assets/blob/fix-invalid-links-2/collections/E13e_cargo_boats_port/E13x-Fig2.png" alt="decrease leisure boats Genoa" style="display: block; margin: 0 auto; width: 600px;" />
+    <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13e_cargo_boats_port/E13x-Fig2.png" alt="decrease leisure boats Genoa" style="display: block; margin: 0 auto; width: 600px;" />
 </p>
 
 
@@ -22,7 +22,7 @@ It is interesting understand the percentage decrease of the number of boats, bec
 The port of Gioia Tauro, instead, showed in 2020 an increase in the number of cargo boats, although the COVID-19 still impacted the very positive trend which characterized the first two months of 2020. 
 
 <p align="center">
-    <img src="https://github.com/eurodatacube/eodash-assets/blob/fix-invalid-links-2/collections/E13e_cargo_boats_port/E13x-Fig3.png" alt="decrease cargo boats Gioia Tauro" style="display: block; margin: 0 auto; width: 600px;" />
+    <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13e_cargo_boats_port/E13x-Fig3.png" alt="decrease cargo boats Gioia Tauro" style="display: block; margin: 0 auto; width: 600px;" />
 </p>
 
 ### Visualising the lockdown measures effect on the number of boats in ports
