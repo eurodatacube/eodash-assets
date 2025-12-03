@@ -11,7 +11,7 @@ Following filters are available:
 - **Categorized species density**: Categorization into five equal groups based on the adjusted and normalized 'species_count_bounds', offering a stratified understanding of biodiversity distribution.
 - **Biodiversity indicator**:  aggregation of data on the number of species present in the area, vegetation quality and spatial connectivity.
   
-More information can be found [here](https://github.com/sistemagmbh/IDEAS-IDEAS-Libraries/blob/main/indicator2/Storytelling_Wildlife_biodivesrity.md)
+More information can be found [here](https://race.esa.int/story/?id=IDEAS)
 
 - **Spatial coverage:** Europe
 - **Temporal coverage:** 10 years (2013 – 2022)

@@ -8,7 +8,6 @@ The COVID-19 pandemic applied a strong pressure on global production capacities 
 
 It is interesting understand the percentage decrease of the number of boats, because it shows clearly how much the COVID-19 virus and the related national restriction impacted on the transit of boats. In the first image it is reported the percentage decrease of the fishing boats for the port of Genova. It is evident that, because of the restrictions after the end of February, the number of boats in the port dropped in 2020, with respect to 2019. The same trend is evident also for pleasure boats.
 
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/eurodatacube/eodash-assets/main/collections/E13e_cargo_boats_port/E13x-Fig1.png" alt="decrease fishing boats Genoa" style="display: block; margin: 0 auto; width: 600px;" />
 </p>
