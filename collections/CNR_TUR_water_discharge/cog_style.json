@@ -10,6 +10,12 @@
         ],
         "domainProperties": ["vmin", "vmax"]
     },
+    "tooltip": {
+        "id": "band1",
+        "title": "Water Turbidity",
+        "appendix": "FNU",
+        "decimals": 2
+    },
     "variables": {"vmin": 0, "vmax": 200},
     "color": [
         "case",
