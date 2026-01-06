@@ -84,5 +84,8 @@
         "title": "N₂O Value"
       }
     ]
-  }
+  },
+  "params": [
+    {"name": "grid", "select": "interval", "bind": "scales"}
+  ]
 }

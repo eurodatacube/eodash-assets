@@ -72,5 +72,7 @@
       {"field": "component", "type": "nominal", "title": "Component"},
       {"field": "numeric_value", "type": "quantitative", "title": "CO₂ Value"}
     ]
-  }
+  },"params": [
+    {"name": "grid", "select": "interval", "bind": "scales"}
+  ]
 }

@@ -33,6 +33,9 @@
       {"field": "data.median", "type": "quantitative", "title": "Median"}
     ]
   },
+  "params": [
+    {"name": "grid", "select": "interval", "bind": "scales"}
+  ],
   "config": {
     "line": {"color": "#1f77b4", "strokeWidth": 3},
     "point": {"filled": true, "color": "#1f77b4", "size": 60}
