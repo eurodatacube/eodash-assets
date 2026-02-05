@@ -81,7 +81,7 @@
       {
         "field": "numeric_value",
         "type": "quantitative",
-        "title": "N₂O Value"
+        "title": "N₂O Value [Tg N]"
       }
     ]
   },

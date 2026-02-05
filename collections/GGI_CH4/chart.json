@@ -107,7 +107,7 @@
     "tooltip": [
       {"field": "time", "type": "temporal", "title": "Date"},
       {"field": "component", "type": "nominal", "title": "Component"},
-      {"field": "numeric_value", "type": "quantitative", "title": "CH4 Value"}
+      {"field": "numeric_value", "type": "quantitative", "title": "CH4 Value [Tg CH4]"}
     ]
   },"params": [
     {"name": "grid", "select": "interval", "bind": "scales"}

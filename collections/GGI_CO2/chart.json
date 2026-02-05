@@ -70,7 +70,7 @@
     "tooltip": [
       {"field": "time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
       {"field": "component", "type": "nominal", "title": "Component"},
-      {"field": "numeric_value", "type": "quantitative", "title": "CO₂ Value"}
+      {"field": "numeric_value", "type": "quantitative", "title": "CO₂ Value [Tg C]"}
     ]
   },"params": [
     {"name": "grid", "select": "interval", "bind": "scales"}
