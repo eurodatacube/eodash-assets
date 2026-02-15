@@ -1,0 +1,8 @@
+    "y": {
+      "field": "numeric_value",
+      "type": "quantitative",
+      "title": "Surface Soil Moisture"
+    },
+    "tooltip": [
+    {"field": "numeric_value", "type": "quantitative", "title": "Surface Soil Moisture"}
+    ],
