@@ -1,8 +1,8 @@
     "y": {
       "field": "numeric_value",
       "type": "quantitative",
-      "title": "Surface Soil Moisture"
+      "title": "Relative saturation"
     },
     "tooltip": [
-    {"field": "numeric_value", "type": "quantitative", "title": "Surface Soil Moisture"}
+    {"field": "numeric_value", "type": "quantitative", "title": "Relative saturation"}
     ],
