@@ -1,4 +1,4 @@
-## Absorbing Aerosol Index by Sentinel-5P TROPOMI (Daily)
+## Absorbing Aerosol Index (AAI) by Sentinel-5P TROPOMI (Daily)
 
 The Absorbing Aerosol Index (AAI), also known as Ultraviolet Aerosol Index (UVAI), is a dimensionless quantity that reveals the presence of absorbing aerosols in the atmosphere: particles such as desert dust, volcanic ash, and smoke from biomass burning that absorb incoming solar radiation. Unlike many other satellite retrievals, the AAI can be calculated even in the presence of clouds, enabling daily, near-global coverage and making it particularly powerful for tracking the evolution of episodic aerosol plumes across the globe.
 
