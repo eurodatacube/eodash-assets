@@ -32,7 +32,6 @@
       {"field": "data.median", "type": "quantitative", "title": "Median"},
       {"field": "numeric_value", "type": "quantitative", "title": "mm/day"}
     ]
-  },
   "params": [
     {"name": "grid", "select": "interval", "bind": "scales"}
   ],
@@ -40,4 +39,3 @@
     "line": {"color": "#1f77b4", "strokeWidth": 3},
     "point": {"filled": true, "color": "#1f77b4", "size": 60}
   }
-}
