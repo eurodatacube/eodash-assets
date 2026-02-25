@@ -32,7 +32,6 @@
       {"field": "data.median", "type": "quantitative", "title": "Median"},
       {"field": "numeric_value", "type": "quantitative", "title": "KNDVI"}
     ]
-  },
   "params": [
     {"name": "grid", "select": "interval", "bind": "scales"}
   ],
