@@ -23,14 +23,13 @@
     "y": {
       "field": "numeric_value",
       "type": "quantitative",
-      "title": "mm/day"
+      "title": "Precipitation [mm/day]"
     },
       }
     },
     "tooltip": [
       {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
-      {"field": "data.median", "type": "quantitative", "title": "Median"},
-      {"field": "numeric_value", "type": "quantitative", "title": "mm/day"}
+      {"field": "data.median", "type": "quantitative", "title": "Precipitation [mm/day]"}
     ]
   "params": [
     {"name": "grid", "select": "interval", "bind": "scales"}
