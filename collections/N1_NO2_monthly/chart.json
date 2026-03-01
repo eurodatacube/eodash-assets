@@ -23,12 +23,12 @@
     "y": {
       "field": "numeric_value",
       "type": "quantitative",
-      "title": "Relative saturation"
+      "title": "NO2 difference [10^15 molecules/cm\u00b2]"
     },
     },
     "tooltip": [
       {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
-      {"field": "data.median", "type": "quantitative", "title": "Relative saturation"}
+      {"field": "data.median", "type": "quantitative", "title": "NO2 difference [10^15 molecules/cm\u00b2]"}
     ]
   },
   "params": [
@@ -38,4 +38,3 @@
     "line": {"color": "#1f77b4", "strokeWidth": 3},
     "point": {"filled": true, "color": "#1f77b4", "size": 60}
   }
-}
