@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "Sea Surface Salinity [psu]"
     },
     "tooltip": [

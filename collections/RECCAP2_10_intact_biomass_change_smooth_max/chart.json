@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "intact_biomass_change_smooth_max [Mg C/ha/year]"
     },
     "tooltip": [

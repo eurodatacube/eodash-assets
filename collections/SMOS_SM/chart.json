@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "Soil moisture [mg m-3]"
     },
     "tooltip": [

@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "deforested biomass [Mg C/ha/year]"
     },
     "tooltip": [

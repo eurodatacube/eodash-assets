@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "AGC_LVOD_amazonia_methods_mean_crop [Mg C/ha]"
     },
     "tooltip": [

@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "SF_biomass_growth [Mg C/ha/year]"
     },
     "tooltip": [

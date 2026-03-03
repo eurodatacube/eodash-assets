@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "Gross Primary productivity [gC/m2]"
     },
     "tooltip": [

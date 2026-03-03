@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "edge_biomass_change [Mg C/ha/year]"
     },
     "tooltip": [

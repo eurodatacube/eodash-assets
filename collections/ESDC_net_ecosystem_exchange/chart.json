@@ -23,6 +23,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "net ecosystem exchange [g C m^-2 d^-1]"
     },
     "tooltip": [

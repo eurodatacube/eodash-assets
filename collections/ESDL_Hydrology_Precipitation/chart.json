@@ -21,6 +21,9 @@
     "y": {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "Precipitation [mm/day]"
     }
   },
@@ -34,6 +37,9 @@
     {
       "field": "data.median",
       "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
       "title": "Precipitation [mm/day]"
     }
   ],
