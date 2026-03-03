@@ -10,9 +10,7 @@
     "interpolate": "monotone",
     "point": true
   },
-  "transform": [
-    {"flatten": ["result"],"as": ["data"]}
-  ],
+  "transform": [{ "flatten": ["result"], "as": ["data"] }],
   "encoding": {
     "x": {
       "field": "data.time",
@@ -21,20 +19,27 @@
       "axis": { "format": "%Y-%m-%d" }
     },
     "y": {
-      "field": "numeric_value",
+      "field": "data.median",
       "type": "quantitative",
       "title": "Precipitation [mm/day]"
+    }
+  },
+  "tooltip": [
+    {
+      "field": "data.time",
+      "type": "temporal",
+      "title": "Date",
+      "format": "%Y-%m-%d"
     },
-      }
-    },
-    "tooltip": [
-      {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
-      {"field": "data.median", "type": "quantitative", "title": "Precipitation [mm/day]"}
-    ]
-  "params": [
-    {"name": "grid", "select": "interval", "bind": "scales"}
+    {
+      "field": "data.median",
+      "type": "quantitative",
+      "title": "Precipitation [mm/day]"
+    }
   ],
+  "params": [{ "name": "grid", "select": "interval", "bind": "scales" }],
   "config": {
-    "line": {"color": "#1f77b4", "strokeWidth": 3},
-    "point": {"filled": true, "color": "#1f77b4", "size": 60}
+    "line": { "color": "#1f77b4", "strokeWidth": 3 },
+    "point": { "filled": true, "color": "#1f77b4", "size": 60 }
   }
+}

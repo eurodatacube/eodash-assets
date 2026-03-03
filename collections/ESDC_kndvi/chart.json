@@ -21,10 +21,9 @@
       "axis": { "format": "%Y-%m-%d" }
     },
         "y": {
-      "field": "numeric_value",
+      "field": "data.median",
       "type": "quantitative",
       "title": "KNDVI"
-    },
       }
     },
     "tooltip": [
