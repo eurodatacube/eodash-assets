@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Xcube dataset",
+  "data": {
+    "name": "xcube_example",
+    "values": []
+  },
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone",
+    "point": true
+  },
+  "transform": [
+    {"flatten": ["result"],"as": ["data"]}
+  ],
+  "encoding": {
+    "x": {
+      "field": "data.time",
+      "type": "temporal",
+      "title": "Date",
+      "axis": { "format": "%Y-%m-%d" }
+    },
+    "y": {
+      "field": "numeric_value",
+      "type": "quantitative",
+      "title": "CO [ppbv]"
+    },
+    },
+    "tooltip": [
+      {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
+      {"field": "data.median", "type": "quantitative", "title": "CO [ppbv]"}
+    ]
+  },
+  "params": [
+    {"name": "grid", "select": "interval", "bind": "scales"}
+  ],
+  "config": {
+    "line": {"color": "#1f77b4", "strokeWidth": 3},
+    "point": {"filled": true, "color": "#1f77b4", "size": 60}
+  }
