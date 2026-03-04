@@ -9,6 +9,9 @@ The Anthropogenic SO₂ COBRA product is important because it provides direct in
 - This product uses the _Covariance-Based Retrieval Algorithm (COBRA)_, implemented operationally in November 2024.
 - Provides the total amount of SO₂ in the troposphere (from the surface to the top of the troposphere), together with additional estimates assuming the SO₂ is located in a 1-km thick layer at ground level, 7 km, or 15 km altitude, which are mainly relevant for elevated plumes such as volcanic emissions.
 - More information on the TROPOMI SO2 measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-BIRA-PRF-SO2-Sentinel-5P-Sulphur-Dioxide-Readme-2025-2.11.pdf).
+- You can interactively explore the Anthropogenic SO₂ COBRA (PBL) product via the [STAC Browser]().
+- The dataset is available via [STAC Browser](https://radiantearth.github.io/stac-browser/#/external/data-portal.s5p-pal.com/api/s5p-l3/so2-cobra-pbl).
+
 
 #### Use cases
 The COBRA PBL SO₂ product is useful for:
