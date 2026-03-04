@@ -6,8 +6,8 @@ The Anthropogenic SO₂ COBRA product is important because it provides direct in
 
 #### About the dataset
 - The Anthropogenic SO₂ COBRA product is measured by the [TROPOMI instrument](https://www.tropomi.eu/) aboard Copernicus ESA's [Sentinel-5P Precursor](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P) satellite, operating in the UV spectral range.
-- Provides the total tropospheric SO₂ vertical column (sulfurdioxide_total_vertical_column), integrated from the surface to the top of the troposphere, along with alternative total column estimates (sulfurdioxide_total_vertical_column_1km, _7km, _15km) calculated assuming SO₂ is concentrated in a 1-km thick layer at ground level, 7 km, or 15 km altitude, which are particularly relevant for elevated plumes such as volcanic emissions.
 - This product uses the _Covariance-Based Retrieval Algorithm (COBRA)_, implemented operationally in November 2024.
+- Provides the total amount of SO₂ in the troposphere (from the surface to the top of the troposphere), together with additional estimates assuming the SO₂ is located in a 1-km thick layer at ground level, 7 km, or 15 km altitude, which are mainly relevant for elevated plumes such as volcanic emissions.
 - More information on the TROPOMI SO2 measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-BIRA-PRF-SO2-Sentinel-5P-Sulphur-Dioxide-Readme-2025-2.11.pdf).
 
 #### Use cases
