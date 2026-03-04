@@ -1,6 +1,6 @@
 ## Aerosol Optical Depth (AOD) by Sentinel-5P TROPOMI (Daily)
 
-The Aerosol Optical Depth (AOD) — also referred to as Aerosol Optical Thickness (AOT) — quantifies the total columnar load of aerosols in the atmosphere by measuring how much sunlight is attenuated due to scattering and absorption by particles between the Earth’s surface and the top of the atmosphere.
+The Aerosol Optical Depth (AOD), also referred to as Aerosol Optical Thickness (AOT), quantifies the total columnar load of aerosols in the atmosphere by measuring how much sunlight is attenuated due to scattering and absorption by particles between the Earth’s surface and the top of the atmosphere.
 
 Unlike aerosol height products, AOD does not provide vertical information. Instead, it indicates the overall abundance of aerosols in the atmospheric column: higher AOD values correspond to hazier conditions and larger aerosol burdens, while low values indicate relatively clean air.
 
