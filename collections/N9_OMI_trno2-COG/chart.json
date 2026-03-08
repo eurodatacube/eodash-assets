@@ -1,40 +1,159 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Xcube dataset",
   "data": {
-    "name": "xcube_example",
     "values": []
   },
-  "mark": {
-    "type": "line",
-    "interpolate": "monotone",
-    "point": true
-  },
   "transform": [
-    {"flatten": ["result"],"as": ["data"]}
+    {
+      "calculate": "datum.b1.mean",
+      "as": "mean"
+    },
+    {
+      "calculate": "datum.b1.min",
+      "as": "min"
+    },
+    {
+      "calculate": "datum.b1.max",
+      "as": "max"
+    },
+    {
+      "calculate": "datum.b1.std",
+      "as": "stDev"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "index"
+        }
+      ],
+      "frame": [null, null]
+    }
   ],
   "encoding": {
     "x": {
-      "field": "data.time",
+      "field": "date",
+      "timeUnit": "binnedutcyearmonthdate",
       "type": "temporal",
-      "title": "Date",
-      "axis": { "format": "%Y-%m-%d" }
-    },
-    "y": {
-      "field": "numeric_value",
-      "type": "quantitative",
-      "title": "NO2 [10^14 molecules/cm\u00b2]"
-    },
-    },
-    "tooltip": [
-      {"field": "data.time", "type": "temporal", "title": "Date", "format": "%Y-%m-%d"},
-      {"field": "data.median", "type": "quantitative", "title": "NO2 [10^14 molecules/cm\u00b2]"}
-    ]
+      "title": "Measurement"
+    }
   },
-  "params": [
-    {"name": "grid", "select": "interval", "bind": "scales"}
+  "layer": [
+    {
+      "mark": {
+        "type": "area"
+      },
+      "encoding": {
+        "y": {
+          "field": "mean",
+          "type": "quantitative",
+          "title": "NO2 [10^14 molecules/cm\u00b2]"
+        },
+        "y2": {
+          "field": "max",
+          "type": "quantitative"
+        },
+        "fill": {
+          "value": "#E1BE6A"
+        },
+        "opacity": {
+          "value": 0.7
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "filled": false
+      },
+      "encoding": {
+        "y": {
+          "field": "mean",
+          "type": "quantitative",
+          "scale": {
+            "zero": false
+          },
+          "title": "Value"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "area"
+      },
+      "encoding": {
+        "y": {
+          "field": "min",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "mean",
+          "type": "quantitative"
+        },
+        "fill": {
+          "value": "#40B0A6"
+        },
+        "opacity": {
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "value": 0.3,
+            "param": "hover",
+            "empty": false
+          },
+          "value": 0
+        },
+        "tooltip": [
+          { "field": "date", "type": "temporal", "title": "NO2 [10^14 molecules/cm\u00b2]" },
+          {
+            "field": "mean",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "mean"
+          },
+          {
+            "field": "min",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "minimum"
+          },
+          {
+            "field": "max",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "maximum"
+          },
+          {
+            "field": "stDev",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "std dev"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["index"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        },
+        { "name": "grid", "select": "interval", "bind": "scales" }
+      ]
+    }
   ],
-  "config": {
-    "line": {"color": "#1f77b4", "strokeWidth": 3},
-    "point": {"filled": true, "color": "#1f77b4", "size": 60}
-  }
+  "background": "transparent"
+}
