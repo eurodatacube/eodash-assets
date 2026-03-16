@@ -5,19 +5,19 @@
   },
   "transform": [
     {
-      "calculate": "datum.b1.mean",
+      "calculate": "datum.b1.mean / 10e-6",
       "as": "mean"
     },
     {
-      "calculate": "datum.b1.min",
+      "calculate": "datum.b1.min / 10e-6",
       "as": "min"
     },
     {
-      "calculate": "datum.b1.max",
+      "calculate": "datum.b1.max / 10e-6",
       "as": "max"
     },
     {
-      "calculate": "datum.b1.std",
+      "calculate": "datum.b1.std / 10e-6",
       "as": "stDev"
     },
     {
@@ -117,25 +117,25 @@
           {
             "field": "mean",
             "type": "quantitative",
-            "format": ".3f",
+            "format": ".1f",
             "title": "mean"
           },
           {
             "field": "min",
             "type": "quantitative",
-            "format": ".3f",
+            "format": ".1f",
             "title": "minimum"
           },
           {
             "field": "max",
             "type": "quantitative",
-            "format": ".3f",
+            "format": ".1f",
             "title": "maximum"
           },
           {
             "field": "stDev",
             "type": "quantitative",
-            "format": ".3f",
+            "format": ".1f",
             "title": "std dev"
           }
         ]
