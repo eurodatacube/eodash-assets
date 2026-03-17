@@ -3,6 +3,11 @@
   "data": {
     "values": []
   },
+  "config": {
+    "mark": {
+      "invalid": "filter"
+    }
+  },
   "transform": [
     {
       "calculate": "datum.bands.B0.stats.mean",

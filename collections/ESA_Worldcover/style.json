@@ -1,0 +1,48 @@
+{
+    "legend": {
+        "title": "Land Cover",
+        "range": ["rgb(180, 180, 180)","rgb(255, 255, 76)","rgb(240, 150, 255)", "rgb(0,100,0)", "rgb(240, 240, 240)", "rgb(255, 187, 34)","rgb(0, 100, 200)","rgb(0, 150, 160)","rgb(0, 207, 117)", "rgb(250, 0, 0)","rgb(250, 230, 160)"],
+        "domain": ["Bare/sparse vegetation", "Cropland", "Grassland", "Tree cover", "Snow and Ice", "Shrubland", "Permanent water bodies",  "Herbaceous wetland", "Mangroves", "Built-up", "Moss and lichen"],
+        "scaleType": "categorical"
+    },
+    "tooltip": {
+        "id": "band1",
+        "title": "Raster value",
+        "appendix": "",
+        "decimals": 0
+    },
+    "color": [
+        "case",
+        ["==", ["band", 1], 0],
+        ["color", 0,0,0,0],
+        ["==", ["band", 1], 10],
+        ["color", 0,100,0, 1],
+        ["==", ["band", 1], 20],
+        ["color", 255,187,34,1],
+        ["==", ["band", 1], 30],
+        ["color", 255,255,76,1],
+        ["==", ["band", 1], 40],
+        ["color", 240,150,255,1],
+        ["==", ["band", 1], 50],
+        ["color", 250,0,0,1],
+        ["==", ["band", 1], 60],
+        ["color", 180,180,180,1],
+        ["==", ["band", 1], 70],
+        ["color", 240,240,240,1],
+        ["==", ["band", 1], 80],
+        ["color", 0,100,200,1],
+        ["==", ["band", 1], 90],
+        ["color", 0,150,160,1],
+        ["==", ["band", 1], 95],
+        ["color", 0,207,117,1],
+        ["==", ["band", 1], 100],
+        ["color", 250,230,160,1],
+        ["color", 0, 0, 0, 0]
+    ],
+    "jsonform": {
+        "type": "object",
+        "title": "Data configuration",
+        "properties": {
+        }
+    }
+}
