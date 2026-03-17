@@ -72,8 +72,7 @@
           "type": "quantitative",
           "scale": {
             "zero": false
-          },
-          "title": "Value"
+          }
         },
         "color": {
           "value": "black"

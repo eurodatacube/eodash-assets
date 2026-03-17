@@ -45,7 +45,7 @@
   },
   "params": [{ "name": "grid", "select": "interval", "bind": "scales" }],
   "config": {
-    "line": { "color": "#1f77b4", "strokeWidth": 2 },
+    "line": { "color": "#1f77b4", "strokeWidth": 1 },
     "point": { "filled": true, "color": "#1f77b4", "size": 30 }
   }
 }
