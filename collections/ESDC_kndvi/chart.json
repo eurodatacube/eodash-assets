@@ -34,7 +34,7 @@
       "title": "Date",
       "format": "%Y-%m-%d"
     },
-    { "field": "data.median", "type": "quantitative", "title": "KNDVI" }
+    { "field": "data.median", "type": "quantitative", "format": ".3f", "title": "KNDVI" }
   ],
   "params": [{ "name": "grid", "select": "interval", "bind": "scales" }],
   "config": {
