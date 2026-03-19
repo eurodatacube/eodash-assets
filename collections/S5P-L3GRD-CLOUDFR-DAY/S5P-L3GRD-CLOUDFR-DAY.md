@@ -9,6 +9,7 @@ CF provides a **horizontal coverage metric** rather than vertical structure, com
 #### About the dataset
 
 - The CF product is derived from measurements by the [TROPOMI instrument](https://www.tropomi.eu/) aboard Copernicus ESA's [Sentinel-5P Precursor](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P) satellite.
+-  More information on the Tropomi cloud product measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-DLR-PRF-CLOUD%20-%20Sentinel-5P%20Cloud%20Level%202%20Product%20Readme%20File%202025%20-%202.10.pdf).
 
 
 
