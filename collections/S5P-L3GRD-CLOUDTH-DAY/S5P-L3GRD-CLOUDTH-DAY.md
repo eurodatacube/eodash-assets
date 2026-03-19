@@ -9,6 +9,7 @@ Unlike columnar aerosol measures or aerosol layer heights, CTH focuses on **clou
 #### About the dataset
 
 - The CTH product is derived from measurements by the [TROPOMI instrument](https://www.tropomi.eu/) aboard Copernicus ESA's [Sentinel-5P Precursor](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P) satellite.
+- More information on the CTH product development can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-DLR-PRF-CLOUD%20-%20Sentinel-5P%20Cloud%20Level%202%20Product%20Readme%20File%202025%20-%202.10.pdf).
 
 
 #### Use cases
