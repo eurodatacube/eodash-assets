@@ -11,6 +11,7 @@ Unlike [aerosol height products](https://eodashboard.org/explore/?x=0.0000&y=0.0
 - The [retrieval algorithm](https://data-portal.s5p-pal.com/product-docs/aot/s5p_aot_pum_v2.1.0_signed.pdf) derives aerosol optical thickness in the 340–494 nm wavelength range, selected because it contains important information on aerosol absorption.
 - The dataset captures the spatial distribution of aerosols from both natural sources (e.g. desert dust, volcanic ash, sea salt) and anthropogenic sources (e.g. industrial pollution, biomass burning).
 - Together with the Sentinel-5P [Aerosol Absorbing Index (AAI)](https://eodashboard.org/explore/?x=0.0000&y=0.0000&z=2.4959&template=expert&indicator=S5P-L3GRD-AAI-DAY&datetime=2024-01-24) and [Aerosol Layer Height (ALH)](https://eodashboard.org/explore/?x=15.0000&y=18.3149&z=2.3450&template=expert&indicator=S5P-L3GRD-ALH-DAY&datetime=2025-01-06) products, AOD forms part of the Copernicus global aerosol monitoring suite.
+- More information on the TROPOMI AOD measurements and quality assessment can be found in the [Product Readme file](https://data-portal.s5p-pal.com/product-docs/aot/s5p_aot_pum_v2.1.0_signed.pdf).
 
 #### Use cases
 
