@@ -7,6 +7,7 @@ The Absorbing Aerosol Index (AAI), also known as Ultraviolet Aerosol Index (UVAI
 - The AAI is derived from the difference between observed and modelled reflectance, based on wavelength-dependent changes in Rayleigh scattering in the UV spectral range for a pair of wavelengths, where ozone absorption is minimal.
 - The measurements are performed once per day, providing a full global snapshot of aerosol activity.
 - A positive aerosol index indicates the presence of absorbing aerosols (such as mineral dust or carbonaceous smoke), while negative values are typically associated with non-absorbing aerosols or clouds.
+- More information on the TROPOMI AAI measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-KNMI-PRF-AER-AI%20-%20Sentinel-5P%20UV%20Aerosol%20Level%202%20Product%20Readme%20File%202025%20-%202.9.pdf?inst-v=14961565-47a3-4449-92de-8bd773526398).
 
 #### Use cases 
 The AAI is especially well suited for monitoring natural and human-driven aerosol events. Saharan dust storms leave a strong positive signal as mineral-rich particles are lofted thousands of metres into the atmosphere and transported across the Atlantic. Similarly, large-scale wildfires in regions such as the Amazon, sub-Saharan Africa, or Siberia produce dense smoke plumes that are readily detected and tracked over days to weeks. Volcanic eruptions inject fine ash and sulfur-rich particles that can spread across hemispheres and impact aviation safety and climate.
