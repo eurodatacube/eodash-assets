@@ -6,6 +6,7 @@ Data are essential for monitoring ocean optical properties, phytoplankton, and m
 #### About the dataset
 - Kd-blue measures the attenuation of downwelling plane irradiance in the ocean’s first optical depth.
 - The product is generated using Differential Optical Absorption Spectroscopy (DOAS) adapted to oceanic applications (PhytoDOAS), with retrievals converted into physical Kd values using radiative transfer look-up tables. Only high-quality measurements (qa_value == 1.0) are used in the final gridded product.
+- More information on the TROPOMI Kd Oceab Colour (blue) measurements and quality assessment can be found in the [Product Readme file](https://data-portal.s5p-pal.com/product-docs/kd/S5P_KD_PAL_PUM_v1.1.pdf).
 
 #### Use cases
 Kd-blue measurements are particularly useful for:
