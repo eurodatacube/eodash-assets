@@ -13,8 +13,5 @@
             },
             "format": "bounding-box"
         }
-    },
-    "required":[
-        "bbox"
-    ]
+    }
 }
