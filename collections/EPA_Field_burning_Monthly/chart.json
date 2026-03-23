@@ -5,19 +5,19 @@
   },
   "transform": [
     {
-      "calculate": "datum.b1.mean / 1e8",
+      "calculate": "datum.b1.mean / 1e9",
       "as": "mean"
     },
     {
-      "calculate": "datum.b1.min / 1e8",
+      "calculate": "datum.b1.min / 1e9",
       "as": "min"
     },
     {
-      "calculate": "datum.b1.max / 1e8",
+      "calculate": "datum.b1.max / 1e9",
       "as": "max"
     },
     {
-      "calculate": "datum.b1.std / 1e8",
+      "calculate": "datum.b1.std / 1e9",
       "as": "stDev"
     },
     {
