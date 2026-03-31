@@ -7,7 +7,7 @@ The Volcanic SO₂ (7km) Near Real-Time (NRT) product measures sulfur dioxide co
 - The retrieval assumes SO₂ is located in a layer at 7 km altitude, making it particularly suited for detecting elevated volcanic plumes injected into the free troposphere.
 - Only the last seven days of data are provided as NRT maps, making this product ideal for operational monitoring of ongoing volcanic events.
 - Only pixels where a volcanic source is most likely (sulfurdioxide_detection_flag > 0) and where the solar zenith angle is within limits (SZA < 70°) are included. Note that SO₂ from potential anthropogenic sources has not been filtered out and can therefore still appear in the data.
-- More information on the TROPOMI SO₂ measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-BIRA-PRF-SO2-Sentinel-5P-Sulphur-Dioxide-Readme-2025-2.11.pdf). The dataset is available via [STAC Browser](https://radiantearth.github.io/stac-browser/#/external/data-portal.s5p-pal.com/api/s5p-l3/so2-cobra-pbl).
+- More information on the TROPOMI SO₂ measurements and quality assessment can be found in the [Product Readme file](https://sentiwiki.copernicus.eu/__attachments/1673595/S5P-MPC-BIRA-PRF-SO2-Sentinel-5P-Sulphur-Dioxide-Readme-2025-2.11.pdf). 
 
 
 ####  Use cases
