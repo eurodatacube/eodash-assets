@@ -9,7 +9,6 @@
         "drawtools": {
           "for": "eox-map#main",
           "measure": true,
-          "type": "Polygon",
           "projection": "EPSG:4326"
         }
       },
