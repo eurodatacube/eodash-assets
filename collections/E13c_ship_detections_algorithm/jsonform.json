@@ -8,14 +8,9 @@
         "autoStartSelection": false,
         "drawtools": {
           "for": "eox-map#main",
-          "projection": "EPSG:4326",
-          "featureStyles": {
-            "layer": {
-              "fill-color": "none",
-              "stroke-color": "#ca42cf",
-              "stroke-width": 3
-            }
-          }
+          "measure": true,
+          "type": "Polygon",
+          "projection": "EPSG:4326"
         }
       },
       "format": "bounding-box"
