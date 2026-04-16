@@ -8,6 +8,7 @@
                 "autoStartSelection": false,
                 "drawtools": {
                     "for": "eox-map#main",
+                    "measure": true,
                     "projection": "EPSG:4326"
                 }
             },
