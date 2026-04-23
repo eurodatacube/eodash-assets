@@ -6,6 +6,8 @@
         {"id": "flux", "title": "Methane flux [kg/km²/hr]", "decimals": 0},
         {"id": "flux_hi", "title": "Methane flux high [kg/km²/hr]", "decimals": 0},
         {"id": "flux_lo", "title": "Methane flux low [kg/km²/hr]", "decimals": 0},
-        {"id": "flux_sd", "title": "Methane flux std [kg/km²/hr]", "decimals": 0}
+        {"id": "flux_sd", "title": "Methane flux std [kg/km²/hr]", "decimals": 0},
+        {"id": "time_coverage_start", "title": "Time Coverage Start"},
+        {"id": "time_coverage_end", "title": "Time Coverage End"}
     ]
 }
