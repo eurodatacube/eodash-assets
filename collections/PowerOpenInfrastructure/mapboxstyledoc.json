@@ -1,0 +1,2130 @@
+{
+  "version": 8,
+  "sprite": "https://raw.githubusercontent.com/gtif-ukif/gtif-ukif-assets/refs/heads/main/collections/PowerOpenInfrastructure/openinframap/sprite",
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "id": "openinframap",
+  "name": "OpenInfraMap",
+  "sources": {
+    "openinframap": {
+      "type": "vector",
+      "url": "https://raw.githubusercontent.com/gtif-ukif/gtif-ukif-assets/refs/heads/main/collections/PowerOpenInfrastructure/openinframap/openinframap.json"
+    }
+  },
+  "layers": [
+    {
+      "zorder": 60,
+      "id": "power_line_case",
+      "type": "line",
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "filter": ["==", ["get", "tunnel"], true],
+      "minzoom": 12,
+      "paint": {
+        "line-opacity": ["case", ["get", "construction"], 0.2, 0.4],
+        "line-color": "#7C4544",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 4, 18, 10]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 61,
+      "id": "power_line_underground_1",
+      "type": "line",
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", ["get", "location"], "underground"],
+          ["==", ["get", "location"], "underwater"],
+          ["==", ["get", "tunnel"], true],
+          [
+            "all",
+            ["==", ["get", "type"], "cable"],
+            ["==", ["get", "location"], ""]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "minzoom": 0,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-dasharray": [3, 2],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], -3.5, ["has", "voltage_2"], -1.75, 0],
+          13,
+          ["case", ["has", "voltage_3"], -7, ["has", "voltage_2"], -3.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 61,
+      "id": "power_line_underground_2",
+      "type": "line",
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", ["get", "location"], "underground"],
+          ["==", ["get", "location"], "underwater"],
+          ["==", ["get", "tunnel"], true],
+          [
+            "all",
+            ["==", ["get", "type"], "cable"],
+            ["==", ["get", "location"], ""]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        ["has", "voltage_2"]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "minzoom": 10,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage_2"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-dasharray": [3, 2],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], 0, ["has", "voltage_2"], 1.75, 0],
+          13,
+          ["case", ["has", "voltage_3"], 0, ["has", "voltage_2"], 3.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 61,
+      "id": "power_line_underground_3",
+      "type": "line",
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", ["get", "location"], "underground"],
+          ["==", ["get", "location"], "underwater"],
+          ["==", ["get", "tunnel"], true],
+          [
+            "all",
+            ["==", ["get", "type"], "cable"],
+            ["==", ["get", "location"], ""]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        ["has", "voltage_3"]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "minzoom": 10,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage_3"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-dasharray": [3, 2],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], 3.5, ["has", "voltage_2"], 5.25, 0],
+          13,
+          ["case", ["has", "voltage_3"], 7, ["has", "voltage_2"], 10.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 160,
+      "id": "power_plant",
+      "type": "fill",
+      "source": "openinframap",
+      "minzoom": 5,
+      "source-layer": "power_plant",
+      "paint": { "fill-opacity": ["case", ["get", "construction"], 0.05, 0.2] }
+    },
+    {
+      "zorder": 161,
+      "id": "power_plant_outline",
+      "type": "line",
+      "filter": ["!", ["get", "construction"]],
+      "source": "openinframap",
+      "minzoom": 8,
+      "source-layer": "power_plant",
+      "paint": {
+        "line-color": "rgb(80,80,80)",
+        "line-opacity": 0.4,
+        "line-width": 1
+      },
+      "layout": { "line-join": "round" }
+    },
+    {
+      "zorder": 161,
+      "id": "power_plant_outline_construction",
+      "type": "line",
+      "filter": ["get", "construction"],
+      "source": "openinframap",
+      "minzoom": 8,
+      "source-layer": "power_plant",
+      "paint": {
+        "line-color": "rgb(163,139,16)",
+        "line-opacity": 0.4,
+        "line-width": 1,
+        "line-dasharray": [2, 2]
+      },
+      "layout": { "line-join": "round" }
+    },
+    {
+      "zorder": 161,
+      "id": "power_substation",
+      "type": "fill",
+      "filter": [
+        "all",
+        [
+          "any",
+          [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+            [">", ["zoom"], 6]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+            [">", ["zoom"], 7]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 25],
+            [">", ["zoom"], 9]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+            [">", ["zoom"], 10]
+          ],
+          [">", ["zoom"], 11]
+        ],
+        [
+          "any",
+          ["!=", ["get", "substation"], "transition"],
+          [">", ["zoom"], 12]
+        ]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_substation",
+      "minzoom": 13,
+      "paint": {
+        "fill-opacity": 0.3,
+        "fill-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "fill-outline-color": "rgba(0, 0, 0, 1)"
+      }
+    },
+    {
+      "zorder": 162,
+      "id": "power_solar_panel",
+      "type": "fill",
+      "source": "openinframap",
+      "source-layer": "power_generator_area",
+      "filter": ["==", ["get", "source"], "solar"],
+      "minzoom": 13,
+      "paint": {
+        "fill-color": "#726BA9",
+        "fill-outline-color": "rgba(50, 50, 50, 1)"
+      }
+    },
+    {
+      "zorder": 260,
+      "id": "power_line_1",
+      "type": "line",
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "filter": [
+        "all",
+        [
+          "!",
+          [
+            "any",
+            ["==", ["get", "location"], "underground"],
+            ["==", ["get", "location"], "underwater"],
+            ["==", ["get", "tunnel"], true],
+            [
+              "all",
+              ["==", ["get", "type"], "cable"],
+              ["==", ["get", "location"], ""]
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ]
+      ],
+      "minzoom": 0,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], -3.5, ["has", "voltage_2"], -1.75, 0],
+          13,
+          ["case", ["has", "voltage_3"], -7, ["has", "voltage_2"], -3.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 260,
+      "id": "power_line_2",
+      "type": "line",
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "filter": [
+        "all",
+        [
+          "!",
+          [
+            "any",
+            ["==", ["get", "location"], "underground"],
+            ["==", ["get", "location"], "underwater"],
+            ["==", ["get", "tunnel"], true],
+            [
+              "all",
+              ["==", ["get", "type"], "cable"],
+              ["==", ["get", "location"], ""]
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        ["has", "voltage_2"]
+      ],
+      "minzoom": 10,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage_2"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], 0, ["has", "voltage_2"], 1.75, 0],
+          13,
+          ["case", ["has", "voltage_3"], 0, ["has", "voltage_2"], 3.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 260,
+      "id": "power_line_3",
+      "type": "line",
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "filter": [
+        "all",
+        [
+          "!",
+          [
+            "any",
+            ["==", ["get", "location"], "underground"],
+            ["==", ["get", "location"], "underwater"],
+            ["==", ["get", "tunnel"], true],
+            [
+              "all",
+              ["==", ["get", "type"], "cable"],
+              ["==", ["get", "location"], ""]
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        ["has", "voltage_3"]
+      ],
+      "minzoom": 10,
+      "paint": {
+        "line-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage_3"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2,
+          0.5,
+          10,
+          [
+            "match",
+            ["get", "line"],
+            "bay",
+            1,
+            "busbar",
+            1,
+            [
+              "interpolate",
+              ["linear"],
+              ["coalesce", ["get", "voltage"], 0],
+              0,
+              1,
+              100,
+              1.8,
+              800,
+              4
+            ]
+          ]
+        ],
+        "line-offset": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9.999,
+          0,
+          10,
+          ["case", ["has", "voltage_3"], 3.5, ["has", "voltage_2"], 5.25, 0],
+          13,
+          ["case", ["has", "voltage_3"], 7, ["has", "voltage_2"], 10.5, 0]
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      },
+      "layout": { "line-join": "round", "line-cap": "round" }
+    },
+    {
+      "zorder": 261,
+      "id": "power_transformer",
+      "type": "symbol",
+      "source": "openinframap",
+      "source-layer": "power_transformer",
+      "minzoom": 14,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": { "icon-image": "power_transformer" }
+    },
+    {
+      "zorder": 262,
+      "id": "power_compensator",
+      "type": "symbol",
+      "source": "openinframap",
+      "source-layer": "power_compensator",
+      "minzoom": 14,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": { "icon-image": "power_compensator" }
+    },
+    {
+      "zorder": 263,
+      "id": "power_switch",
+      "type": "symbol",
+      "source": "openinframap",
+      "source-layer": "power_switch",
+      "minzoom": 14,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": { "icon-image": "power_switch" }
+    },
+    {
+      "zorder": 264,
+      "id": "power_tower",
+      "type": "symbol",
+      "filter": ["==", ["get", "type"], "tower"],
+      "source": "openinframap",
+      "source-layer": "power_tower",
+      "minzoom": 13,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": {
+        "icon-image": [
+          "case",
+          ["get", "transition"],
+          "power_tower_transition",
+          ["any", ["has", "transformer"], ["has", "substation"]],
+          "power_tower_transformer",
+          "power_tower"
+        ],
+        "icon-offset": [
+          "case",
+          ["any", ["has", "transformer"], ["has", "substation"]],
+          ["literal", [12, 0]],
+          ["literal", [0, 0]]
+        ],
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.6, 17, 1],
+        "text-field": "{ref}",
+        "text-size": ["step", ["zoom"], 0, 14, 10],
+        "text-offset": [0, 1.5],
+        "text-max-angle": 10
+      }
+    },
+    {
+      "zorder": 265,
+      "id": "power_pole",
+      "type": "symbol",
+      "filter": ["==", ["get", "type"], "pole"],
+      "source": "openinframap",
+      "source-layer": "power_tower",
+      "minzoom": 13,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": {
+        "icon-image": [
+          "case",
+          ["get", "transition"],
+          "power_pole_transition",
+          ["any", ["has", "transformer"], ["has", "substation"]],
+          "power_pole_transformer",
+          "power_pole"
+        ],
+        "icon-offset": [
+          "case",
+          ["any", ["has", "transformer"], ["has", "substation"]],
+          ["literal", [10, 0]],
+          ["literal", [0, 0]]
+        ],
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.2, 17, 0.8],
+        "text-field": "{ref}",
+        "text-size": ["step", ["zoom"], 0, 14, 10],
+        "text-offset": [0, 1],
+        "text-max-angle": 10
+      }
+    },
+    {
+      "zorder": 266,
+      "id": "power_wind_turbine",
+      "type": "symbol",
+      "source": "openinframap",
+      "source-layer": "power_generator",
+      "filter": ["==", ["get", "source"], "wind"],
+      "minzoom": 11,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": {
+        "icon-image": "power_wind",
+        "icon-anchor": "bottom",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.5, 14, 1],
+        "text-field": "{name}",
+        "text-size": ["step", ["zoom"], 0, 12, 9],
+        "text-offset": [0, 1],
+        "text-anchor": "top"
+      }
+    },
+    {
+      "zorder": 267,
+      "id": "power_wind_turbine_point",
+      "type": "circle",
+      "source": "openinframap",
+      "source-layer": "power_generator",
+      "filter": ["==", ["get", "source"], "wind"],
+      "minzoom": 9,
+      "maxzoom": 11,
+      "paint": { "circle-radius": 1.5, "circle-color": "#444444" }
+    },
+    {
+      "zorder": 268,
+      "id": "power_substation_point",
+      "type": "circle",
+      "filter": [
+        "all",
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+              [">", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+              [">", ["zoom"], 7]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 25],
+              [">", ["zoom"], 9]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">", ["zoom"], 10]
+            ],
+            [">", ["zoom"], 11]
+          ],
+          [
+            "any",
+            ["!=", ["get", "substation"], "transition"],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        [
+          "any",
+          ["==", ["coalesce", ["get", "area"], 0], 0],
+          [
+            "all",
+            ["<", ["coalesce", ["get", "area"], 0], 100],
+            ["<", ["zoom"], 16]
+          ],
+          [
+            "all",
+            ["<", ["coalesce", ["get", "area"], 0], 250],
+            ["<", ["zoom"], 15]
+          ],
+          ["<", ["zoom"], 13]
+        ],
+        [
+          "!",
+          [
+            "all",
+            ["==", ["get", "substation"], "converter"],
+            [
+              "any",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+              [">", ["zoom"], 6]
+            ]
+          ]
+        ]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_substation_point",
+      "minzoom": 5,
+      "layout": {},
+      "paint": {
+        "circle-radius": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          5,
+          [
+            "interpolate",
+            ["linear"],
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            0,
+            0,
+            200,
+            1,
+            750,
+            3
+          ],
+          12,
+          [
+            "interpolate",
+            ["linear"],
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            10,
+            1,
+            30,
+            3,
+            100,
+            5,
+            300,
+            7,
+            600,
+            9
+          ],
+          15,
+          3
+        ],
+        "circle-color": [
+          "case",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["==", ["to-number", ["get", "frequency"]], 0]
+          ],
+          "#4E01B5",
+          [
+            "all",
+            ["has", "frequency"],
+            ["!=", ["get", "frequency"], ""],
+            ["!=", ["to-number", ["get", "frequency"]], 50],
+            ["!=", ["to-number", ["get", "frequency"]], 60]
+          ],
+          "#A8B596",
+          [
+            "step",
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            "#7A7A85",
+            9.99,
+            "#6E97B8",
+            24.99,
+            "#55B555",
+            51.99,
+            "#B59F10",
+            131.99,
+            "#B55D00",
+            219.99,
+            "#C73030",
+            309.99,
+            "#B54EB2",
+            549.99,
+            "#00C1CF"
+          ]
+        ],
+        "circle-stroke-color": "#555",
+        "circle-stroke-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          5,
+          0.1,
+          8,
+          0.5,
+          15,
+          2
+        ],
+        "circle-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ],
+        "circle-stroke-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          ["case", ["get", "construction"], 0.3, 0.6],
+          8,
+          ["case", ["get", "construction"], 0.3, 1]
+        ]
+      }
+    },
+    {
+      "zorder": 560,
+      "id": "power_line_ref",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "all",
+          [
+            "any",
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 330],
+              [">", ["zoom"], 7]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+              [">", ["zoom"], 8]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+              [">", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ],
+        ["!=", ["coalesce", ["get", "ref"], ""], ""],
+        ["<", ["length", ["get", "ref"]], 5]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "minzoom": 7,
+      "layout": {
+        "icon-image": "power_line_ref",
+        "text-field": "{ref}",
+        "symbol-placement": "line-center",
+        "text-size": 10,
+        "text-max-angle": 10
+      }
+    },
+    {
+      "zorder": 561,
+      "id": "power_line_label",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "all",
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 199],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 99],
+              [">=", ["zoom"], 4]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 49],
+              [">=", ["zoom"], 5]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 24],
+              [">=", ["zoom"], 6]
+            ],
+            [
+              "all",
+              [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 9],
+              [">=", ["zoom"], 9]
+            ],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "any",
+            [
+              "all",
+              ["!=", ["get", "line"], "busbar"],
+              ["!=", ["get", "line"], "bay"]
+            ],
+            [">", ["zoom"], 12]
+          ]
+        ]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_line",
+      "minzoom": 11,
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      },
+      "layout": {
+        "text-field": [
+          "case",
+          [
+            "all",
+            ["has", "voltage"],
+            ["has", "name"],
+            ["!=", ["coalesce", ["get", "name"], ["get", "name-en"]], ""]
+          ],
+          [
+            "concat",
+            ["coalesce", ["get", "name"], ["get", "name-en"]],
+            " (",
+            [
+              "case",
+              [
+                "all",
+                ["has", "voltage_3"],
+                ["!=", ["get", "voltage_3"], ["get", "voltage_2"]]
+              ],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_2"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_3"], 1000]], 1000],
+                " kV"
+              ],
+              [
+                "all",
+                ["has", "voltage_2"],
+                ["!=", ["get", "voltage_2"], ["get", "voltage"]]
+              ],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_2"], 1000]], 1000],
+                " kV"
+              ],
+              ["has", "voltage"],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                " kV"
+              ],
+              ""
+            ],
+            [
+              "case",
+              [
+                "all",
+                ["has", "frequency"],
+                ["!=", ["get", "frequency"], ""],
+                ["==", ["to-number", ["get", "frequency"]], 0]
+              ],
+              " DC",
+              [
+                "all",
+                ["has", "frequency"],
+                ["!=", ["get", "frequency"], ""],
+                ["!=", ["to-number", ["get", "frequency"]], 50],
+                ["!=", ["to-number", ["get", "frequency"]], 60]
+              ],
+              ["concat", " ", ["get", "frequency"], " Hz"],
+              ""
+            ],
+            ")",
+            ["case", ["get", "construction"], " (under construction) ", ""]
+          ],
+          ["has", "voltage"],
+          [
+            "concat",
+            [
+              "case",
+              [
+                "all",
+                ["has", "voltage_3"],
+                ["!=", ["get", "voltage_3"], ["get", "voltage_2"]]
+              ],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_2"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_3"], 1000]], 1000],
+                " kV"
+              ],
+              [
+                "all",
+                ["has", "voltage_2"],
+                ["!=", ["get", "voltage_2"], ["get", "voltage"]]
+              ],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                "/",
+                ["/", ["round", ["*", ["get", "voltage_2"], 1000]], 1000],
+                " kV"
+              ],
+              ["has", "voltage"],
+              [
+                "concat",
+                ["/", ["round", ["*", ["get", "voltage"], 1000]], 1000],
+                " kV"
+              ],
+              ""
+            ],
+            [
+              "case",
+              [
+                "all",
+                ["has", "frequency"],
+                ["!=", ["get", "frequency"], ""],
+                ["==", ["to-number", ["get", "frequency"]], 0]
+              ],
+              " DC",
+              [
+                "all",
+                ["has", "frequency"],
+                ["!=", ["get", "frequency"], ""],
+                ["!=", ["to-number", ["get", "frequency"]], 50],
+                ["!=", ["to-number", ["get", "frequency"]], 60]
+              ],
+              ["concat", " ", ["get", "frequency"], " Hz"],
+              ""
+            ],
+            ["case", ["get", "construction"], " (under construction) ", ""]
+          ],
+          ["coalesce", ["get", "name"], ["get", "name-en"]]
+        ],
+        "symbol-placement": "line",
+        "symbol-spacing": 400,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 18, 13],
+        "text-offset": [
+          "case",
+          ["has", "voltage_3"],
+          ["literal", [0, 1.5]],
+          ["has", "voltage_2"],
+          ["literal", [0, 1.25]],
+          ["literal", [0, 1]]
+        ],
+        "text-max-angle": 10
+      }
+    },
+    {
+      "zorder": 562,
+      "id": "power_substation_ref_label",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "any",
+          [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 399],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+            [">", ["zoom"], 8]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 50],
+            [">", ["zoom"], 12]
+          ],
+          [">", ["zoom"], 13]
+        ],
+        ["any", ["==", ["to-number", ["get", "area"]], 0], ["<", ["zoom"], 17]],
+        ["!=", ["get", "substation"], "transition"]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_substation_point",
+      "minzoom": 14.5,
+      "layout": {
+        "symbol-z-order": "source",
+        "text-field": "{ref}",
+        "text-anchor": "bottom",
+        "text-offset": [0, -0.5],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 14, 9, 18, 12],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      }
+    },
+    {
+      "zorder": 562,
+      "id": "power_substation_label",
+      "type": "symbol",
+      "source": "openinframap",
+      "filter": [
+        "all",
+        [
+          "any",
+          [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 399],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 200],
+            [">", ["zoom"], 8]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+            [">", ["zoom"], 10]
+          ],
+          [
+            "all",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 50],
+            [">", ["zoom"], 12]
+          ],
+          [">", ["zoom"], 13]
+        ],
+        ["any", ["==", ["to-number", ["get", "area"]], 0], ["<", ["zoom"], 17]],
+        ["!=", ["get", "substation"], "transition"]
+      ],
+      "source-layer": "power_substation_point",
+      "minzoom": 8,
+      "layout": {
+        "symbol-sort-key": [
+          "-",
+          10000,
+          ["to-number", ["coalesce", ["get", "voltage"], 0]]
+        ],
+        "symbol-z-order": "source",
+        "text-field": [
+          "step",
+          ["zoom"],
+          ["coalesce", ["get", "name"], ["get", "name-en"]],
+          12,
+          [
+            "case",
+            [
+              "all",
+              ["!=", ["coalesce", ["get", "name"], ["get", "name-en"]], ""],
+              ["has", "voltage"]
+            ],
+            [
+              "concat",
+              ["coalesce", ["get", "name"], ["get", "name-en"]],
+              " ",
+              ["to-number", ["coalesce", ["get", "voltage"], 0]],
+              " kV",
+              [
+                "case",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["==", ["to-number", ["get", "frequency"]], 0]
+                ],
+                " DC",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["!=", ["to-number", ["get", "frequency"]], 50],
+                  ["!=", ["to-number", ["get", "frequency"]], 60]
+                ],
+                ["concat", " ", ["get", "frequency"], " Hz"],
+                ""
+              ],
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            [
+              "all",
+              ["==", ["coalesce", ["get", "name"], ["get", "name-en"]], ""],
+              ["has", "voltage"]
+            ],
+            [
+              "concat",
+              "Substation ",
+              ["to-number", ["coalesce", ["get", "voltage"], 0]],
+              " kV",
+              [
+                "case",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["==", ["to-number", ["get", "frequency"]], 0]
+                ],
+                " DC",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["!=", ["to-number", ["get", "frequency"]], 50],
+                  ["!=", ["to-number", ["get", "frequency"]], 60]
+                ],
+                ["concat", " ", ["get", "frequency"], " Hz"],
+                ""
+              ],
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            ["coalesce", ["get", "name"], ["get", "name-en"]]
+          ]
+        ],
+        "text-anchor": "top",
+        "text-offset": [0, 0.5],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          8,
+          10,
+          18,
+          [
+            "interpolate",
+            ["linear"],
+            ["to-number", ["coalesce", ["get", "voltage"], 0]],
+            0,
+            10,
+            400,
+            16
+          ]
+        ],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)"
+      }
+    },
+    {
+      "zorder": 562,
+      "id": "power_converter_point",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "all",
+          ["==", ["get", "substation"], "converter"],
+          [
+            "any",
+            [">", ["to-number", ["coalesce", ["get", "voltage"], 0]], 100],
+            [">", ["zoom"], 6]
+          ]
+        ],
+        [
+          "any",
+          ["==", ["coalesce", ["get", "area"], 0], 0],
+          [
+            "all",
+            ["<", ["coalesce", ["get", "area"], 0], 100],
+            ["<", ["zoom"], 16]
+          ],
+          [
+            "all",
+            ["<", ["coalesce", ["get", "area"], 0], 250],
+            ["<", ["zoom"], 15]
+          ],
+          ["<", ["zoom"], 13]
+        ]
+      ],
+      "source": "openinframap",
+      "source-layer": "power_substation_point",
+      "minzoom": 5.5,
+      "layout": {
+        "icon-image": "converter",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 5, 0.4, 9, 1],
+        "text-field": [
+          "step",
+          ["zoom"],
+          ["coalesce", ["get", "name"], ["get", "name-en"]],
+          12,
+          [
+            "case",
+            [
+              "all",
+              ["!=", ["coalesce", ["get", "name"], ["get", "name-en"]], ""],
+              ["has", "voltage"]
+            ],
+            [
+              "concat",
+              ["coalesce", ["get", "name"], ["get", "name-en"]],
+              " ",
+              ["to-number", ["coalesce", ["get", "voltage"], 0]],
+              " kV",
+              [
+                "case",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["==", ["to-number", ["get", "frequency"]], 0]
+                ],
+                " DC",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["!=", ["to-number", ["get", "frequency"]], 50],
+                  ["!=", ["to-number", ["get", "frequency"]], 60]
+                ],
+                ["concat", " ", ["get", "frequency"], " Hz"],
+                ""
+              ],
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            [
+              "all",
+              ["==", ["coalesce", ["get", "name"], ["get", "name-en"]], ""],
+              ["has", "voltage"]
+            ],
+            [
+              "concat",
+              "Substation ",
+              ["to-number", ["coalesce", ["get", "voltage"], 0]],
+              " kV",
+              [
+                "case",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["==", ["to-number", ["get", "frequency"]], 0]
+                ],
+                " DC",
+                [
+                  "all",
+                  ["has", "frequency"],
+                  ["!=", ["get", "frequency"], ""],
+                  ["!=", ["to-number", ["get", "frequency"]], 50],
+                  ["!=", ["to-number", ["get", "frequency"]], 60]
+                ],
+                ["concat", " ", ["get", "frequency"], " Hz"],
+                ""
+              ],
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            ["coalesce", ["get", "name"], ["get", "name-en"]]
+          ]
+        ],
+        "text-anchor": "top",
+        "text-offset": [0, 1.2],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          10,
+          18,
+          [
+            "interpolate",
+            ["linear"],
+            ["to-number", ["coalesce", ["get", "output"], 0]],
+            0,
+            10,
+            2000,
+            16
+          ]
+        ],
+        "text-optional": true
+      },
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)",
+        "text-opacity": ["step", ["zoom"], 0, 7, 1]
+      }
+    },
+    {
+      "zorder": 563,
+      "id": "power_plant_label",
+      "type": "symbol",
+      "source": "openinframap",
+      "filter": [
+        "any",
+        [">", ["to-number", ["coalesce", ["get", "output"], 0]], 1000],
+        [
+          "all",
+          [">", ["to-number", ["coalesce", ["get", "output"], 0]], 750],
+          [">", ["zoom"], 5]
+        ],
+        [
+          "all",
+          [">", ["to-number", ["coalesce", ["get", "output"], 0]], 250],
+          [">", ["zoom"], 6]
+        ],
+        [
+          "all",
+          [">", ["to-number", ["coalesce", ["get", "output"], 0]], 100],
+          [">", ["zoom"], 7]
+        ],
+        [
+          "all",
+          [">", ["to-number", ["coalesce", ["get", "output"], 0]], 10],
+          [">", ["zoom"], 9]
+        ],
+        [
+          "all",
+          [">", ["to-number", ["coalesce", ["get", "output"], 0]], 1],
+          [">", ["zoom"], 11]
+        ],
+        [">", ["zoom"], 12]
+      ],
+      "source-layer": "power_plant_point",
+      "minzoom": 6,
+      "maxzoom": 24,
+      "layout": {
+        "symbol-sort-key": [
+          "-",
+          10000,
+          ["to-number", ["coalesce", ["get", "output"], 0]]
+        ],
+        "symbol-z-order": "source",
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "match",
+          ["get", "source"],
+          "coal",
+          "power_plant_coal",
+          "geothermal",
+          "power_plant_geothermal",
+          "hydro",
+          "power_plant_hydro",
+          "nuclear",
+          "power_plant_nuclear",
+          "oil",
+          "power_plant_oilgas",
+          "gas",
+          "power_plant_oilgas",
+          "diesel",
+          "power_plant_oilgas",
+          "solar",
+          "power_plant_solar",
+          "wind",
+          "power_plant_wind",
+          "biomass",
+          "power_plant_biomass",
+          "waste",
+          "power_plant_waste",
+          "battery",
+          "power_plant_battery",
+          "power_plant"
+        ],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 6, 0.6, 10, 0.8],
+        "text-field": [
+          "step",
+          ["zoom"],
+          ["concat", ["coalesce", ["get", "name"], ["get", "name-en"]]],
+          9,
+          [
+            "case",
+            ["all", ["!", ["has", "name"]], ["has", "output"]],
+            [
+              "concat",
+              [
+                "case",
+                [">", ["to-number", ["coalesce", ["get", "output"], 0]], 1],
+                [
+                  "concat",
+                  ["to-number", ["coalesce", ["get", "output"], 0]],
+                  " MW"
+                ],
+                [
+                  "concat",
+                  [
+                    "round",
+                    [
+                      "*",
+                      ["to-number", ["coalesce", ["get", "output"], 0]],
+                      1000
+                    ]
+                  ],
+                  " kW"
+                ]
+              ],
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            ["has", "output"],
+            [
+              "concat",
+              ["coalesce", ["get", "name"], ["get", "name-en"]],
+              " \n",
+              [
+                "case",
+                [">", ["to-number", ["coalesce", ["get", "output"], 0]], 1],
+                [
+                  "concat",
+                  ["to-number", ["coalesce", ["get", "output"], 0]],
+                  " MW"
+                ],
+                [
+                  "concat",
+                  [
+                    "round",
+                    [
+                      "*",
+                      ["to-number", ["coalesce", ["get", "output"], 0]],
+                      1000
+                    ]
+                  ],
+                  " kW"
+                ]
+              ],
+              "\n",
+              ["case", ["get", "construction"], " (under construction) ", ""]
+            ],
+            ["coalesce", ["get", "name"], ["get", "name-en"]]
+          ]
+        ],
+        "text-anchor": "top",
+        "text-offset": [0, 1],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          10,
+          18,
+          [
+            "interpolate",
+            ["linear"],
+            ["to-number", ["coalesce", ["get", "output"], 0]],
+            0,
+            10,
+            2000,
+            16
+          ]
+        ],
+        "text-optional": true
+      },
+      "paint": {
+        "text-halo-width": 4,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(230, 230, 230, 1)",
+        "icon-opacity": [
+          "step",
+          ["zoom"],
+          ["case", ["get", "construction"], 0.5, 1],
+          11,
+          0
+        ],
+        "text-opacity": ["step", ["zoom"], 0, 7, 1]
+      }
+    }
+  ]
+}
