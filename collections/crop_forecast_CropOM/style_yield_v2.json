@@ -53,8 +53,8 @@
             "crop": {
                 "title": "Crop",
                 "type": "string",
-                "enum": ["Maize", "Soybean", "Sunflower", "Wheat"],
-                "default": "Maize"
+                "enum": ["Corn", "Soybean", "Sunflower", "Wheat"],
+                "default": "Corn"
             },
             "vstat": {
                 "title": "Statistical value",
@@ -64,7 +64,7 @@
             }
         }
     },
-    "variables": {"vmin": 0, "vmax": 10, "crop": "Maize", "vstat": "average"},
+    "variables": {"vmin": 0, "vmax": 10, "crop": "Corn", "vstat": "average"},
     "text-value": ["concat",["coalesce", ["get", "yield", ["var", "crop"], ["var", "vstat"]], "N/A"], " t/ha"],
     "text-font": "bold 11px Arial,sans-serif",
     "text-fill-color": "white",
