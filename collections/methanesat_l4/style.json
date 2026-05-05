@@ -2,6 +2,20 @@
     "stroke-width": 4,
     "stroke-color": "#ff0000",
     "fill-color": "rgba(255,0,0,0.5)",
+    "jsonform": {
+        "type": "object",
+        "title": "Data configuration",
+        "properties": {}
+    },
+    "legend": {
+        "domain": [
+            "Dispersed Emission Point Source"
+        ],
+        "range": [
+            "rgba(255,255,255,0.7)"
+        ],
+        "scaleType": "categorical"
+    },
     "tooltip": [
         {"id": "flux", "title": "Methane flux [kg/km²/hr]", "decimals": 0},
         {"id": "flux_hi", "title": "Methane flux high [kg/km²/hr]", "decimals": 0},
