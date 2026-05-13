@@ -1,2 +1,2 @@
-## Sentinel-5P Total Column CO (month)
+## Total Column CO by Sentinel-5P TROPOMI (Monthly)
 Description here.
