@@ -1,21 +1,12 @@
 {
-    "circle-radius": 10,
+    "circle-radius": 14,
     "circle-stroke-width": 2,
     "circle-stroke-color": "rgba(0,0,0,1)",
-    "circle-fill-color": "rgba(0,255,0,0.6)",
+    "circle-fill-color": "#009E73",
     "jsonform": {
         "type": "object",
         "title": "Data configuration",
         "properties": {}
-    },
-    "legend": {
-        "domain": [
-            "Dispersed Emission Point Source"
-        ],
-        "range": [
-            "rgb(0,255,0)"
-        ],
-        "scaleType": "categorical"
     },
     "tooltip": [
         {"id": "flux", "title": "Methane flux [kg/km²/hr]", "decimals": 0},
