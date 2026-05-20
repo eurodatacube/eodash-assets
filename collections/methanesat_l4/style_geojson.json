@@ -1,7 +1,8 @@
 {
-    "stroke-width": 4,
-    "stroke-color": "#ffff00",
-    "fill-color": "rgba(255,0,0,0.5)",
+    "circle-radius": 10,
+    "circle-stroke-width": 2,
+    "circle-stroke-color": "rgba(0,0,0,1)",
+    "circle-fill-color": "rgba(0,255,0,0.6)",
     "jsonform": {
         "type": "object",
         "title": "Data configuration",
@@ -12,7 +13,7 @@
             "Dispersed Emission Point Source"
         ],
         "range": [
-            "rgba(255,255,255,0.7)"
+            "rgb(0,255,0)"
         ],
         "scaleType": "categorical"
     },
