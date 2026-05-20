@@ -1,6 +1,6 @@
 {
     "stroke-width": 4,
-    "stroke-color": "#ff0000",
+    "stroke-color": "#ffff00",
     "fill-color": "rgba(255,0,0,0.5)",
     "jsonform": {
         "type": "object",

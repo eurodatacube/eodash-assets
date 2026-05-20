@@ -1,0 +1,98 @@
+{
+  "variables": {
+    "vmin": 0,
+    "vmax": 100
+  },
+  "color": [
+    "case",
+    [">", ["band", 1], 0],
+    [
+      "interpolate",
+      ["linear"],
+      [
+        "/",
+        ["-", ["band", 1], ["var", "vmin"]],
+        ["-", ["var", "vmax"], ["var", "vmin"]]
+      ],
+      0.0,
+      [255, 245, 240, 1],
+      0.0769,
+      [254, 232, 222, 1],
+      0.1538,
+      [254, 215, 199, 1],
+      0.2308,
+      [252, 193, 169, 1],
+      0.3077,
+      [252, 168, 139, 1],
+      0.3846,
+      [252, 143, 111, 1],
+      0.4615,
+      [251, 118, 86, 1],
+      0.5385,
+      [247, 92, 65, 1],
+      0.6154,
+      [240, 63, 46, 1],
+      0.6923,
+      [220, 40, 36, 1],
+      0.7692,
+      [197, 23, 28, 1],
+      0.8462,
+      [174, 17, 23, 1],
+      0.9231,
+      [141, 9, 18, 1],
+      1.0,
+      [103, 0, 13, 1]
+    ],
+    ["color", 0, 0, 0, 0]
+  ],
+  "jsonform": {
+    "type": "object",
+    "title": "Data configuration",
+    "properties": {
+      "vminmax": {
+        "title": "CH4 emissions [kg/km²/hr]",
+        "description": "",
+        "type": "object",
+        "properties": {
+          "vmin": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "format": "range",
+            "default": 0
+          },
+          "vmax": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "format": "range",
+            "default": 100
+          }
+        },
+        "format": "minmax"
+      }
+    }
+  },
+  "legend": {
+    "domainProperties": ["vmin", "vmax"],
+    "range": [
+      "#fff5f0",
+      "#fee8de",
+      "#fed7c7",
+      "#fcc1a9",
+      "#fca88b",
+      "#fc8f6f",
+      "#fb7656",
+      "#f75c41",
+      "#f03f2e",
+      "#dc2824",
+      "#c5171c",
+      "#ae1117",
+      "#8d0912",
+      "#67000d"
+    ],
+    "scaleType": "continuous",
+    "tickFormat": ".0f",
+    "title": "CH4 emissions [kg/km²/hr]"
+  }
+}
