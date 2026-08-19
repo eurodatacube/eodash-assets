@@ -4,7 +4,7 @@ Visualise the snow water equivalent values at various points in time. Save a spe
 
 #### WHY THIS DATA 
 
-This data have been produced within the [eo4alps project](https://snow-app-gte2s.hub.eox.at/), which focuses on implementing a
+This data have been produced within the [eo4alps project](https://eo4society.esa.int/projects/eo4alps-eo4alps/), which focuses on implementing a
 high-resolution quasi real-time snow monitoring to improve water resource management.
 
 It is taking advantage of the recent developments in physically-based snow modelling and is based on high-resolution optical and radar EO missions such as Sentinel-1 and 2.
