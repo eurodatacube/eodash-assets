@@ -3,10 +3,9 @@
   "description": "Daily fire counts",
   "background": "transparent",
   "transform": [
-    {"flatten": ["src"], "as": ["data"]},
-    {"timeUnit": "yearmonthdate", "field": "data.date_time", "as": "date"},
+    {"timeUnit": "yearmonthdate", "field": "date_time", "as": "date"},
     {
-      "aggregate": [{"op": "count", "field": "data.date_time", "as": "fire_count"}],
+      "aggregate": [{"op": "count", "field": "date_time", "as": "fire_count"}],
       "groupby": ["date"]
     }
   ],
