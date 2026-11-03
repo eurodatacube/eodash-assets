@@ -1,8 +1,8 @@
 {
     "type": "object",
     "properties": {
-        "polygon": {
-            "type": "wkt",
+        "bbox": {
+            "type": "array",
             "title": "Select area (bbox) on map",
             "options": {
                 "autoStartSelection": false,
@@ -16,6 +16,6 @@
         }
     },
     "required":[
-        "polygon"
+        "bbox"
     ]
 }

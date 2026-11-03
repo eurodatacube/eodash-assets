@@ -6,6 +6,6 @@
         {"id": "date_time", "title": "Timestamp"},
         {"id": "confidence", "title": "Confidence"},
         {"id": "frp", "title": "Fire Radiative Power"},
-        {"id": "bright_t31", "title": "Brightness Temperature at 3.7 µm"}
+        {"id": "bright_t_b", "title": "Brightness Temperature at 3.7 µm"}
     ]
 }
