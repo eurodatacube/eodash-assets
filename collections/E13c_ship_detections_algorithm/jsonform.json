@@ -16,7 +16,7 @@
     },
     "start_date": {
       "title": "Select date",
-      "type": "date",
+      "type": "string",
       "format": "date"
     },
     "threshold": {
